@@ -1,0 +1,3 @@
+UPDATE,000192653,CC. 1.037.582.333,Ivan Felipe,Luna Gomez,,1,ivan.luna@upb.edu.co
+ENROLL,000192653,,Moderador,UPBV
+ENROLL,000192653,,Moderador,4441-0023-202610-10688

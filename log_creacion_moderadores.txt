@@ -1,0 +1,51 @@
+
+=== PROCESAMIENTO CURSO: 5566-0002-202610-10145 - NRC: 10145 ===
+Fecha: 2026-01-13 14:22:37.685463
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 5566-0002-202610-10159 - NRC: 10159 ===
+Fecha: 2026-01-13 14:22:37.729147
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 5566-0002-202610-10144 - NRC: 10144 ===
+Fecha: 2026-01-13 14:22:37.736270
+❌ ID inválido: '000000nan' para curso 5566-0002-202610-10144
+[✓] Total moderadores inscritos: 0
+
+=== PROCESAMIENTO CURSO: 4450-0002-202610-10605 - NRC: 10605 ===
+Fecha: 2026-01-13 14:22:37.739244
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 4450-0002-202610-10606 - NRC: 10606 ===
+Fecha: 2026-01-13 14:22:37.746994
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 5566-0010-202610-10602 - NRC: 10602 ===
+Fecha: 2026-01-13 14:22:37.754504
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 5566-0010-202610-10601 - NRC: 10601 ===
+Fecha: 2026-01-13 14:22:37.760426
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 4450-0005-202610-10691 - NRC: 10691 ===
+Fecha: 2026-01-13 14:22:37.768388
+❌ ID inválido: '000000nan' para curso 4450-0005-202610-10691
+[✓] Total moderadores inscritos: 0
+
+=== PROCESAMIENTO CURSO: 4450-0004-202610-10686 - NRC: 10686 ===
+Fecha: 2026-01-13 14:22:37.770539
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 4450-0004-202610-10687 - NRC: 10687 ===
+Fecha: 2026-01-13 14:22:37.778187
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 4441-0023-202610-10688 - NRC: 10688 ===
+Fecha: 2026-01-13 14:22:37.784312
+[✓] Total moderadores inscritos: 1
+
+=== PROCESAMIENTO CURSO: 4441-0023-202610-10689 - NRC: 10689 ===
+Fecha: 2026-01-13 14:22:37.790741
+❌ ID inválido: '000000nan' para curso 4441-0023-202610-10689
+[✓] Total moderadores inscritos: 0
