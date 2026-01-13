@@ -1,3 +1,0 @@
-UPDATE,000008335,CC. 71.752.815,Hector Mauricio,Mazo Alvarez,,1,mauricio.mazo@upb.edu.co
-ENROLL,000008335,,Moderador,UPBV
-ENROLL,000008335,,Moderador,5566-0002-202610-10145
