@@ -1,0 +1,60 @@
+UPDATE,000279558,CC. 1.020.796.099,Sergio Andres,Valencia Silva,,1,sergio.valencias@upb.edu.co
+ENROLL,000279558,,Student_te,UPBV
+ENROLL,000279558,,Student,2027-5010V-202617-1007
+UPDATE,000472403,CC. 1.027.740.769,Jade,Mosquera Bravo,,1,jade.mosquera@upb.edu.co
+ENROLL,000472403,,Student_te,UPBV
+ENROLL,000472403,,Student,2027-5010V-202617-1007
+UPDATE,000579455,TI. 1.073.819.705,Jeronimo,Pinedo Lengua,,1,jeronimo.pinedol@upb.edu.co
+ENROLL,000579455,,Student_te,UPBV
+ENROLL,000579455,,Student,2027-5010V-202617-1007
+UPDATE,000581791,TI. 1.014.666.539,Alison Clarena,Alvarez Angulo,,1,alison.alvarez@upb.edu.co
+ENROLL,000581791,,Student_te,UPBV
+ENROLL,000581791,,Student,2027-5010V-202617-1007
+UPDATE,000581792,TI. 1.057.095.767,Carlos Andres,Cortes Gomez,,1,carlos.cortesg@upb.edu.co
+ENROLL,000581792,,Student_te,UPBV
+ENROLL,000581792,,Student,2027-5010V-202617-1007
+UPDATE,000581795,CC. 1.110.366.592,Tiffany,Velasco Henao,,1,tiffany.velasco@upb.edu.co
+ENROLL,000581795,,Student_te,UPBV
+ENROLL,000581795,,Student,2027-5010V-202617-1007
+UPDATE,000583280,TI. 1.066.602.408,Santiago,Sanchez Menco,,1,santiago.sanchezm@upb.edu.co
+ENROLL,000583280,,Student_te,UPBV
+ENROLL,000583280,,Student,2027-5010V-202617-1007
+UPDATE,000585781,CC. 1.038.866.771,Kristian David,Rojas Ceballos,,1,kristian.rojas@upb.edu.co
+ENROLL,000585781,,Student_te,UPBV
+ENROLL,000585781,,Student,2027-5010V-202617-1007
+UPDATE,000587587,CC. 1.036.662.804,Eliana,Londoño Garc,,1,eliana.londono@upb.edu.co
+ENROLL,000587587,,Student_te,UPBV
+ENROLL,000587587,,Student,2027-5010V-202617-1007
+UPDATE,000588410,CC. 1.000.339.131,Mario Alejandro,Ortiz Vargas,,1,mario.ortizv@upb.edu.co
+ENROLL,000588410,,Student_te,UPBV
+ENROLL,000588410,,Student,2027-5010V-202617-1007
+UPDATE,000279558,CC. 1.020.796.099,Sergio Andres,Valencia Silva,,1,sergio.valencias@upb.edu.co
+ENROLL,000279558,,Student_te,UPBV
+ENROLL,000279558,,Student,5555-0008-202617-1008
+UPDATE,000472403,CC. 1.027.740.769,Jade,Mosquera Bravo,,1,jade.mosquera@upb.edu.co
+ENROLL,000472403,,Student_te,UPBV
+ENROLL,000472403,,Student,5555-0008-202617-1008
+UPDATE,000579455,TI. 1.073.819.705,Jeronimo,Pinedo Lengua,,1,jeronimo.pinedol@upb.edu.co
+ENROLL,000579455,,Student_te,UPBV
+ENROLL,000579455,,Student,5555-0008-202617-1008
+UPDATE,000581791,TI. 1.014.666.539,Alison Clarena,Alvarez Angulo,,1,alison.alvarez@upb.edu.co
+ENROLL,000581791,,Student_te,UPBV
+ENROLL,000581791,,Student,5555-0008-202617-1008
+UPDATE,000581792,TI. 1.057.095.767,Carlos Andres,Cortes Gomez,,1,carlos.cortesg@upb.edu.co
+ENROLL,000581792,,Student_te,UPBV
+ENROLL,000581792,,Student,5555-0008-202617-1008
+UPDATE,000581795,CC. 1.110.366.592,Tiffany,Velasco Henao,,1,tiffany.velasco@upb.edu.co
+ENROLL,000581795,,Student_te,UPBV
+ENROLL,000581795,,Student,5555-0008-202617-1008
+UPDATE,000583280,TI. 1.066.602.408,Santiago,Sanchez Menco,,1,santiago.sanchezm@upb.edu.co
+ENROLL,000583280,,Student_te,UPBV
+ENROLL,000583280,,Student,5555-0008-202617-1008
+UPDATE,000585781,CC. 1.038.866.771,Kristian David,Rojas Ceballos,,1,kristian.rojas@upb.edu.co
+ENROLL,000585781,,Student_te,UPBV
+ENROLL,000585781,,Student,5555-0008-202617-1008
+UPDATE,000587587,CC. 1.036.662.804,Eliana,Londoño Garc,,1,eliana.londono@upb.edu.co
+ENROLL,000587587,,Student_te,UPBV
+ENROLL,000587587,,Student,5555-0008-202617-1008
+UPDATE,000588410,CC. 1.000.339.131,Mario Alejandro,Ortiz Vargas,,1,mario.ortizv@upb.edu.co
+ENROLL,000588410,,Student_te,UPBV
+ENROLL,000588410,,Student,5555-0008-202617-1008
