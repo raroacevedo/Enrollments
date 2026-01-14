@@ -18,7 +18,7 @@ def load_config(path="config.json"):
         "bdusuarios_file": "./BDUsuarios/Listados Usuarios.xlsx",
         "salida_directory": "./salida/"
       }
-    Devuelve un dict con la configuración (vacío si no existe o hay errores).
+    Devuelve un dic con la configuración (vacío si no existe o hay errores).
     """
     try:
         base = os.path.dirname(os.path.abspath(__file__))
@@ -87,6 +87,7 @@ def merge_archivos():
     # Usar la ruta de salida desde la configuración si está definida
     base = os.path.dirname(os.path.abspath(__file__))
     directory = CONFIG.get('salida_directory', './salida/')
+
     if not os.path.isabs(directory):
         directory = os.path.join(base, directory)
 
@@ -269,7 +270,9 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDEstuBS):
           OrgUnid = "CVTE"
   
     # Creamos los archivos distintos por curso
-    file    = './salida/registro' + '_' + course_name + '.txt'
+    #file    = './salida/registro' + '_' + course_name + '.txt'
+    directory = CONFIG.get('salida_directory', './salida/')
+    file    = directory + 'registro_' + course_name + '.txt'
     fptr    = open(file, 'a', encoding='utf8')
     line_count = 0
  
