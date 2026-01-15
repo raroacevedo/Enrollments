@@ -1,60 +1,1404 @@
-UPDATE,000279558,CC. 1.020.796.099,Sergio Andres,Valencia Silva,,1,sergio.valencias@upb.edu.co
-ENROLL,000279558,,Student_te,UPBV
-ENROLL,000279558,,Student,2027-5010V-202617-1007
-UPDATE,000472403,CC. 1.027.740.769,Jade,Mosquera Bravo,,1,jade.mosquera@upb.edu.co
-ENROLL,000472403,,Student_te,UPBV
-ENROLL,000472403,,Student,2027-5010V-202617-1007
-UPDATE,000579455,TI. 1.073.819.705,Jeronimo,Pinedo Lengua,,1,jeronimo.pinedol@upb.edu.co
-ENROLL,000579455,,Student_te,UPBV
-ENROLL,000579455,,Student,2027-5010V-202617-1007
-UPDATE,000581791,TI. 1.014.666.539,Alison Clarena,Alvarez Angulo,,1,alison.alvarez@upb.edu.co
-ENROLL,000581791,,Student_te,UPBV
-ENROLL,000581791,,Student,2027-5010V-202617-1007
-UPDATE,000581792,TI. 1.057.095.767,Carlos Andres,Cortes Gomez,,1,carlos.cortesg@upb.edu.co
-ENROLL,000581792,,Student_te,UPBV
-ENROLL,000581792,,Student,2027-5010V-202617-1007
-UPDATE,000581795,CC. 1.110.366.592,Tiffany,Velasco Henao,,1,tiffany.velasco@upb.edu.co
-ENROLL,000581795,,Student_te,UPBV
-ENROLL,000581795,,Student,2027-5010V-202617-1007
-UPDATE,000583280,TI. 1.066.602.408,Santiago,Sanchez Menco,,1,santiago.sanchezm@upb.edu.co
-ENROLL,000583280,,Student_te,UPBV
-ENROLL,000583280,,Student,2027-5010V-202617-1007
-UPDATE,000585781,CC. 1.038.866.771,Kristian David,Rojas Ceballos,,1,kristian.rojas@upb.edu.co
-ENROLL,000585781,,Student_te,UPBV
-ENROLL,000585781,,Student,2027-5010V-202617-1007
-UPDATE,000587587,CC. 1.036.662.804,Eliana,Londoño Garc,,1,eliana.londono@upb.edu.co
-ENROLL,000587587,,Student_te,UPBV
-ENROLL,000587587,,Student,2027-5010V-202617-1007
-UPDATE,000588410,CC. 1.000.339.131,Mario Alejandro,Ortiz Vargas,,1,mario.ortizv@upb.edu.co
-ENROLL,000588410,,Student_te,UPBV
-ENROLL,000588410,,Student,2027-5010V-202617-1007
-UPDATE,000279558,CC. 1.020.796.099,Sergio Andres,Valencia Silva,,1,sergio.valencias@upb.edu.co
-ENROLL,000279558,,Student_te,UPBV
-ENROLL,000279558,,Student,5555-0008-202617-1008
-UPDATE,000472403,CC. 1.027.740.769,Jade,Mosquera Bravo,,1,jade.mosquera@upb.edu.co
-ENROLL,000472403,,Student_te,UPBV
-ENROLL,000472403,,Student,5555-0008-202617-1008
-UPDATE,000579455,TI. 1.073.819.705,Jeronimo,Pinedo Lengua,,1,jeronimo.pinedol@upb.edu.co
-ENROLL,000579455,,Student_te,UPBV
-ENROLL,000579455,,Student,5555-0008-202617-1008
-UPDATE,000581791,TI. 1.014.666.539,Alison Clarena,Alvarez Angulo,,1,alison.alvarez@upb.edu.co
-ENROLL,000581791,,Student_te,UPBV
-ENROLL,000581791,,Student,5555-0008-202617-1008
-UPDATE,000581792,TI. 1.057.095.767,Carlos Andres,Cortes Gomez,,1,carlos.cortesg@upb.edu.co
-ENROLL,000581792,,Student_te,UPBV
-ENROLL,000581792,,Student,5555-0008-202617-1008
-UPDATE,000581795,CC. 1.110.366.592,Tiffany,Velasco Henao,,1,tiffany.velasco@upb.edu.co
-ENROLL,000581795,,Student_te,UPBV
-ENROLL,000581795,,Student,5555-0008-202617-1008
-UPDATE,000583280,TI. 1.066.602.408,Santiago,Sanchez Menco,,1,santiago.sanchezm@upb.edu.co
-ENROLL,000583280,,Student_te,UPBV
-ENROLL,000583280,,Student,5555-0008-202617-1008
-UPDATE,000585781,CC. 1.038.866.771,Kristian David,Rojas Ceballos,,1,kristian.rojas@upb.edu.co
-ENROLL,000585781,,Student_te,UPBV
-ENROLL,000585781,,Student,5555-0008-202617-1008
-UPDATE,000587587,CC. 1.036.662.804,Eliana,Londoño Garc,,1,eliana.londono@upb.edu.co
-ENROLL,000587587,,Student_te,UPBV
-ENROLL,000587587,,Student,5555-0008-202617-1008
-UPDATE,000588410,CC. 1.000.339.131,Mario Alejandro,Ortiz Vargas,,1,mario.ortizv@upb.edu.co
-ENROLL,000588410,,Student_te,UPBV
-ENROLL,000588410,,Student,5555-0008-202617-1008
+UPDATE,000236314,CC. 30.983.147,Luz Milda,Chipiaje Ponare,,1,luzchipiaje@gmail.com
+ENROLL,000236314,,Student_fa,UPBV
+ENROLL,000236314,,Student,3313-2015-202641-52404
+CREATE,000426962,CC. 1.005.183.775,Karen Viviana,Quiñones Alvarez,,Student_fa,1,karen.quinones.2020@upb.edu.co
+ENROLL,000426962,,Student_fa,CVFA
+ENROLL,000426962,,Student,3313-2026-202641-51992
+CREATE,000356605,CC. 1.000.532.504,Manuela,Orrego Arias,,Student_fa,1,manue.arias24@gmail.com
+ENROLL,000356605,,Student_fa,CVFA
+ENROLL,000356605,,Student,3313-2026-202641-51992
+CREATE,000600620,CC. 1.003.315.640,Valentina,Amaya Vieco,,Student_fa,1,valeeamayavieco@gmail.com
+ENROLL,000600620,,Student_fa,CVFA
+ENROLL,000600620,,Student,3313-2026-202641-51992
+UPDATE,000310404,CC. 1.123.636.742,Daniela,Rojas Montoya,,1,danielarojasmya@gmail.com
+ENROLL,000310404,,Student_fa,UPBV
+ENROLL,000310404,,Student,3313-2026-202641-51992
+CREATE,000603260,CC. 1.020.808.988,Yenny Ximena,Diaz Serrano,,Student_fa,1,yennyxnadias@hotmail.com
+ENROLL,000603260,,Student_fa,CVFA
+ENROLL,000603260,,Student,3313-2026-202641-51992
+CREATE,000604165,CC. 1.045.754.368,Jennifer Paola,Diaz Marquez,,Student_fa,1,jenniferpaoladiazmarquez@gmail.com
+ENROLL,000604165,,Student_fa,CVFA
+ENROLL,000604165,,Student,3313-2026-202641-51992
+CREATE,000606255,CC. 1.007.975.613,Valentina,Cervantes Fernandez,,Student_fa,1,valecerv27200@gmail.com
+ENROLL,000606255,,Student_fa,CVFA
+ENROLL,000606255,,Student,3313-2026-202641-51992
+CREATE,000605343,CC. 1.017.157.140,Yuliet Cristina,Muñoz Zapata,,Student_fa,1,yulieth.munozzapata@gmail.com
+ENROLL,000605343,,Student_fa,CVFA
+ENROLL,000605343,,Student,3313-2026-202641-51992
+CREATE,000565919,CC. 43.146.102,Diana Constanza,Gutierrez Mazo,,Student_fa,1,dianitaco5@gmail.com
+ENROLL,000565919,,Student_fa,CVFA
+ENROLL,000565919,,Student,3313-2026-202641-51992
+CREATE,000218948,CC. 1.037.623.729,Viviana Maria,Restrepo Agudelo,,Student_fa,1,vivianarestrepoagudelo@gmail.com
+ENROLL,000218948,,Student_fa,CVFA
+ENROLL,000218948,,Student,3313-2026-202641-51992
+UPDATE,000573997,CC. 32.205.532,Olga Lucia,Uribe,,1,lucia.uribe@hotmail.com
+ENROLL,000573997,,Student_fa,UPBV
+ENROLL,000573997,,Student,3313-2026-202641-51992
+UPDATE,000586514,CC. 1.053.818.682,Tania,Marin Manrique,,1,tmarin92@hotmail.com
+ENROLL,000586514,,Student_fa,UPBV
+ENROLL,000586514,,Student,3313-2026-202641-51992
+UPDATE,000586515,CC. 1.072.671.521,Mauricio,Rojas Zapata,,1,mauricio.rojasz@upb.edu.co
+ENROLL,000586515,,Student_fa,UPBV
+ENROLL,000586515,,Student,3313-2026-202641-51992
+UPDATE,000593432,CC. 1.017.274.227,Kendry Dayana,Salas Torres,,1,kendryday@gmail.com
+ENROLL,000593432,,Student_fa,UPBV
+ENROLL,000593432,,Student,3313-2026-202641-51992
+UPDATE,000533553,CC. 1.102.387.993,Diana Lucia,Carvajal Montalvo,,1,psluciacofa@gmail.com
+ENROLL,000533553,,Student_fa,UPBV
+ENROLL,000533553,,Student,3313-2026-202641-51992
+UPDATE,000559842,CC. 1.152.705.098,Luisa Fernanda,Barrientos Alvarez,,1,luisafernandabarrientosalvarez@gmail.com
+ENROLL,000559842,,Student_fa,UPBV
+ENROLL,000559842,,Student,3313-2026-202641-51992
+UPDATE,000593101,CC. 1.017.244.867,Maria Camila,Jimenez Arredondo,,1,mariac.jimenez@upb.edu.co
+ENROLL,000593101,,Student_fa,UPBV
+ENROLL,000593101,,Student,3313-2026-202641-51992
+UPDATE,000589032,CC. 1.098.708.783,Jennyfer Dayanne,Forero Madiedo,,1,jennyferforero1@hotmail.com
+ENROLL,000589032,,Student_fa,UPBV
+ENROLL,000589032,,Student,3313-2026-202641-51992
+UPDATE,000593953,CC. 1.026.575.568,Monica Andrea,Cardenas Bejarano,,1,monicacardenas.932@gmail.com
+ENROLL,000593953,,Student_fa,UPBV
+ENROLL,000593953,,Student,3313-2026-202641-51992
+UPDATE,000551582,CC. 1.063.178.335,Maria Del Pilar,Lopez,,1,pililopezrhenals@gmail.com
+ENROLL,000551582,,Student_fa,UPBV
+ENROLL,000551582,,Student,3313-2026-202641-51992
+UPDATE,000588690,CC. 1.096.039.996,Alejandro,Salazar Mayorquin,,1,asalazarm_1@uqvirtual.edu.co
+ENROLL,000588690,,Student_fa,UPBV
+ENROLL,000588690,,Student,3313-2026-202641-51992
+UPDATE,000245869,CC. 1.118.565.428,Katherin Dayanna,Rodriguez Calderon,,1,katyd9607@gmail.com
+ENROLL,000245869,,Student_fa,UPBV
+ENROLL,000245869,,Student,3313-2026-202641-51992
+CREATE,000609637,CC. 1.054.999.783,Alejandra,Herrera Giraldo,,Student_fa,1,alejaa.hg@gmail.com
+ENROLL,000609637,,Student_fa,CVFA
+ENROLL,000609637,,Student,3313-2026-202641-51992
+CREATE,000605857,CC. 1.102.372.771,Leiny Milena,Latorre Diaz,,Student_fa,1,milenalatorre93@gmail.com
+ENROLL,000605857,,Student_fa,CVFA
+ENROLL,000605857,,Student,3313-2026-202641-51992
+UPDATE,000553968,CC. 1.037.632.695,Susana,Velasquez Chavarriaga,,1,Susvelasc@gmail.com
+ENROLL,000553968,,Student_fa,UPBV
+ENROLL,000553968,,Student,3313-2026-202641-51992
+UPDATE,000595460,CC. 1.044.503.331,Yuliana Marcela,Restrepo Garcia,,1,yrestrepo21@gmail.com
+ENROLL,000595460,,Student_fa,UPBV
+ENROLL,000595460,,Student,3313-2026-202641-51992
+CREATE,000610122,CC. 1.026.143.371,Isabel Cristina,Franco Colorado,,Student_fa,1,icfc02@gmail.com
+ENROLL,000610122,,Student_fa,CVFA
+ENROLL,000610122,,Student,3313-2026-202641-51992
+UPDATE,000374675,CC. 1.005.336.964,Sareth Daniela,Hazbon Manrique,,1,sareth_hazbon@hotmail.com
+ENROLL,000374675,,Student_fa,UPBV
+ENROLL,000374675,,Student,3313-2026-202641-51992
+UPDATE,000602479,CC. 1.050.975.549,Adana Eli,Fonseca Salazar,,1,adana.fonseca@idem.edu.co
+ENROLL,000602479,,Student_fa,UPBV
+ENROLL,000602479,,Student,3313-2130-202641-57758
+UPDATE,000602500,CC. 1.020.459.801,Alison,Vanegas Pulgarin,,1,alison_vanegas@outlook.com
+ENROLL,000602500,,Student_fa,UPBV
+ENROLL,000602500,,Student,3313-2130-202641-57758
+UPDATE,000453817,CC. 71.770.056,Carlos Mario,Acevedo Banguero,,1,cacevedo32@hotmail.com
+ENROLL,000453817,,Student_fa,UPBV
+ENROLL,000453817,,Student,3313-2130-202641-57758
+UPDATE,000433731,CC. 70.141.085,Eusebio,Montoya Vanegas,,1,eusebiomontoyavanegas@gmail.com
+ENROLL,000433731,,Student_fa,UPBV
+ENROLL,000433731,,Student,3313-2130-202641-57758
+UPDATE,000577428,CC. 43.626.707,Alexandra Maria,Perez Lopez,,1,alexandramariaperezlopez27@hotmail.com
+ENROLL,000577428,,Student_fa,UPBV
+ENROLL,000577428,,Student,3313-2130-202641-57758
+UPDATE,000577426,CC. 15.354.050,Edison,Patiño Lopez,,1,edison.patino@upb.edu.co
+ENROLL,000577426,,Student_fa,UPBV
+ENROLL,000577426,,Student,3313-2130-202641-57758
+UPDATE,000582691,CC. 1.152.189.788,Carlos Roberto,Gomez Arroyave,,1,gomezarroyavec@gmail.com
+ENROLL,000582691,,Student_fa,UPBV
+ENROLL,000582691,,Student,3313-2130-202641-57758
+UPDATE,000370364,CC. 71.260.048,Carlos,Martinez Muñoz,,1,carlos.martinezmu@upb.edu.co
+ENROLL,000370364,,Student_fa,UPBV
+ENROLL,000370364,,Student,3313-2130-202641-57758
+UPDATE,000602476,CC. 1.037.631.951,Carolina,Diosa Novoa,,1,carolinadnovoa@gmail.com
+ENROLL,000602476,,Student_fa,UPBV
+ENROLL,000602476,,Student,3313-2130-202641-57758
+UPDATE,000190008,CC. 1.128.397.009,Carolina Maria,Gomez Gomez,,1,carogo17@gmail.com
+ENROLL,000190008,,Student_fa,UPBV
+ENROLL,000190008,,Student,3313-2130-202641-57758
+UPDATE,000390107,CC. 1.017.164.639,Chris Liceth,Restrepo Castaño,,1,liceth214@hotmail.com
+ENROLL,000390107,,Student_fa,UPBV
+ENROLL,000390107,,Student,3313-2130-202641-57758
+UPDATE,000602750,CC. 1.152.190.931,Cindy Tatiana,Villegas Sucerquia,,1,cindy.villegas@ieblanquizal.edu.co
+ENROLL,000602750,,Student_fa,UPBV
+ENROLL,000602750,,Student,3313-2130-202641-57758
+UPDATE,000602561,CC. 1.036.641.911,Eyfer Estiben,Ortiz Londoño,,1,eifer_0810@hotmail.com
+ENROLL,000602561,,Student_fa,UPBV
+ENROLL,000602561,,Student,3313-2130-202641-57758
+UPDATE,000602495,CC. 1.128.405.909,Isabel Cristina,Rodriguez Suarez,,1,isacros@hotmail.com
+ENROLL,000602495,,Student_fa,UPBV
+ENROLL,000602495,,Student,3313-2130-202641-57758
+UPDATE,000602486,CC. 1.128.399.422,Jaime Alberto,Orozco Saldarriaga,,1,jaimeorozco89@hotmail.com
+ENROLL,000602486,,Student_fa,UPBV
+ENROLL,000602486,,Student,3313-2130-202641-57758
+UPDATE,000602725,CC. 1.075.222.832,Jairo Andres,Castillo Buitrago,,1,jairocastillo@derkasantodomingo.edu.co
+ENROLL,000602725,,Student_fa,UPBV
+ENROLL,000602725,,Student,3313-2130-202641-57758
+UPDATE,000602483,CC. 1.023.722.372,Jorge Hugo,Mesa Giraldo,,1,jormez24@gmail.com
+ENROLL,000602483,,Student_fa,UPBV
+ENROLL,000602483,,Student,3313-2130-202641-57758
+UPDATE,000602580,CC. 1.152.186.152,Juan Carlos,Echavarria Gomez,,1,juanechavarria0323@gmail.com
+ENROLL,000602580,,Student_fa,UPBV
+ENROLL,000602580,,Student,3313-2130-202641-57758
+UPDATE,000301316,CC. 8.104.604,John Alexander,Zapata Ramírez,,1,maestriabmc@hotmail.com
+ENROLL,000301316,,Student_fa,UPBV
+ENROLL,000301316,,Student,3313-2130-202641-57758
+UPDATE,000413208,CC. 1.033.647.540,Juan Carlos,Gomez,,1,juancarlosgomezlopera@gmail.com
+ENROLL,000413208,,Student_fa,UPBV
+ENROLL,000413208,,Student,3313-2130-202641-57758
+UPDATE,000602557,CC. 1.077.451.416,Lina Marcela,Martinez Lemus,,1,martinezlemuslinamarcela@gmail.com
+ENROLL,000602557,,Student_fa,UPBV
+ENROLL,000602557,,Student,3313-2130-202641-57759
+UPDATE,000218930,CC. 1.037.622.794,Marcela,Castaño Muñoz,,1,marcelacastanomunoz12@gmail.com
+ENROLL,000218930,,Student_fa,UPBV
+ENROLL,000218930,,Student,3313-2130-202641-57759
+UPDATE,000602896,CC. 1.077.438.167,Juan Carlos,Mena Cordoba,,1,juan.mena.cordoba@gmail.com
+ENROLL,000602896,,Student_fa,UPBV
+ENROLL,000602896,,Student,3313-2130-202641-57759
+UPDATE,000602899,CC. 43.810.043,Luz Estela,Silva Rodriguez,,1,melokasilva@yahoo.es
+ENROLL,000602899,,Student_fa,UPBV
+ENROLL,000602899,,Student,3313-2130-202641-57759
+UPDATE,000217091,CC. 1.017.224.833,Karen,Gonzalez Ortiz,,1,karen.gonzalezor@upb.edu.co
+ENROLL,000217091,,Student_fa,UPBV
+ENROLL,000217091,,Student,3313-2130-202641-57759
+UPDATE,000258580,CC. 43.105.980,Liliana Patricia,Agudelo Velasquez,,1,lili43105980@gmail.com
+ENROLL,000258580,,Student_fa,UPBV
+ENROLL,000258580,,Student,3313-2130-202641-57759
+UPDATE,000602719,CC. 1.039.024.366,Maria Camila,Acevedo Molina,,1,maria.acevedo@iefeyalegriapopular.edu.co
+ENROLL,000602719,,Student_fa,UPBV
+ENROLL,000602719,,Student,3313-2130-202641-57759
+UPDATE,000578741,CC. 64.700.458,Maria Angelica,Atencia Vergara,,1,maria.atencia@feyalegrialacima.edu.co
+ENROLL,000578741,,Student_fa,UPBV
+ENROLL,000578741,,Student,3313-2130-202641-57759
+UPDATE,000602587,CC. 1.035.427.952,Maria Alejandra,Osorio Castaño,,1,maosorio62@gmail.com
+ENROLL,000602587,,Student_fa,UPBV
+ENROLL,000602587,,Student,3313-2130-202641-57759
+UPDATE,000587671,CC. 43.848.115,Maria Del Carmen,Restrepo Bedoya,,1,pensarcsobrero@gmail.com
+ENROLL,000587671,,Student_fa,UPBV
+ENROLL,000587671,,Student,3313-2130-202641-57759
+UPDATE,000579109,CC. 98.636.345,Milton,Sarmiento Isaza,,1,miltonsarmientoisaza@gmail.com
+ENROLL,000579109,,Student_fa,UPBV
+ENROLL,000579109,,Student,3313-2130-202641-57759
+UPDATE,000602730,CC. 1.036.671.507,Pablo Esteban,Henao Ochoa,,1,pesteban.henao@gmail.com
+ENROLL,000602730,,Student_fa,UPBV
+ENROLL,000602730,,Student,3313-2130-202641-57759
+UPDATE,000602469,CC. 1.020.465.134,Stephany,Cañas Valencia,,1,stephany@lajoseroberto.edu.co
+ENROLL,000602469,,Student_fa,UPBV
+ENROLL,000602469,,Student,3313-2130-202641-57759
+UPDATE,000602492,CC. 39.178.733,Yenny Andrea,Renteria Marin,,1,yenny.renteria@ieciudadelalasamericas.edu.co
+ENROLL,000602492,,Student_fa,UPBV
+ENROLL,000602492,,Student,3313-2130-202641-57759
+UPDATE,000602554,CC. 39.455.494,Yised Viviana,Giraldo Gomez,,1,yised.giraldo@iegabrielrestrepo.edu.co
+ENROLL,000602554,,Student_fa,UPBV
+ENROLL,000602554,,Student,3313-2130-202641-57759
+UPDATE,000031353,CC. 43.569.212,Margarita Maria,Cano Pulgarin,,1,margarita.cano@iefaz.edu.co
+ENROLL,000031353,,Student_fa,UPBV
+ENROLL,000031353,,Student,3313-2130-202641-57759
+UPDATE,000602800,CC. 1.020.726.087,Martha Isabel,Torres Sanchez,,1,tata0235@hotmail.com
+ENROLL,000602800,,Student_fa,UPBV
+ENROLL,000602800,,Student,3313-2130-202641-57759
+UPDATE,000332603,CC. 43.921.710,Natalia Andrea,Hinestroza Mesa,,1,natahinestroza728@gmail.com
+ENROLL,000332603,,Student_fa,UPBV
+ENROLL,000332603,,Student,3313-2130-202641-57759
+UPDATE,000449607,CC. 39.176.448,Sandra Milena,Cano Palacio,,1,smilec19@gmail.com
+ENROLL,000449607,,Student_fa,UPBV
+ENROLL,000449607,,Student,3313-2130-202641-57759
+UPDATE,000038142,CC. 71.535.745,Walter Eduardo,Salazar Vargas,,1,waltersalazar1045@gmail.com
+ENROLL,000038142,,Student_fa,UPBV
+ENROLL,000038142,,Student,3313-2130-202641-57759
+UPDATE,000587448,CC. 66.738.387,Alma De Las Lajas,Cerezo Renteria,,1,cerezo_alma@hotmail.com
+ENROLL,000587448,,Student_fa,UPBV
+ENROLL,000587448,,Student,5556-2006-202641-52077
+UPDATE,000588694,CC. 36.951.557,Carol Shirley,Buesaquillo Castro,,1,carolsbuesaquilloc@gmail.com
+ENROLL,000588694,,Student_fa,UPBV
+ENROLL,000588694,,Student,5556-2006-202641-52077
+UPDATE,000588749,CC. 1.016.066.391,Kevin Fabian,Suarez Martinez,,1,ksuarez@unimonserrate.edu.co
+ENROLL,000588749,,Student_fa,UPBV
+ENROLL,000588749,,Student,5556-2006-202641-52077
+UPDATE,000587447,CC. 1.083.867.177,Victor Alfonso,Anacona Diaz,,1,diazvictor1986@hotmail.com
+ENROLL,000587447,,Student_fa,UPBV
+ENROLL,000587447,,Student,5556-2006-202641-52077
+UPDATE,000587921,CC. 1.111.757.583,Xiomara,Castillo Delgado,,1,xiomycastillo1987@hotmail.com
+ENROLL,000587921,,Student_fa,UPBV
+ENROLL,000587921,,Student,5556-2006-202641-52077
+UPDATE,000588320,CC. 1.023.943.773,Youlin Stephanie,Cardona Zambrano,,1,youlincardonalcs@gmail.com
+ENROLL,000588320,,Student_fa,UPBV
+ENROLL,000588320,,Student,5556-2006-202641-52077
+UPDATE,000587366,CC. 1.130.609.543,Liliana,Restrepo Jimenez,,1,restrepoliliana969@gmail.com
+ENROLL,000587366,,Student_fa,UPBV
+ENROLL,000587366,,Student,5556-2006-202641-52077
+UPDATE,000536611,CC. 80.218.808,Edisson Alexander,Lopez Perez,,1,alexlopez25@yahoo.com
+ENROLL,000536611,,Student_fa,UPBV
+ENROLL,000536611,,Student,5556-2006-202641-52077
+UPDATE,000586844,CC. 1.152.470.370,Valentina,Tabares Gaviria,,1,valentinatabares0623@gmail.com
+ENROLL,000586844,,Student_fa,UPBV
+ENROLL,000586844,,Student,5556-2006-202641-52077
+UPDATE,000322572,CC. 1.077.444.627,Carlos Dionisio,Salamandra Palacios,,1,carlos.salamandra@yahoo.com.co
+ENROLL,000322572,,Student_fa,UPBV
+ENROLL,000322572,,Student,5556-2006-202641-52077
+UPDATE,000591210,CC. 39.578.653,Olga Lucia,Loaiza Mendoza,,1,olgalucialoaizamendoza@gmail.com
+ENROLL,000591210,,Student_fa,UPBV
+ENROLL,000591210,,Student,5556-2006-202641-52077
+UPDATE,000593516,CC. 15.441.639,Esteban Mauricio,Cadavid Gomez,,1,estebancadavidg@gmail.com
+ENROLL,000593516,,Student_fa,UPBV
+ENROLL,000593516,,Student,5556-2006-202641-52077
+UPDATE,000564267,CC. 70.755.386,Sneyder Willington,Quiceno Marin,,1,sneyderqmarin@gmail.com
+ENROLL,000564267,,Student_fa,UPBV
+ENROLL,000564267,,Student,5556-2006-202641-52077
+UPDATE,000454649,CC. 1.083.902.661,Jose,Collazos Molina,,1,josecollazosm@gmail.com
+ENROLL,000454649,,Student_fa,UPBV
+ENROLL,000454649,,Student,5556-2006-202641-52077
+UPDATE,000043453,CC. 43.364.222,Liliana Maria,Medina Peña,,1,lilimed2310@gmail.com
+ENROLL,000043453,,Student_fa,UPBV
+ENROLL,000043453,,Student,5556-2006-202641-52077
+UPDATE,000278506,CC. 1.037.368.799,Luisa Fernanda,Suárez Rodríguez,,1,luisaf1505@gmail.com
+ENROLL,000278506,,Student_fa,UPBV
+ENROLL,000278506,,Student,5556-2006-202641-52077
+UPDATE,000473250,CC. 49.715.521,Samira,Orozco Amaris,,1,samiraorozco1@gmail.com
+ENROLL,000473250,,Student_fa,UPBV
+ENROLL,000473250,,Student,5556-2006-202641-52077
+UPDATE,000272420,CC. 1.098.768.423,Daniela,Jimenez Blanco,,1,daniela.jimenezb22@gmail.com
+ENROLL,000272420,,Student_fa,UPBV
+ENROLL,000272420,,Student,5556-2006-202641-52077
+UPDATE,000589290,CC. 1.039.468.555,Daniela,Ceballos Chalarca,,1,danielaceballoschalarca@gmail.com
+ENROLL,000589290,,Student_fa,UPBV
+ENROLL,000589290,,Student,5557-2005-202641-52057
+UPDATE,000594993,CC. 1.020.397.347,Juliana,Vargas Soto,,1,juliavargas.soto@gmail.com
+ENROLL,000594993,,Student_fa,UPBV
+ENROLL,000594993,,Student,5557-2005-202641-52057
+UPDATE,000593643,CC. 1.098.823.495,Andres Julian,Galeano Carrascal,,1,andresgale1110@gmail.com
+ENROLL,000593643,,Student_fa,UPBV
+ENROLL,000593643,,Student,5557-2005-202641-52057
+UPDATE,000589152,CC. 1.073.173.386,Maria Camila,Veloza Chacon,,1,camilaveloza24@gmail.com
+ENROLL,000589152,,Student_fa,UPBV
+ENROLL,000589152,,Student,5557-2005-202641-52057
+UPDATE,000405941,CC. 1.017.248.600,Juliana,Franco Valverde,,1,fvalverdejuliana@gmail.com
+ENROLL,000405941,,Student_fa,UPBV
+ENROLL,000405941,,Student,5557-2005-202641-52057
+UPDATE,000126572,CC. 1.095.801.066,Laura Raquel,Marquez Leal,,1,laura.marquez389@gmail.com
+ENROLL,000126572,,Student_fa,UPBV
+ENROLL,000126572,,Student,5557-2005-202641-52057
+UPDATE,000345498,CC. 1.098.821.467,Laura Stefany,Barajas Molina,,1,laura.barajasm@upb.edu.co
+ENROLL,000345498,,Student_fa,UPBV
+ENROLL,000345498,,Student,5557-2005-202641-52057
+UPDATE,000375705,CC. 1.005.105.051,Vanessa Alexandra,Muñiz Calderon,,1,vanessa.muniz@upb.edu.co
+ENROLL,000375705,,Student_fa,UPBV
+ENROLL,000375705,,Student,5557-2005-202641-52057
+UPDATE,000497073,CC. 1.034.988.333,Susana,Perez Gonzalez,,1,susana.perezg@upb.edu.co
+ENROLL,000497073,,Student_pr,UPBV
+ENROLL,000497073,,Student,5557-2005-202641-52057
+CREATE,000455109,CC. 1.005.329.785,Andrea Camila,Garcia Pimentel,,Student_pr,1,andrea.garcia.2021@upb.edu.co
+ENROLL,000455109,,Student_pr,CVPR
+ENROLL,000455109,,Student,5557-2005-202641-52057
+UPDATE,000480914,TI. 1.062.428.656,Maria Jimena,Echeverri Rhenals,,1,maria.echeverrir@upb.edu.co
+ENROLL,000480914,,Student_pr,UPBV
+ENROLL,000480914,,Student,5557-2005-202641-52057
+UPDATE,000398049,CC. 1.000.752.544,Brayan Estiven,Arboleda Sanchez,,1,beas8505@gmail.com
+ENROLL,000398049,,Student_fa,UPBV
+ENROLL,000398049,,Student,5557-2005-202641-58476
+UPDATE,000594703,CC. 1.152.201.845,Cenid Liliana,Castano Giraldo,,1,cenid.castano@upb.edu.co
+ENROLL,000594703,,Student_fa,UPBV
+ENROLL,000594703,,Student,5557-2005-202641-58476
+UPDATE,000592693,CC. 1.018.510.926,Angie Tatiana,Coronado Guzman,,1,tatianacoronado06@outlook.es
+ENROLL,000592693,,Student_fa,UPBV
+ENROLL,000592693,,Student,5557-2005-202641-58476
+UPDATE,000591028,CC. 1.036.966.941,Valeria,Giraldo Ospina,,1,valeriagiraldoo1016@gmail.com
+ENROLL,000591028,,Student_fa,UPBV
+ENROLL,000591028,,Student,5557-2005-202641-58476
+UPDATE,000326633,CC. 1.001.366.900,Isabela,Muñoz Garcia,,1,isabelamunoz17117@gmail.com
+ENROLL,000326633,,Student_fa,UPBV
+ENROLL,000326633,,Student,5557-2005-202641-58476
+UPDATE,000590492,CC. 1.000.412.084,Esteban,Naranjo Cruz,,1,naranjoesteban1207@gmail.com
+ENROLL,000590492,,Student_fa,UPBV
+ENROLL,000590492,,Student,5557-2005-202641-58476
+UPDATE,000340475,CC. 1.001.131.830,Manuela,Ospina Alvarez,,1,manuelao0918@gmail.com
+ENROLL,000340475,,Student_fa,UPBV
+ENROLL,000340475,,Student,5557-2005-202641-58476
+UPDATE,000059025,CC. 98.544.215,Carlos Mario,Salgado Roldan,,1,pasaes704@gmail.com
+ENROLL,000059025,,Student_fa,UPBV
+ENROLL,000059025,,Student,5557-2005-202641-58476
+UPDATE,000224238,CC. 1.017.254.706,Sara,Upegui Varela,,1,sara.upeguiv@upb.edu.co
+ENROLL,000224238,,Student_ap,UPBV
+ENROLL,000224238,,Student,5557-2006-202641-SU3
+UPDATE,000590492,CC. 1.000.412.084,Esteban,Naranjo Cruz,,1,naranjoesteban1207@gmail.com
+ENROLL,000590492,,Student_fa,UPBV
+ENROLL,000590492,,Student,5557-2006-202641-SU3
+UPDATE,000594703,CC. 1.152.201.845,Cenid Liliana,Castano Giraldo,,1,cenid.castano@upb.edu.co
+ENROLL,000594703,,Student_fa,UPBV
+ENROLL,000594703,,Student,5557-2006-202641-SU3
+UPDATE,000340475,CC. 1.001.131.830,Manuela,Ospina Alvarez,,1,manuelao0918@gmail.com
+ENROLL,000340475,,Student_fa,UPBV
+ENROLL,000340475,,Student,5557-2006-202641-SU3
+UPDATE,000126572,CC. 1.095.801.066,Laura Raquel,Marquez Leal,,1,laura.marquez389@gmail.com
+ENROLL,000126572,,Student_fa,UPBV
+ENROLL,000126572,,Student,5557-2006-202641-SU3
+UPDATE,000405941,CC. 1.017.248.600,Juliana,Franco Valverde,,1,fvalverdejuliana@gmail.com
+ENROLL,000405941,,Student_fa,UPBV
+ENROLL,000405941,,Student,5557-2006-202641-SU3
+UPDATE,000589290,CC. 1.039.468.555,Daniela,Ceballos Chalarca,,1,danielaceballoschalarca@gmail.com
+ENROLL,000589290,,Student_fa,UPBV
+ENROLL,000589290,,Student,5557-2006-202641-SU3
+UPDATE,000592693,CC. 1.018.510.926,Angie Tatiana,Coronado Guzman,,1,tatianacoronado06@outlook.es
+ENROLL,000592693,,Student_fa,UPBV
+ENROLL,000592693,,Student,5557-2006-202641-SU3
+UPDATE,000326633,CC. 1.001.366.900,Isabela,Muñoz Garcia,,1,isabelamunoz17117@gmail.com
+ENROLL,000326633,,Student_fa,UPBV
+ENROLL,000326633,,Student,5557-2006-202641-SU3
+UPDATE,000594993,CC. 1.020.397.347,Juliana,Vargas Soto,,1,juliavargas.soto@gmail.com
+ENROLL,000594993,,Student_fa,UPBV
+ENROLL,000594993,,Student,5557-2006-202641-SU3
+UPDATE,000591028,CC. 1.036.966.941,Valeria,Giraldo Ospina,,1,valeriagiraldoo1016@gmail.com
+ENROLL,000591028,,Student_fa,UPBV
+ENROLL,000591028,,Student,5557-2006-202641-SU3
+UPDATE,000593643,CC. 1.098.823.495,Andres Julian,Galeano Carrascal,,1,andresgale1110@gmail.com
+ENROLL,000593643,,Student_fa,UPBV
+ENROLL,000593643,,Student,5557-2006-202641-SU3
+UPDATE,000398049,CC. 1.000.752.544,Brayan Estiven,Arboleda Sanchez,,1,beas8505@gmail.com
+ENROLL,000398049,,Student_fa,UPBV
+ENROLL,000398049,,Student,5557-2006-202641-SU3
+UPDATE,000345498,CC. 1.098.821.467,Laura Stefany,Barajas Molina,,1,laura.barajasm@upb.edu.co
+ENROLL,000345498,,Student_fa,UPBV
+ENROLL,000345498,,Student,5557-2006-202641-SU3
+UPDATE,000589152,CC. 1.073.173.386,Maria Camila,Veloza Chacon,,1,camilaveloza24@gmail.com
+ENROLL,000589152,,Student_fa,UPBV
+ENROLL,000589152,,Student,5557-2006-202641-SU3
+UPDATE,000375705,CC. 1.005.105.051,Vanessa Alexandra,Muñiz Calderon,,1,vanessa.muniz@upb.edu.co
+ENROLL,000375705,,Student_fa,UPBV
+ENROLL,000375705,,Student,5557-2006-202641-SU3
+UPDATE,000500996,CC. 73.208.426,Jorge Armando,Giraldo Calle,,1,jorge.giraldoc@upb.edu.co
+ENROLL,000500996,,Student_fa,UPBV
+ENROLL,000500996,,Student,5557-2062-202641-51862
+UPDATE,000587673,CC. 1.017.272.881,Juan Pablo,Mejia Vasquez,,1,jpmv999@gmail.com
+ENROLL,000587673,,Student_fa,UPBV
+ENROLL,000587673,,Student,5557-2062-202641-51862
+UPDATE,000575580,CC. 1.039.449.134,Joan Camilo,Cuartas Mejia,,1,camilo4tas@gmail.com
+ENROLL,000575580,,Student_fa,UPBV
+ENROLL,000575580,,Student,5557-2062-202641-51862
+UPDATE,000592127,CC. 1.036.404.981,Luisa Fernanda Luisa Fernanda,Martinez Arenas,,1,luisamartinez475@gmail.com
+ENROLL,000592127,,Student_fa,UPBV
+ENROLL,000592127,,Student,5557-2062-202641-51862
+UPDATE,000588861,CC. 1.000.401.156,Valentina,Amariles Hurtado,,1,valentinaamariles07@gmail.com
+ENROLL,000588861,,Student_fa,UPBV
+ENROLL,000588861,,Student,5557-2062-202641-51862
+UPDATE,000587226,CC. 1.022.415.976,Jenny Tatiana,Munoz Diaz,,1,thata.munoz@gmail.com
+ENROLL,000587226,,Student_fa,UPBV
+ENROLL,000587226,,Student,5557-2062-202641-51862
+UPDATE,000422259,CC. 1.005.241.221,Xue Yoeni,Perez Barrios,,1,perezxue@gmail.com
+ENROLL,000422259,,Student_fa,UPBV
+ENROLL,000422259,,Student,5557-2062-202641-51862
+UPDATE,000117281,CC. 1.099.365.134,Claudia Mireya,Sandoval Correa,,1,sandovalcorreaclaudia@gmail.com
+ENROLL,000117281,,Student_fa,UPBV
+ENROLL,000117281,,Student,5557-2062-202641-51862
+UPDATE,000564983,CC. 1.005.160.777,Slendy Marcela,Florez Larrota,,1,smflorezlarrota@gmail.com
+ENROLL,000564983,,Student_fa,UPBV
+ENROLL,000564983,,Student,5557-2062-202641-51862
+UPDATE,000533670,CC. 1.001.005.221,Mateo,Morales Betancur,,1,mateo.moralesb@upb.edu.co
+ENROLL,000533670,,Student_pr,UPBV
+ENROLL,000533670,,Student,5557-2062-202641-51862
+UPDATE,000467297,CC. 1.001.368.333,Sara,Garcia Parra,,1,sara.garciapa@upb.edu.co
+ENROLL,000467297,,Student_pr,UPBV
+ENROLL,000467297,,Student,5557-2062-202641-51862
+UPDATE,000532863,CC. 1.031.172.084,Maria Victoria,Rodriguez Fonseca,,1,mariav.rodriguezf@upb.edu.co
+ENROLL,000532863,,Student_pr,UPBV
+ENROLL,000532863,,Student,5557-2062-202641-51862
+CREATE,000481500,CC. 1.096.700.631,Sara Gabriela,Barrios Llanes,,Student_pr,1,sara.barrios@upb.edu.co
+ENROLL,000481500,,Student_pr,CVPR
+ENROLL,000481500,,Student,5557-2062-202641-51862
+UPDATE,000050555,CC. 1.017.147.254,Paulina,Bedoya Cadavid,,1,paulina1702@hotmail.com
+ENROLL,000050555,,Student_fa,UPBV
+ENROLL,000050555,,Student,5557-2064-202641-51894
+UPDATE,000195155,CC. 1.017.220.429,Carlos Andres,Rojas Correa,,1,carlos.rojasco@gmail.com
+ENROLL,000195155,,Student_fa,UPBV
+ENROLL,000195155,,Student,5557-2064-202641-51894
+UPDATE,000582072,CC. 1.098.603.233,John Jairo,Ballen Chaves,,1,johnjairoballenchaves0705@gmail.com
+ENROLL,000582072,,Student_fa,UPBV
+ENROLL,000582072,,Student,5557-2064-202641-51894
+UPDATE,000557674,CC. 1.000.089.544,Susana,Ocampo Escobar,,1,ocampoescobars@gmail.com
+ENROLL,000557674,,Student_fa,UPBV
+ENROLL,000557674,,Student,5557-2064-202641-51894
+UPDATE,000315702,CC. 1.152.708.118,Susana,Camacho Ochoa,,1,susana.camacho54@gmail.com
+ENROLL,000315702,,Student_fa,UPBV
+ENROLL,000315702,,Student,5557-2064-202641-51894
+UPDATE,000070112,CC. 71.378.280,David,Berrio Ruiz,,1,davberrio@gmail.com
+ENROLL,000070112,,Student_fa,UPBV
+ENROLL,000070112,,Student,5557-2064-202641-51894
+UPDATE,000579056,CC. 1.140.873.820,Melissa,Suarez Sanjuan,,1,mssanjuan09@gmail.com
+ENROLL,000579056,,Student_fa,UPBV
+ENROLL,000579056,,Student,5557-2064-202641-51894
+UPDATE,000582588,CC. 15.388.003,Eduard Elias,Gomez Lopez,,1,quienmaspues@gmail.com
+ENROLL,000582588,,Student_fa,UPBV
+ENROLL,000582588,,Student,5557-2064-202641-51894
+UPDATE,000573367,CC. 1.045.755.793,Jose Antonio,Berrocal Contreras,,1,joseberrocal09@hotmail.com
+ENROLL,000573367,,Student_fa,UPBV
+ENROLL,000573367,,Student,5557-2064-202641-51894
+UPDATE,000573366,CC. 1.045.739.137,Jeison Jair,Badillo De La Cruz,,1,jotabadillo1@gmail.com
+ENROLL,000573366,,Student_fa,UPBV
+ENROLL,000573366,,Student,5557-2064-202641-51894
+UPDATE,000116114,CC. 1.098.662.999,Juan Carlos,Rangel Noriega,,1,juancarlosrangelnoriega@gmail.com
+ENROLL,000116114,,Student_fa,UPBV
+ENROLL,000116114,,Student,5557-2064-202641-51894
+UPDATE,000076625,CC. 1.098.633.720,Claudia Marcela,Ramirez Lopez,,1,claudiaramirez2520@gmail.com
+ENROLL,000076625,,Student_fa,UPBV
+ENROLL,000076625,,Student,5557-2064-202641-51894
+UPDATE,000258198,CC. 1.095.821.437,Natalia,Sanabria Cardenas,,1,nataliasanabriacardenas@gmail.com
+ENROLL,000258198,,Student_fa,UPBV
+ENROLL,000258198,,Student,5557-2064-202641-51894
+UPDATE,000530004,CC. 1.019.131.983,Natalia,Chaverra Mosquera,,1,mosquerachaverranatalia@gmail.com
+ENROLL,000530004,,Student_fa,UPBV
+ENROLL,000530004,,Student,5557-2064-202641-51894
+UPDATE,000532863,CC. 1.031.172.084,Maria Victoria,Rodriguez Fonseca,,1,mariav.rodriguezf@upb.edu.co
+ENROLL,000532863,,Student_pr,UPBV
+ENROLL,000532863,,Student,5557-2064-202641-51894
+UPDATE,000147832,TI. 1.001.004.446,Santiago,Velez Osorio,,1,santiago.velezo@upb.edu.co
+ENROLL,000147832,,Student_pr,UPBV
+ENROLL,000147832,,Student,5557-2064-202641-51894
+UPDATE,000405182,CC. 1.000.640.025,Maria Isabel,Cardona Lopez,,1,maria.cardonal@upb.edu.co
+ENROLL,000405182,,Student_pr,UPBV
+ENROLL,000405182,,Student,5557-2064-202641-51894
+UPDATE,000573626,CC. 1.067.886.125,Yina Luz,Dominguez Sierra,,1,ginalu90@hotmail.com
+ENROLL,000573626,,Student_fa,UPBV
+ENROLL,000573626,,Student,5559-2080V-202641-51657
+UPDATE,000584972,CC. 32.143.739,Martha Elena,Correa Rivera,,1,spica37@hotmail.com
+ENROLL,000584972,,Student_fa,UPBV
+ENROLL,000584972,,Student,5559-2080V-202641-51657
+UPDATE,000584978,CC. 1.077.482.173,Luz Victoria,Perea Cordoba,,1,luzvictoria112@gmail.com
+ENROLL,000584978,,Student_fa,UPBV
+ENROLL,000584978,,Student,5559-2080V-202641-51657
+UPDATE,000287176,CC. 1.193.117.772,Sara Estefania,Cardona Higuita,,1,saracardona.220@gmail.com
+ENROLL,000287176,,Student_fa,UPBV
+ENROLL,000287176,,Student,5559-2080V-202641-51657
+UPDATE,000316254,CC. 1.152.223.983,Lina Maria,Calad Ballesteros,,1,Lcalad23@hotmail.com
+ENROLL,000316254,,Student_fa,UPBV
+ENROLL,000316254,,Student,5559-2080V-202641-51657
+UPDATE,000125888,CC. 1.067.903.004,Angelica,Blanco Gonzalez,,1,ablanco279@hotmail.com
+ENROLL,000125888,,Student_fa,UPBV
+ENROLL,000125888,,Student,5559-2080V-202641-51657
+UPDATE,000584917,CC. 1.077.477.878,Jhon Alexander,Arriaga Palacios,,1,jhonarriagap@gmail.com
+ENROLL,000584917,,Student_fa,UPBV
+ENROLL,000584917,,Student,5559-2080V-202641-51675
+UPDATE,000592985,CC. 10.769.521,Alexander,Doria Florez,,1,alexd3612@gmail.com
+ENROLL,000592985,,Student_fa,UPBV
+ENROLL,000592985,,Student,5559-2080V-202641-51675
+UPDATE,000363852,CC. 1.004.012.717,Juan Diego,Rengifo Neita,,1,Jrengifoneita@gmail.com
+ENROLL,000363852,,Student_fa,UPBV
+ENROLL,000363852,,Student,5559-2080V-202641-51675
+UPDATE,000594445,CC. 1.035.853.221,Yeisson Alexander,Urrego Botero,,1,yeisson.urrego@upb.edu.co
+ENROLL,000594445,,Student_fa,UPBV
+ENROLL,000594445,,Student,5559-2080V-202641-51675
+UPDATE,000589150,CC. 1.032.489.155,Nicolas,Hoyos Restrepo,,1,nicohoyos1997@gmail.com
+ENROLL,000589150,,Student_fa,UPBV
+ENROLL,000589150,,Student,5559-2080V-202641-51675
+UPDATE,000354547,CC. 1.001.391.048,Andres Felipe,Lopez Vanegas,,1,andresf.lopezv@upb.edu.co
+ENROLL,000354547,,Student_fa,UPBV
+ENROLL,000354547,,Student,5559-2080V-202641-51690
+UPDATE,000591852,CC. 1.002.633.958,Malorin Yuliana,Cardona Gil,,1,malorincardona@hotmail.com
+ENROLL,000591852,,Student_fa,UPBV
+ENROLL,000591852,,Student,5559-2080V-202641-51690
+UPDATE,000392784,CC. 1.003.432.390,Sara  Cristina,Paternina Ortiz,,1,saracpaor123@gmail.com
+ENROLL,000392784,,Student_fa,UPBV
+ENROLL,000392784,,Student,5559-2080V-202641-51690
+UPDATE,000345272,CC. 1.032.507.083,Julian Alfonso,Dueñas Rivera,,1,julian.duenas@upb.edu.co
+ENROLL,000345272,,Student_fa,UPBV
+ENROLL,000345272,,Student,5559-2080V-202641-51690
+UPDATE,000592621,CC. 5.477.805,Yamith,Riaño Sanchez,,1,yamith0618@yahoo.com
+ENROLL,000592621,,Student_fa,UPBV
+ENROLL,000592621,,Student,5559-2080V-202641-51690
+UPDATE,000591855,CC. 1.053.867.628,David Fernando,Zuluaga Orozco,,1,davidfer192919@gmail.com
+ENROLL,000591855,,Student_fa,UPBV
+ENROLL,000591855,,Student,5559-2080V-202641-51690
+UPDATE,000534445,CC. 1.098.769.491,David Alberto,Cristancho Uribe,,1,david.cristancho@upb.edu.co
+ENROLL,000534445,,Student_fa,UPBV
+ENROLL,000534445,,Student,5559-2080V-202641-51690
+UPDATE,000592897,CC. 1.035.416.101,Juan Fernando,Sierra Campuzano,,1,juridicascampuzano@hotmail.com
+ENROLL,000592897,,Student_fa,UPBV
+ENROLL,000592897,,Student,5559-2080V-202641-51690
+UPDATE,000593956,CC. 1.064.790.476,Efren Ricardo,Navarro Perez,,1,efrennavarrop@hotmail.com
+ENROLL,000593956,,Student_fa,UPBV
+ENROLL,000593956,,Student,5559-2080V-202641-51690
+UPDATE,000588555,CC. 1.233.189.214,Santiago,Revelo Arcos,,1,santyrevelo97@outlook.com
+ENROLL,000588555,,Student_fa,UPBV
+ENROLL,000588555,,Student,5559-2080V-202641-51690
+UPDATE,000593434,CC. 1.085.275.998,Daniel Laurencio,Benavides Uscategui,,1,daniellw103@gmail.com
+ENROLL,000593434,,Student_fa,UPBV
+ENROLL,000593434,,Student,5559-2080V-202641-51690
+UPDATE,000591853,CC. 1.032.465.621,Ana Maria,Fernandez Vega,,1,anamafernandezv@gmail.com
+ENROLL,000591853,,Student_fa,UPBV
+ENROLL,000591853,,Student,5559-2165-202641-51705
+UPDATE,000594206,CC. 1.052.384.090,Andrea Paola,Diaz Becerra,,1,andreaindus@yahoo.es
+ENROLL,000594206,,Student_fa,UPBV
+ENROLL,000594206,,Student,5559-2165-202641-51705
+UPDATE,000591486,CC. 1.121.861.775,Walter Smith,Castillo Romero,,1,walter.admon@gmail.com
+ENROLL,000591486,,Student_fa,UPBV
+ENROLL,000591486,,Student,5559-2165-202641-51705
+UPDATE,000398711,CC. 1.193.088.292,Luisa Fernanda,Fernandez Solorzano,,1,luisa.fernandezs@upb.edu.co
+ENROLL,000398711,,Student_fa,UPBV
+ENROLL,000398711,,Student,5559-2165-202641-51705
+UPDATE,000589433,CC. 1.001.971.969,Maria Camila,Infante Solis,,1,milainfante31@gmail.com
+ENROLL,000589433,,Student_fa,UPBV
+ENROLL,000589433,,Student,5559-2165-202641-51705
+UPDATE,000574615,CC. 1.100.482.385,Angy Lorena,Casas Santamaria,,1,angycasascontadora@gmail.com
+ENROLL,000574615,,Student_fa,UPBV
+ENROLL,000574615,,Student,5559-2165-202641-51705
+UPDATE,000592002,CC. 79.855.878,Carlos Alberto,Moreno Navarrete,,1,camorenon@unal.edu.co
+ENROLL,000592002,,Student_fa,UPBV
+ENROLL,000592002,,Student,5559-2165-202641-51705
+UPDATE,000591204,CC. 1.028.004.088,Alirio,Martinez Ruiz,,1,martinezalirio2106@gmail.com
+ENROLL,000591204,,Student_fa,UPBV
+ENROLL,000591204,,Student,5559-2165-202641-51705
+UPDATE,000122659,CC. 1.036.632.887,Maria Juliana,Berrio Gomez,,1,mariaju126@gmail.com
+ENROLL,000122659,,Student_fa,UPBV
+ENROLL,000122659,,Student,5559-2166-202641-51945
+UPDATE,000592697,CC. 1.114.736.171,Ana Cecilia,Lorza Ortiz,,1,ana.lorza4@hotmail.com
+ENROLL,000592697,,Student_fa,UPBV
+ENROLL,000592697,,Student,5559-2166-202641-51945
+UPDATE,000589554,CC. 1.005.328.786,Brayan Steven,Castellanos Rodriguez,,1,brayancrodri14@gmail.com
+ENROLL,000589554,,Student_fa,UPBV
+ENROLL,000589554,,Student,5559-2166-202641-51945
+UPDATE,000594451,CC. 1.006.409.964,Karen Tatiana,Pinzon Sanchez,,1,karen.pinzon@upb.edu.co
+ENROLL,000594451,,Student_fa,UPBV
+ENROLL,000594451,,Student,5559-2166-202641-51945
+UPDATE,000589437,CC. 1.152.435.719,Yoni Alberto,Restrepo Monsalve,,1,jhoni.restrepo9@gmail.com
+ENROLL,000589437,,Student_fa,UPBV
+ENROLL,000589437,,Student,5559-2166-202641-51945
+UPDATE,000213438,CC. 1.020.458.642,Valeria,Cardona Gomez,,1,valekrdo@hotmail.com
+ENROLL,000213438,,Student_fa,UPBV
+ENROLL,000213438,,Student,5559-2166-202641-51945
+UPDATE,000422342,CC. 1.193.207.358,Luisa Fernanda,Serpa Gutierrez,,1,luisa.serpa.2020@upb.edu.co
+ENROLL,000422342,,Student_fa,UPBV
+ENROLL,000422342,,Student,5559-2166-202641-51945
+UPDATE,000247155,CC. 1.017.238.508,Santiago,Sepulveda Salazar,,1,santiago.sepulvedas@upb.edu.co
+ENROLL,000247155,,Student_fa,UPBV
+ENROLL,000247155,,Student,5559-2166-202641-51945
+UPDATE,000576470,CC. 1.098.786.976,Carmen Rocio,Lora Trujillo,,1,rocioloratrujillo@gmail.com
+ENROLL,000576470,,Student_fa,UPBV
+ENROLL,000576470,,Student,5559-2166-202641-51945
+UPDATE,000597893,CC. 1.098.651.704,July,Sampayo Salazar,,1,july.sampayo@gmail.com
+ENROLL,000597893,,Student_fa,UPBV
+ENROLL,000597893,,Student,5559-2166-202641-51945
+UPDATE,000376651,CC. 1.039.470.846,Clarisa,Arango Vasquez,,1,clarisa.arango@upb.edu.co
+ENROLL,000376651,,Student_fa,UPBV
+ENROLL,000376651,,Student,5569-2031-202641-52082
+UPDATE,000578326,CC. 1.016.069.904,Deyna Lorena,Peñaloza Olaya,,1,deynapenaloza94@gmail.com
+ENROLL,000578326,,Student_fa,UPBV
+ENROLL,000578326,,Student,5569-2031-202641-52082
+UPDATE,000189139,CC. 1.037.614.201,Maria Fernanda,Molina Abad,,1,mafemamol@gmail.com
+ENROLL,000189139,,Student_fa,UPBV
+ENROLL,000189139,,Student,5569-2031-202641-52082
+UPDATE,000576086,CC. 1.152.686.781,Lorena,Millan Otero,,1,lorenamillanotero@gmail.com
+ENROLL,000576086,,Student_fa,UPBV
+ENROLL,000576086,,Student,5569-2031-202641-52082
+UPDATE,000392267,CC. 80.114.268,Jhon Freddy,Hernandez,,1,jfhsdb@gmail.com
+ENROLL,000392267,,Student_fa,UPBV
+ENROLL,000392267,,Student,5569-2031-202641-52082
+UPDATE,000502560,CC. 1.098.767.669,Diego Heliberto,Villamizar Fuentes,,1,diegovillamizar909@gmail.com
+ENROLL,000502560,,Student_fa,UPBV
+ENROLL,000502560,,Student,5569-2031-202641-52082
+UPDATE,000238820,CC. 1.152.455.490,Maria Jose,Uribe Uribe,,1,m.uribeu2@gmail.com
+ENROLL,000238820,,Student_fa,UPBV
+ENROLL,000238820,,Student,5569-2031-202641-52082
+UPDATE,000576088,CC. 1.007.401.515,Tatiana,Parra Tejada,,1,tatianaparra001@gmail.com
+ENROLL,000576088,,Student_fa,UPBV
+ENROLL,000576088,,Student,5569-2031-202641-52082
+UPDATE,000580197,CC. 98.543.136,Javier,Cardona Pineda,,1,direccionejecutiva@fundacol.com
+ENROLL,000580197,,Student_fa,UPBV
+ENROLL,000580197,,Student,5569-2031-202641-52082
+UPDATE,000578225,CC. 1.151.185.685,Pedro Moises,Villamizar Boccio,,1,pvillamizar.boccio@gmail.com
+ENROLL,000578225,,Student_fa,UPBV
+ENROLL,000578225,,Student,5569-2031-202641-52082
+UPDATE,000582768,CC. 46.383.583,Jeimy Andrea,Mora Dimas,,1,jeimydimas1983@gmail.com
+ENROLL,000582768,,Student_fa,UPBV
+ENROLL,000582768,,Student,5569-2031-202641-52082
+UPDATE,000581009,CC. 1.038.095.802,Ana Gudiela,Uribe Agudelo,,1,anauribe_86@hotmail.com
+ENROLL,000581009,,Student_fa,UPBV
+ENROLL,000581009,,Student,5569-2031-202641-52082
+UPDATE,000273174,CC. 63.531.171,Liliana Mercedes,Corredor,,1,liliana.corredor11@gmail.com
+ENROLL,000273174,,Student_fa,UPBV
+ENROLL,000273174,,Student,5569-2031-202641-52082
+UPDATE,000579107,CC. 1.110.454.115,Dallan Javier,Cifuentes Villalba,,1,cifuentesdallan2020@gmail.com
+ENROLL,000579107,,Student_fa,UPBV
+ENROLL,000579107,,Student,5569-2031-202641-52082
+UPDATE,000503090,CC. 80.755.340,Isaac,Vargas Daza,,1,saovargas@gmail.com
+ENROLL,000503090,,Student_fa,UPBV
+ENROLL,000503090,,Student,5569-2031-202641-52082
+UPDATE,000578875,CC. 1.077.431.107,Beatriz Elena,Asprilla Cordoba,,1,beasprilla@gmail.com
+ENROLL,000578875,,Student_fa,UPBV
+ENROLL,000578875,,Student,5569-2031-202641-52082
+UPDATE,000127875,CC. 1.152.187.538,Daniela,Mesa Gutierrez,,1,DANI_MEGU@HOTMAIL.COM
+ENROLL,000127875,,Student_fa,UPBV
+ENROLL,000127875,,Student,5569-2031-202641-52082
+UPDATE,000162567,CC. 50.971.271,Liliana Judith,Negrete Fajardo,,1,asoproapaz@gmail.com
+ENROLL,000162567,,Student_fa,UPBV
+ENROLL,000162567,,Student,5569-2031-202641-52082
+UPDATE,000579838,CC. 1.077.480.387,Davinson,Cordoba Mena,,1,davinsonflow10@gmail.com
+ENROLL,000579838,,Student_fa,UPBV
+ENROLL,000579838,,Student,5569-2031-202641-52082
+UPDATE,000387917,CC. 1.005.333.702,Andres David,Caicedo Cadena,,1,c-cad27@hotmail.com
+ENROLL,000387917,,Student_fa,UPBV
+ENROLL,000387917,,Student,5569-2031-202641-52082
+UPDATE,000527556,CC. 1.102.362.332,Yuly Andrea,Niño Becerra,,1,andreani_2009@outlook.com
+ENROLL,000527556,,Student_fa,UPBV
+ENROLL,000527556,,Student,5569-2031-202641-52082
+CREATE,000467900,TI. 1.001.286.533,Santiago Jose,Latorre Suarez,,Student_pr,1,santiago.latorre@upb.edu.co
+ENROLL,000467900,,Student_pr,CVPR
+ENROLL,000467900,,Student,5569-2031-202641-52082
+UPDATE,000467308,TI. 1.077.997.970,Luna Yirianny,Vanegas Perea,,1,luna.vanegas@upb.edu.co
+ENROLL,000467308,,Student_pr,UPBV
+ENROLL,000467308,,Student,5569-2031-202641-52082
+UPDATE,000555063,CC. 18.419.154,Alexander,Arango,,1,alexanderarangogar@gmail.com
+ENROLL,000555063,,Student_fa,UPBV
+ENROLL,000555063,,Student,PGME-0034-202641-52312
+UPDATE,000589154,CC. 1.040.324.803,Andres Felipe,Echavarria Restrepo,,1,yoyisss94@gmail.com
+ENROLL,000589154,,Student_fa,UPBV
+ENROLL,000589154,,Student,PGME-0034-202641-52312
+UPDATE,000585866,CC. 80.221.196,Edgar Andres,Medina Beltran,,1,andresmb82@gmail.com
+ENROLL,000585866,,Student_fa,UPBV
+ENROLL,000585866,,Student,PGME-0034-202641-52312
+UPDATE,000566718,CC. 1.019.081.043,Edwin Belisario,Tavera Sanchez,,1,edwin.tavera1@gmail.com
+ENROLL,000566718,,Student_fa,UPBV
+ENROLL,000566718,,Student,PGME-0034-202641-52312
+UPDATE,000589158,CC. 1.039.702.310,Elizer Estefani,Puerta Carmona,,1,estefanipuerta3@gmail.com
+ENROLL,000589158,,Student_fa,UPBV
+ENROLL,000589158,,Student,PGME-0034-202641-52312
+UPDATE,000588110,CC. 1.103.096.414,Jorge Armando,Cuello Vargas,,1,jorgearmandocuellov@hotmail.com
+ENROLL,000588110,,Student_fa,UPBV
+ENROLL,000588110,,Student,PGME-0034-202641-52312
+UPDATE,000591857,CC. 11.811.877,Jose Yinesky,Gomez Murillo,,1,joseyinesky2024@gmail.com
+ENROLL,000591857,,Student_fa,UPBV
+ENROLL,000591857,,Student,PGME-0034-202641-52312
+UPDATE,000588566,CC. 1.005.095.413,Julian,Acevedo Rendon,,1,jacevedor@uqvirtual.edu.co
+ENROLL,000588566,,Student_fa,UPBV
+ENROLL,000588566,,Student,PGME-0034-202641-52312
+UPDATE,000581341,CC. 1.017.163.441,Leidy Alejandra,Osorio Muñoz,,1,aleja.osorio2009@gmail.com
+ENROLL,000581341,,Student_fa,UPBV
+ENROLL,000581341,,Student,PGME-0034-202641-52312
+UPDATE,000590347,CC. 1.110.595.282,Liceth Tatiana,Pabon Barrero,,1,activo.online19@gmail.com
+ENROLL,000590347,,Student_fa,UPBV
+ENROLL,000590347,,Student,PGME-0034-202641-52312
+UPDATE,000587827,CC. 66.948.364,Liliana,Suarez Montoya,,1,liliveroisa@gmail.com
+ENROLL,000587827,,Student_fa,UPBV
+ENROLL,000587827,,Student,PGME-0034-202641-52312
+UPDATE,000588480,CC. 1.093.224.152,Luis Camilo,Arevalo Valencia,,1,lcarevalo94@gmail.com
+ENROLL,000588480,,Student_fa,UPBV
+ENROLL,000588480,,Student,PGME-0034-202641-52312
+UPDATE,000588114,CC. 1.001.747.325,Marco Fidel,Negrete Arroyo,,1,negretemarcos4@gmail.com
+ENROLL,000588114,,Student_fa,UPBV
+ENROLL,000588114,,Student,PGME-0034-202641-52312
+UPDATE,000588693,CC. 1.097.403.486,Marlon,Alzate,,1,marlon_alzate@hotmail.com
+ENROLL,000588693,,Student_fa,UPBV
+ENROLL,000588693,,Student,PGME-0034-202641-52312
+UPDATE,000588144,CC. 25.080.000,Martha Liliana,Giraldo Sanchez,,1,marliliana26@hotmail.com
+ENROLL,000588144,,Student_fa,UPBV
+ENROLL,000588144,,Student,PGME-0034-202641-52312
+UPDATE,000587924,CC. 32.563.310,Nancy Adriana,Mazo Piedrahita,,1,nmazo421@gmail.com
+ENROLL,000587924,,Student_fa,UPBV
+ENROLL,000587924,,Student,PGME-0034-202641-52312
+UPDATE,000587926,CC. 42.091.834,Sonia Elena,Murillo Garcia,,1,sollitaaway@hotmail.com
+ENROLL,000587926,,Student_fa,UPBV
+ENROLL,000587926,,Student,PGME-0034-202641-52312
+UPDATE,000589812,CC. 4.805.849,Yeremy,Cuesta Palacios,,1,yeremycuesta03@gmail.com
+ENROLL,000589812,,Student_fa,UPBV
+ENROLL,000589812,,Student,PGME-0034-202641-52312
+UPDATE,000538559,CC. 1.094.247.172,Yurley Yesenia,Sepúlveda Bustos,,1,yurley.sepulveda@upb.edu.co
+ENROLL,000538559,,Student_fa,UPBV
+ENROLL,000538559,,Student,PGME-0034-202641-52312
+UPDATE,000589944,CC. 1.094.908.747,Viviana Lizeth,Bedoya Garzon,,1,vivianabedoya608@gmail.com
+ENROLL,000589944,,Student_fa,UPBV
+ENROLL,000589944,,Student,PGME-0034-202641-52312
+UPDATE,000587620,CC. 30.658.145,Maria Serafina,Villadiego Diaz,,1,mayos10@gmail.com
+ENROLL,000587620,,Student_fa,UPBV
+ENROLL,000587620,,Student,PGME-0034-202641-52312
+UPDATE,000580992,CC. 1.120.217.754,Adriana Milena,Bravo Muñoz,,1,bravomunozadrianamilena03@gmail.com
+ENROLL,000580992,,Student_fa,UPBV
+ENROLL,000580992,,Student,PGME-0034-202641-52316
+UPDATE,000589438,CC. 1.110.509.448,Ana Yulieth,Salazar Rubio,,1,ana.salazarrubio@sedtolima.edu.co
+ENROLL,000589438,,Student_fa,UPBV
+ENROLL,000589438,,Student,PGME-0034-202641-52316
+UPDATE,000589435,CC. 1.032.431.450,Angie Steffi,Flechas Quiros,,1,steffiflechas@gmail.com
+ENROLL,000589435,,Student_fa,UPBV
+ENROLL,000589435,,Student,PGME-0034-202641-52316
+UPDATE,000546218,CC. 1.106.774.735,Carlos Andres,Agudelo Espitia,,1,caagudeloespitia201289@gmail.com
+ENROLL,000546218,,Student_fa,UPBV
+ENROLL,000546218,,Student,PGME-0034-202641-52316
+UPDATE,000589395,CC. 1.033.792.881,Charlotte Dayna,Contreras Vallejo,,1,daynacontreras308@gmail.com
+ENROLL,000589395,,Student_fa,UPBV
+ENROLL,000589395,,Student,PGME-0034-202641-52316
+UPDATE,000586352,CC. 52.952.740,Deyssi Cristina,Rodriguez Perez,,1,deyza11@yahoo.com
+ENROLL,000586352,,Student_fa,UPBV
+ENROLL,000586352,,Student,PGME-0034-202641-52316
+UPDATE,000588560,CC. 1.087.672.523,Edicson Bladimir,Jurado Riascos,,1,edicsonbjr@gmail.com
+ENROLL,000588560,,Student_fa,UPBV
+ENROLL,000588560,,Student,PGME-0034-202641-52316
+UPDATE,000588592,CC. 32.853.255,Erika Yojana,Martinez Narvaez,,1,sede32024@gmail.com
+ENROLL,000588592,,Student_fa,UPBV
+ENROLL,000588592,,Student,PGME-0034-202641-52316
+UPDATE,000582031,CC. 49.755.896,Holiberes Maria,Paez Angarita,,1,rosadani29@hotmail.com
+ENROLL,000582031,,Student_fa,UPBV
+ENROLL,000582031,,Student,PGME-0034-202641-52316
+UPDATE,000588504,CC. 11.706.290,Ilson Arbey,Papelito Abona,,1,iaeducacionindigena@gmail.com
+ENROLL,000588504,,Student_fa,UPBV
+ENROLL,000588504,,Student,PGME-0034-202641-52316
+UPDATE,000580115,CC. 1.065.658.019,Jarion,Diaz Quintero,,1,mrjariun@gmail.com
+ENROLL,000580115,,Student_fa,UPBV
+ENROLL,000580115,,Student,PGME-0034-202641-52316
+UPDATE,000444656,CC. 1.044.422.351,Jocellyn Del Carmen,Ahumada Jerónimo,,1,jahumadajeronimo@gmail.com
+ENROLL,000444656,,Student_fa,UPBV
+ENROLL,000444656,,Student,PGME-0034-202641-52316
+UPDATE,000236000,CC. 76.310.323,Jose Olmer,Cordoba Urrutia,,1,joseolmercordoba@gmail.com
+ENROLL,000236000,,Student_fa,UPBV
+ENROLL,000236000,,Student,PGME-0034-202641-52316
+UPDATE,000588517,CC. 1.098.312.415,Laura Daniela,Saavedra Tejada,,1,lauraasaavedra02@gmail.com
+ENROLL,000588517,,Student_fa,UPBV
+ENROLL,000588517,,Student,PGME-0034-202641-52316
+UPDATE,000580514,CC. 59.826.572,Nancy Janeth,Guzman Botina,,1,nagubo16@gmail.com
+ENROLL,000580514,,Student_fa,UPBV
+ENROLL,000580514,,Student,PGME-0034-202641-52316
+UPDATE,000585956,CC. 1.069.489.940,Paola Andrea,Arcia Solano,,1,paolaarciasolano@hotmail.com
+ENROLL,000585956,,Student_fa,UPBV
+ENROLL,000585956,,Student,PGME-0034-202641-52316
+UPDATE,000587609,CC. 1.022.348.137,Paola Andrea,Bautista Guzman,,1,itayozara@gmail.com
+ENROLL,000587609,,Student_fa,UPBV
+ENROLL,000587609,,Student,PGME-0034-202641-52316
+UPDATE,000587564,CC. 1.005.604.636,Wendy,Perez Pacheco,,1,wendyperezpacheco@gmail.com
+ENROLL,000587564,,Student_fa,UPBV
+ENROLL,000587564,,Student,PGME-0034-202641-52316
+UPDATE,000589876,CC. 88.157.099,William,Reyes Acevedo,,1,williamreyesa092@gmail.com
+ENROLL,000589876,,Student_fa,UPBV
+ENROLL,000589876,,Student,PGME-0034-202641-52316
+UPDATE,000587311,CC. 1.047.482.104,Yolibeth Maria,Buelvas Narvaez,,1,yomabuna295@hotmail.com
+ENROLL,000587311,,Student_fa,UPBV
+ENROLL,000587311,,Student,PGME-0034-202641-52316
+UPDATE,000555063,CC. 18.419.154,Alexander,Arango,,1,alexanderarangogar@gmail.com
+ENROLL,000555063,,Student_fa,UPBV
+ENROLL,000555063,,Student,PGME-0035-202641-52309
+UPDATE,000589154,CC. 1.040.324.803,Andres Felipe,Echavarria Restrepo,,1,yoyisss94@gmail.com
+ENROLL,000589154,,Student_fa,UPBV
+ENROLL,000589154,,Student,PGME-0035-202641-52309
+UPDATE,000585866,CC. 80.221.196,Edgar Andres,Medina Beltran,,1,andresmb82@gmail.com
+ENROLL,000585866,,Student_fa,UPBV
+ENROLL,000585866,,Student,PGME-0035-202641-52309
+UPDATE,000566718,CC. 1.019.081.043,Edwin Belisario,Tavera Sanchez,,1,edwin.tavera1@gmail.com
+ENROLL,000566718,,Student_fa,UPBV
+ENROLL,000566718,,Student,PGME-0035-202641-52309
+UPDATE,000589158,CC. 1.039.702.310,Elizer Estefani,Puerta Carmona,,1,estefanipuerta3@gmail.com
+ENROLL,000589158,,Student_fa,UPBV
+ENROLL,000589158,,Student,PGME-0035-202641-52309
+UPDATE,000588110,CC. 1.103.096.414,Jorge Armando,Cuello Vargas,,1,jorgearmandocuellov@hotmail.com
+ENROLL,000588110,,Student_fa,UPBV
+ENROLL,000588110,,Student,PGME-0035-202641-52309
+UPDATE,000591857,CC. 11.811.877,Jose Yinesky,Gomez Murillo,,1,joseyinesky2024@gmail.com
+ENROLL,000591857,,Student_fa,UPBV
+ENROLL,000591857,,Student,PGME-0035-202641-52309
+UPDATE,000588566,CC. 1.005.095.413,Julian,Acevedo Rendon,,1,jacevedor@uqvirtual.edu.co
+ENROLL,000588566,,Student_fa,UPBV
+ENROLL,000588566,,Student,PGME-0035-202641-52309
+UPDATE,000581341,CC. 1.017.163.441,Leidy Alejandra,Osorio Muñoz,,1,aleja.osorio2009@gmail.com
+ENROLL,000581341,,Student_fa,UPBV
+ENROLL,000581341,,Student,PGME-0035-202641-52309
+UPDATE,000590347,CC. 1.110.595.282,Liceth Tatiana,Pabon Barrero,,1,activo.online19@gmail.com
+ENROLL,000590347,,Student_fa,UPBV
+ENROLL,000590347,,Student,PGME-0035-202641-52309
+UPDATE,000587827,CC. 66.948.364,Liliana,Suarez Montoya,,1,liliveroisa@gmail.com
+ENROLL,000587827,,Student_fa,UPBV
+ENROLL,000587827,,Student,PGME-0035-202641-52309
+UPDATE,000588480,CC. 1.093.224.152,Luis Camilo,Arevalo Valencia,,1,lcarevalo94@gmail.com
+ENROLL,000588480,,Student_fa,UPBV
+ENROLL,000588480,,Student,PGME-0035-202641-52309
+UPDATE,000588114,CC. 1.001.747.325,Marco Fidel,Negrete Arroyo,,1,negretemarcos4@gmail.com
+ENROLL,000588114,,Student_fa,UPBV
+ENROLL,000588114,,Student,PGME-0035-202641-52309
+UPDATE,000588693,CC. 1.097.403.486,Marlon,Alzate,,1,marlon_alzate@hotmail.com
+ENROLL,000588693,,Student_fa,UPBV
+ENROLL,000588693,,Student,PGME-0035-202641-52309
+UPDATE,000588144,CC. 25.080.000,Martha Liliana,Giraldo Sanchez,,1,marliliana26@hotmail.com
+ENROLL,000588144,,Student_fa,UPBV
+ENROLL,000588144,,Student,PGME-0035-202641-52309
+UPDATE,000587924,CC. 32.563.310,Nancy Adriana,Mazo Piedrahita,,1,nmazo421@gmail.com
+ENROLL,000587924,,Student_fa,UPBV
+ENROLL,000587924,,Student,PGME-0035-202641-52309
+UPDATE,000587926,CC. 42.091.834,Sonia Elena,Murillo Garcia,,1,sollitaaway@hotmail.com
+ENROLL,000587926,,Student_fa,UPBV
+ENROLL,000587926,,Student,PGME-0035-202641-52309
+UPDATE,000589812,CC. 4.805.849,Yeremy,Cuesta Palacios,,1,yeremycuesta03@gmail.com
+ENROLL,000589812,,Student_fa,UPBV
+ENROLL,000589812,,Student,PGME-0035-202641-52309
+UPDATE,000538559,CC. 1.094.247.172,Yurley Yesenia,Sepúlveda Bustos,,1,yurley.sepulveda@upb.edu.co
+ENROLL,000538559,,Student_fa,UPBV
+ENROLL,000538559,,Student,PGME-0035-202641-52309
+UPDATE,000589944,CC. 1.094.908.747,Viviana Lizeth,Bedoya Garzon,,1,vivianabedoya608@gmail.com
+ENROLL,000589944,,Student_fa,UPBV
+ENROLL,000589944,,Student,PGME-0035-202641-52309
+UPDATE,000587620,CC. 30.658.145,Maria Serafina,Villadiego Diaz,,1,mayos10@gmail.com
+ENROLL,000587620,,Student_fa,UPBV
+ENROLL,000587620,,Student,PGME-0035-202641-52309
+UPDATE,000580992,CC. 1.120.217.754,Adriana Milena,Bravo Muñoz,,1,bravomunozadrianamilena03@gmail.com
+ENROLL,000580992,,Student_fa,UPBV
+ENROLL,000580992,,Student,PGME-0035-202641-52313
+UPDATE,000589438,CC. 1.110.509.448,Ana Yulieth,Salazar Rubio,,1,ana.salazarrubio@sedtolima.edu.co
+ENROLL,000589438,,Student_fa,UPBV
+ENROLL,000589438,,Student,PGME-0035-202641-52313
+UPDATE,000589435,CC. 1.032.431.450,Angie Steffi,Flechas Quiros,,1,steffiflechas@gmail.com
+ENROLL,000589435,,Student_fa,UPBV
+ENROLL,000589435,,Student,PGME-0035-202641-52313
+UPDATE,000589395,CC. 1.033.792.881,Charlotte Dayna,Contreras Vallejo,,1,daynacontreras308@gmail.com
+ENROLL,000589395,,Student_fa,UPBV
+ENROLL,000589395,,Student,PGME-0035-202641-52313
+UPDATE,000588560,CC. 1.087.672.523,Edicson Bladimir,Jurado Riascos,,1,edicsonbjr@gmail.com
+ENROLL,000588560,,Student_fa,UPBV
+ENROLL,000588560,,Student,PGME-0035-202641-52313
+UPDATE,000588592,CC. 32.853.255,Erika Yojana,Martinez Narvaez,,1,sede32024@gmail.com
+ENROLL,000588592,,Student_fa,UPBV
+ENROLL,000588592,,Student,PGME-0035-202641-52313
+UPDATE,000582031,CC. 49.755.896,Holiberes Maria,Paez Angarita,,1,rosadani29@hotmail.com
+ENROLL,000582031,,Student_fa,UPBV
+ENROLL,000582031,,Student,PGME-0035-202641-52313
+UPDATE,000588504,CC. 11.706.290,Ilson Arbey,Papelito Abona,,1,iaeducacionindigena@gmail.com
+ENROLL,000588504,,Student_fa,UPBV
+ENROLL,000588504,,Student,PGME-0035-202641-52313
+UPDATE,000580115,CC. 1.065.658.019,Jarion,Diaz Quintero,,1,mrjariun@gmail.com
+ENROLL,000580115,,Student_fa,UPBV
+ENROLL,000580115,,Student,PGME-0035-202641-52313
+UPDATE,000588517,CC. 1.098.312.415,Laura Daniela,Saavedra Tejada,,1,lauraasaavedra02@gmail.com
+ENROLL,000588517,,Student_fa,UPBV
+ENROLL,000588517,,Student,PGME-0035-202641-52313
+UPDATE,000580514,CC. 59.826.572,Nancy Janeth,Guzman Botina,,1,nagubo16@gmail.com
+ENROLL,000580514,,Student_fa,UPBV
+ENROLL,000580514,,Student,PGME-0035-202641-52313
+UPDATE,000585956,CC. 1.069.489.940,Paola Andrea,Arcia Solano,,1,paolaarciasolano@hotmail.com
+ENROLL,000585956,,Student_fa,UPBV
+ENROLL,000585956,,Student,PGME-0035-202641-52313
+UPDATE,000587609,CC. 1.022.348.137,Paola Andrea,Bautista Guzman,,1,itayozara@gmail.com
+ENROLL,000587609,,Student_fa,UPBV
+ENROLL,000587609,,Student,PGME-0035-202641-52313
+UPDATE,000587564,CC. 1.005.604.636,Wendy,Perez Pacheco,,1,wendyperezpacheco@gmail.com
+ENROLL,000587564,,Student_fa,UPBV
+ENROLL,000587564,,Student,PGME-0035-202641-52313
+UPDATE,000587311,CC. 1.047.482.104,Yolibeth Maria,Buelvas Narvaez,,1,yomabuna295@hotmail.com
+ENROLL,000587311,,Student_fa,UPBV
+ENROLL,000587311,,Student,PGME-0035-202641-52313
+UPDATE,000546218,CC. 1.106.774.735,Carlos Andres,Agudelo Espitia,,1,caagudeloespitia201289@gmail.com
+ENROLL,000546218,,Student_fa,UPBV
+ENROLL,000546218,,Student,PGME-0035-202641-52313
+UPDATE,000586352,CC. 52.952.740,Deyssi Cristina,Rodriguez Perez,,1,deyza11@yahoo.com
+ENROLL,000586352,,Student_fa,UPBV
+ENROLL,000586352,,Student,PGME-0035-202641-52313
+UPDATE,000444656,CC. 1.044.422.351,Jocellyn Del Carmen,Ahumada Jerónimo,,1,jahumadajeronimo@gmail.com
+ENROLL,000444656,,Student_fa,UPBV
+ENROLL,000444656,,Student,PGME-0035-202641-52313
+UPDATE,000236000,CC. 76.310.323,Jose Olmer,Cordoba Urrutia,,1,joseolmercordoba@gmail.com
+ENROLL,000236000,,Student_fa,UPBV
+ENROLL,000236000,,Student,PGME-0035-202641-52313
+UPDATE,000589876,CC. 88.157.099,William,Reyes Acevedo,,1,williamreyesa092@gmail.com
+ENROLL,000589876,,Student_fa,UPBV
+ENROLL,000589876,,Student,PGME-0035-202641-52313
+UPDATE,000388462,CC. 71.225.253,Alexander,Ortiz Gaviria,,1,alexanderortizg@hotmail.com
+ENROLL,000388462,,Student_fa,UPBV
+ENROLL,000388462,,Student,PGME-0042-202641-52318
+UPDATE,000577561,CC. 1.039.450.787,Angela Patricia,Steer Villa,,1,Angela.steervilla@gmail.com
+ENROLL,000577561,,Student_fa,UPBV
+ENROLL,000577561,,Student,PGME-0042-202641-52318
+UPDATE,000577559,CC. 33.253.592,Elvia Maria,Gonzalez Campillo,,1,elviagonzalezc1975@gmail.com
+ENROLL,000577559,,Student_fa,UPBV
+ENROLL,000577559,,Student,PGME-0042-202641-52318
+UPDATE,000577735,CC. 1.036.642.067,Giovany,Montoya Colorado,,1,giovany_100@hotmail.com
+ENROLL,000577735,,Student_fa,UPBV
+ENROLL,000577735,,Student,PGME-0042-202641-52318
+UPDATE,000577403,CC. 1.026.562.116,Ivan Camilo,Paez Zapata,,1,camilitopaezzapata@gmail.com
+ENROLL,000577403,,Student_fa,UPBV
+ENROLL,000577403,,Student,PGME-0042-202641-52318
+UPDATE,000240786,CC. 1.098.789.630,Laura Geraldine,Torres Villamizar,,1,lauratorres909@gmail.com
+ENROLL,000240786,,Student_fa,UPBV
+ENROLL,000240786,,Student,PGME-0042-202641-52318
+UPDATE,000577433,CC. 1.035.431.106,Laura Liliana,Restrepo Arias,,1,laurarestrepoarias@gmail.com
+ENROLL,000577433,,Student_fa,UPBV
+ENROLL,000577433,,Student,PGME-0042-202641-52318
+UPDATE,000577438,CC. 1.017.244.202,Manuela,Vives,,1,manuela.vives07@gmail.com
+ENROLL,000577438,,Student_fa,UPBV
+ENROLL,000577438,,Student,PGME-0042-202641-52318
+UPDATE,000577409,CC. 71.331.050,Walter Adolfo,Zuluaga Arcila,,1,walterzu77@gmail.com
+ENROLL,000577409,,Student_fa,UPBV
+ENROLL,000577409,,Student,PGME-0042-202641-52318
+UPDATE,000577738,CC. 1.020.436.026,Yesid Mauricio,Perez Moreno,,1,YESID1487@GMAIL.COM
+ENROLL,000577738,,Student_fa,UPBV
+ENROLL,000577738,,Student,PGME-0042-202641-52318
+UPDATE,000577217,CC. 1.040.325.220,Bibiana Andrea,Gonzalez  Correa,,1,bibianag15@gmail.com
+ENROLL,000577217,,Student_fa,UPBV
+ENROLL,000577217,,Student,PGME-0042-202641-52318
+UPDATE,000392910,CC. 1.152.193.295,Luisa,Ortiz Castillo,,1,luisaortizies@gmail.com
+ENROLL,000392910,,Student_fa,UPBV
+ENROLL,000392910,,Student,PGME-0042-202641-52318
+UPDATE,000184266,CC. 43.634.607,Natalia Andrea,Velasquez Cano,,1,natalia.velasquez@iemanueljbetancur.edu.co
+ENROLL,000184266,,Student_fa,UPBV
+ENROLL,000184266,,Student,PGME-0042-202641-52318
+UPDATE,000385470,CC. 1.152.186.902,Natasha,Quintero Jimenez,,1,natly1408@gmail.com
+ENROLL,000385470,,Student_fa,UPBV
+ENROLL,000385470,,Student,PGME-0042-202641-52318
+UPDATE,000577570,CC. 1.128.443.307,Cristian Camilo,Lopez Zapata,,1,cristianlopezza@hotmail.com
+ENROLL,000577570,,Student_fa,UPBV
+ENROLL,000577570,,Student,PGME-0042-202641-52321
+UPDATE,000336189,CC. 1.128.473.056,Daniel Esteban,Carmona Rendón,,1,decarmonar@gmail.com
+ENROLL,000336189,,Student_fa,UPBV
+ENROLL,000336189,,Student,PGME-0042-202641-52321
+UPDATE,000026791,CC. 3.391.791,David,Londoño Gonzalez,,1,profedavidsistemas2022@gmail.com
+ENROLL,000026791,,Student_fa,UPBV
+ENROLL,000026791,,Student,PGME-0042-202641-52321
+UPDATE,000577407,CC. 32.256.917,Erika Natalia,Alzate Cano,,1,enalzateca@gmail.com
+ENROLL,000577407,,Student_fa,UPBV
+ENROLL,000577407,,Student,PGME-0042-202641-52321
+UPDATE,000577435,CC. 1.036.642.640,Jhoan Stiven,Rueda Restrepo,,1,jhoan.rueda@iemanueljosegomezserna.edu.co
+ENROLL,000577435,,Student_fa,UPBV
+ENROLL,000577435,,Student,PGME-0042-202641-52321
+UPDATE,000186242,CC. 98.631.454,Juan Carlos,Blandon Vargas,,1,juancarlosbv@iemanueljbetancur.edu.co
+ENROLL,000186242,,Student_fa,UPBV
+ENROLL,000186242,,Student,PGME-0042-202641-52321
+UPDATE,000322149,CC. 76.324.504,Julian Andres,Grueso Fernandez,,1,julian.grueso@inemjose.edu.co
+ENROLL,000322149,,Student_fa,UPBV
+ENROLL,000322149,,Student,PGME-0042-202641-52321
+UPDATE,000577413,CC. 1.214.721.614,Kevin Aldrey,Bedoya Velez,,1,xkevinbedoyax@gmail.com
+ENROLL,000577413,,Student_fa,UPBV
+ENROLL,000577413,,Student,PGME-0042-202641-52321
+UPDATE,000388655,CC. 1.040.736.068,Luisa Fernanda,Florez Ramirez,,1,luisaflorez@ielusitania.edu.co
+ENROLL,000388655,,Student_fa,UPBV
+ENROLL,000388655,,Student,PGME-0042-202641-52321
+UPDATE,000578059,CC. 43.436.587,Rosario,Mejia Perez,,1,proferochy43@gmail.com
+ENROLL,000578059,,Student_fa,UPBV
+ENROLL,000578059,,Student,PGME-0042-202641-52321
+UPDATE,000577411,CC. 1.110.556.961,Yiliana,Arias Ochoa,,1,yiliana.arias@gmail.com
+ENROLL,000577411,,Student_fa,UPBV
+ENROLL,000577411,,Student,PGME-0042-202641-52321
+UPDATE,000577569,CC. 1.038.334.767,Yimmy,Lopez Montoya,,1,yimmylopez@ielusitania.edu.co
+ENROLL,000577569,,Student_fa,UPBV
+ENROLL,000577569,,Student,PGME-0042-202641-52321
+UPDATE,000577571,CC. 43.254.243,Yuly Pauline,Orozco Holguin,,1,yulypaulina17@hotmail.com
+ENROLL,000577571,,Student_fa,UPBV
+ENROLL,000577571,,Student,PGME-0042-202641-52321
+UPDATE,000305760,CC. 43.264.162,Marcela Yaneth,Montoya Jimenez,,1,juanaymarte@gmail.com
+ENROLL,000305760,,Student_fa,UPBV
+ENROLL,000305760,,Student,PGME-0043-202641-52357
+UPDATE,000349352,CC. 1.036.400.694,Daniela,Aguirre Ramirez,,1,daniela@iesanantoniorionegro.edu.co
+ENROLL,000349352,,Student_fa,UPBV
+ENROLL,000349352,,Student,PGME-0043-202641-52357
+UPDATE,000443413,CC. 54.257.074,Edilma,Renteria Rovira,,1,edilmar2@hotmail.com
+ENROLL,000443413,,Student_fa,UPBV
+ENROLL,000443413,,Student,PGME-0043-202641-52357
+UPDATE,000444073,CC. 5.348.989,Carlos  Alberto,Erazo,,1,carlosalberto28105@gmail.com
+ENROLL,000444073,,Student_fa,UPBV
+ENROLL,000444073,,Student,PGME-0043-202641-52357
+UPDATE,000496285,CC. 41.182.315,Marta Ligia,Chindoy Jansasoy,,1,chindoymartha376@gmail.com
+ENROLL,000496285,,Student_fa,UPBV
+ENROLL,000496285,,Student,PGME-0043-202641-52357
+UPDATE,000566683,CC. 1.077.451.433,Ariel Enrique,Maturana Garcia,,1,ariel.maturana@upb.edu.co
+ENROLL,000566683,,Student_fa,UPBV
+ENROLL,000566683,,Student,PGME-0043-202641-52357
+UPDATE,000567415,CC. 1.052.983.611,Breiner De Jesus,Mendoza Quezada,,1,breinermq36@gmail.com
+ENROLL,000567415,,Student_fa,UPBV
+ENROLL,000567415,,Student,PGME-0043-202641-52357
+UPDATE,000579468,CC. 1.040.045.578,Jennifer Alejandra,Ciro Londoño,,1,aljciro@gmail.com
+ENROLL,000579468,,Student_fa,UPBV
+ENROLL,000579468,,Student,PGME-0043-202641-52357
+UPDATE,000581210,CC. 71.372.533,Alvaro,Ruiz Gomez,,1,alvaro.ruizgo@upb.edu.co
+ENROLL,000581210,,Student_fa,UPBV
+ENROLL,000581210,,Student,PGME-0043-202641-52357
+UPDATE,000582010,CC. 29.820.837,Diana Maria,Arcila Pelaez,,1,arciladianamaria21@gmail.com
+ENROLL,000582010,,Student_fa,UPBV
+ENROLL,000582010,,Student,PGME-0043-202641-52357
+UPDATE,000582013,CC. 77.161.712,Carlos Eliecer,Mejia Zuleta,,1,carloseliecer2911@gmail.com
+ENROLL,000582013,,Student_fa,UPBV
+ENROLL,000582013,,Student,PGME-0043-202641-52357
+UPDATE,000582014,CC. 1.128.426.895,Henry Alberto,Restrepo Vargas,,1,licenciadopoli2016@gmail.com
+ENROLL,000582014,,Student_fa,UPBV
+ENROLL,000582014,,Student,PGME-0043-202641-52357
+UPDATE,000582078,CC. 32.258.986,Sandra Maria,Vera Alzate,,1,sandra.veraa@upb.edu.co
+ENROLL,000582078,,Student_fa,UPBV
+ENROLL,000582078,,Student,PGME-0043-202641-52357
+UPDATE,000582119,CC. 1.152.705.697,Erick Alexander,Castañeda Villalobos,,1,erickacasvi@gmail.com
+ENROLL,000582119,,Student_fa,UPBV
+ENROLL,000582119,,Student,PGME-0043-202641-52357
+UPDATE,000582321,CC. 1.037.264.042,Deisy Julieth,Tabera Vasquez,,1,taberavasquezdeisyjulieth@gmail.com
+ENROLL,000582321,,Student_fa,UPBV
+ENROLL,000582321,,Student,PGME-0043-202641-52357
+UPDATE,000582405,CC. 1.042.707.549,Claudia Yaneth,Tobon Miranda,,1,claudiatobon2303@gmail.com
+ENROLL,000582405,,Student_fa,UPBV
+ENROLL,000582405,,Student,PGME-0043-202641-52357
+UPDATE,000582445,CC. 39.677.488,Johana Astrid,Calderon Chaux,,1,jastrid24@hotmail.com
+ENROLL,000582445,,Student_fa,UPBV
+ENROLL,000582445,,Student,PGME-0043-202641-52357
+UPDATE,000582499,CC. 98.627.763,Julio Cesar,Davila Hincapie,,1,juliocesardavilahincapie@gmail.com
+ENROLL,000582499,,Student_fa,UPBV
+ENROLL,000582499,,Student,PGME-0043-202641-52357
+UPDATE,000582593,CC. 1.045.497.311,Kely Johana,Mena Mena,,1,kellymena898@gmail.com
+ENROLL,000582593,,Student_fa,UPBV
+ENROLL,000582593,,Student,PGME-0043-202641-52357
+UPDATE,000582675,CC. 98.633.022,Hans,Velasquez Maya,,1,hans.velasquez@upb.edu.co
+ENROLL,000582675,,Student_fa,UPBV
+ENROLL,000582675,,Student,PGME-0043-202641-52357
+UPDATE,000556938,CC. 43.742.098,Mary Luz,Gaviria Rendon,,1,marylgaviriar@itagui.edu.co
+ENROLL,000556938,,Student_fa,UPBV
+ENROLL,000556938,,Student,PGME-0043-202641-52360
+UPDATE,000572748,CC. 43.960.209,Zohe,Velasquez Gonzalez,,1,zorisha1207@gmail.com
+ENROLL,000572748,,Student_fa,UPBV
+ENROLL,000572748,,Student,PGME-0043-202641-52360
+UPDATE,000574751,CC. 1.036.946.763,Jairo,Rendon Gonzalez,,1,jairorendong@gmail.com
+ENROLL,000574751,,Student_fa,UPBV
+ENROLL,000574751,,Student,PGME-0043-202641-52360
+UPDATE,000579108,CC. 1.073.599.462,Sandra Milena,Pardo Sanchez,,1,sandrapardosan@gmail.com
+ENROLL,000579108,,Student_fa,UPBV
+ENROLL,000579108,,Student,PGME-0043-202641-52360
+UPDATE,000579703,CC. 1.007.287.341,Laura Vanessa,Ponce Tapias,,1,lauraponcetapia1@gmail.com
+ENROLL,000579703,,Student_fa,UPBV
+ENROLL,000579703,,Student,PGME-0043-202641-52360
+UPDATE,000209677,CC. 80.041.122,Wilander,Culma Estevez,,1,wilander@ierhojasanchas.edu.co
+ENROLL,000209677,,Student_fa,UPBV
+ENROLL,000209677,,Student,PGME-0043-202641-52360
+UPDATE,000579832,CC. 88.259.625,Walter,Pabon Pinillos,,1,wpabonpinillos@yahoo.com
+ENROLL,000579832,,Student_fa,UPBV
+ENROLL,000579832,,Student,PGME-0043-202641-52360
+UPDATE,000352913,CC. 70.905.156,Pablo Emilio,Naranjo Zuluaga,,1,pablo.nan@hotmail.com
+ENROLL,000352913,,Student_fa,UPBV
+ENROLL,000352913,,Student,PGME-0043-202641-52360
+UPDATE,000515174,CC. 60.265.757,Gladys Yamile,Ferrer Leal,,1,yamileferrerl@gmail.com
+ENROLL,000515174,,Student_fa,UPBV
+ENROLL,000515174,,Student,PGME-0043-202641-52360
+UPDATE,000517908,CC. 30.239.772,Sandra Patricia,Muñoz Zamora,,1,yireth2003@hotmail.com
+ENROLL,000517908,,Student_fa,UPBV
+ENROLL,000517908,,Student,PGME-0043-202641-52360
+UPDATE,000580116,CC. 3.424.363,Robinson Fernando,Gomez Garcia,,1,robinsonf.gomez@upb.edu.co
+ENROLL,000580116,,Student_fa,UPBV
+ENROLL,000580116,,Student,PGME-0043-202641-52360
+UPDATE,000580515,CC. 82.362.613,Yefferson,Murillo Mosquera,,1,yeffersonmurillomosquera@gmail.com
+ENROLL,000580515,,Student_fa,UPBV
+ENROLL,000580515,,Student,PGME-0043-202641-52360
+UPDATE,000580964,CC. 1.020.415.820,Yeimel Esteban,Echavarria Gil,,1,estebanechavarria01@gmail.com
+ENROLL,000580964,,Student_fa,UPBV
+ENROLL,000580964,,Student,PGME-0043-202641-52360
+UPDATE,000581209,CC. 98.700.924,Luis Miguel,Hernandez Celis,,1,lmhcelis42@gmail.com
+ENROLL,000581209,,Student_fa,UPBV
+ENROLL,000581209,,Student,PGME-0043-202641-52360
+UPDATE,000581423,CC. 17.903.793,Ruben Dario,Bastidas Cantillo,,1,rudabascan@gmail.com
+ENROLL,000581423,,Student_fa,UPBV
+ENROLL,000581423,,Student,PGME-0043-202641-52360
+UPDATE,000582174,CC. 1.107.101.979,Maryuri,Ramirez Ordoñez,,1,teacher.maryuri@gmail.com
+ENROLL,000582174,,Student_fa,UPBV
+ENROLL,000582174,,Student,PGME-0043-202641-52360
+UPDATE,000582672,CC. 1.076.383.973,Omar Yesid,Mosquera Mosquera,,1,omarmosquera2015@gmail.com
+ENROLL,000582672,,Student_fa,UPBV
+ENROLL,000582672,,Student,PGME-0043-202641-52360
+UPDATE,000583045,CC. 35.113.571,Liseth Del Socorro Del Socorro,Mendez Zapa,,1,lisethmendezzapa@gmail.com
+ENROLL,000583045,,Student_fa,UPBV
+ENROLL,000583045,,Student,PGME-0043-202641-52360
+UPDATE,000589873,CC. 43.204.476,Blanca Isabel,Herrera Cruz,,1,isaherrera47@gmail.com
+ENROLL,000589873,,Student_fa,UPBV
+ENROLL,000589873,,Student,PGME-0044-202641-52303
+UPDATE,000589294,CC. 1.035.230.591,Cristian Humberto,Garcia Ganan,,1,chumberto.garcia@udea.edu.co
+ENROLL,000589294,,Student_fa,UPBV
+ENROLL,000589294,,Student,PGME-0044-202641-52303
+UPDATE,000588699,CC. 1.054.916.151,Emilsen Lorena,Rodriguez Henao,,1,lorerodrizacademico@hotmail.com
+ENROLL,000588699,,Student_fa,UPBV
+ENROLL,000588699,,Student,PGME-0044-202641-52303
+UPDATE,000582323,CC. 1.098.736.502,German Andres,Velasco Mantilla,,1,gerand.09@gmail.com
+ENROLL,000582323,,Student_fa,UPBV
+ENROLL,000582323,,Student,PGME-0044-202641-52303
+UPDATE,000577417,CC. 43.616.638,Gilda Bony,Cuesta Mayo,,1,bonycuesta@yahoo.com
+ENROLL,000577417,,Student_fa,UPBV
+ENROLL,000577417,,Student,PGME-0044-202641-52303
+UPDATE,000577858,CC. 1.143.239.882,Gustavo Andres,Blanco Ospino,,1,white_1054@hotmail.com
+ENROLL,000577858,,Student_fa,UPBV
+ENROLL,000577858,,Student,PGME-0044-202641-52303
+UPDATE,000588145,CC. 15.264.825,Joel De Jesus,Lujan Sanchez,,1,lujanprofe@gmail.com
+ENROLL,000588145,,Student_fa,UPBV
+ENROLL,000588145,,Student,PGME-0044-202641-52303
+UPDATE,000572405,CC. 1.020.472.055,Juan Pablo,Cortes Herrera,,1,juanpabloch17@gmail.com
+ENROLL,000572405,,Student_fa,UPBV
+ENROLL,000572405,,Student,PGME-0044-202641-52303
+UPDATE,000589153,CC. 1.037.974.116,Keydy Tatiana,Ceballos Morales,,1,teretati081@hotmail.com
+ENROLL,000589153,,Student_fa,UPBV
+ENROLL,000589153,,Student,PGME-0044-202641-52303
+UPDATE,000206947,CC. 1.022.034.265,Lorena,Gutierrez Perez,,1,lorena.gutierrez@upb.edu.co
+ENROLL,000206947,,Student_fa,UPBV
+ENROLL,000206947,,Student,PGME-0044-202641-52303
+UPDATE,000577566,CC. 1.020.479.916,Luisa Maria,Bedoya Castrillon,,1,luisabeca97@gmail.com
+ENROLL,000577566,,Student_fa,UPBV
+ENROLL,000577566,,Student,PGME-0044-202641-52303
+UPDATE,000587042,CC. 1.085.103.796,Maria Paz,Tundeno Ospino,,1,matupaz.19@gmail.com
+ENROLL,000587042,,Student_fa,UPBV
+ENROLL,000587042,,Student,PGME-0044-202641-52303
+UPDATE,000589947,CC. 43.868.140,Monica Patricia,Seguro Gomez,,1,monyseguro@gmail.com
+ENROLL,000589947,,Student_fa,UPBV
+ENROLL,000589947,,Student,PGME-0044-202641-52303
+UPDATE,000588786,CC. 71.748.647,Oscar Ivan,Monsalve Tapasco,,1,oscarivanprofe@gmail.com
+ENROLL,000588786,,Student_fa,UPBV
+ENROLL,000588786,,Student,PGME-0044-202641-52303
+UPDATE,000252629,CC. 21.897.683,Paola Andrea,Garcia Cardona,,1,paogar4812@gmail.com
+ENROLL,000252629,,Student_fa,UPBV
+ENROLL,000252629,,Student,PGME-0044-202641-52303
+UPDATE,000588687,CC. 43.265.675,Paula Andrea,Sepulveda Sanchez,,1,andrea.sepulveda@udea.edu.co
+ENROLL,000588687,,Student_fa,UPBV
+ENROLL,000588687,,Student,PGME-0044-202641-52303
+UPDATE,000580507,CC. 1.143.401.379,Ronaldo,Tejedor Simarra,,1,mg.tejedors@gmail.com
+ENROLL,000580507,,Student_fa,UPBV
+ENROLL,000580507,,Student,PGME-0044-202641-52303
+UPDATE,000588317,CC. 43.625.788,Sandra Milena,Buritica Velez,,1,saburiticave@iepedroclaveraguirre.edu.co
+ENROLL,000588317,,Student_fa,UPBV
+ENROLL,000588317,,Student,PGME-0044-202641-52303
+UPDATE,000298187,CC. 1.076.822.432,Yermer David,Mosquera Arias,,1,yda56@hotmail.com
+ENROLL,000298187,,Student_fa,UPBV
+ENROLL,000298187,,Student,PGME-0044-202641-52303
+UPDATE,000588989,CC. 1.017.142.663,Yuliana,Zuluaga Roldan,,1,yata129@hotmail.com
+ENROLL,000588989,,Student_fa,UPBV
+ENROLL,000588989,,Student,PGME-0044-202641-52303
+UPDATE,000277127,CC. 43.689.657,Beatriz Eugenia,Arango Calle,,1,barangocalle@gmail.com
+ENROLL,000277127,,Student_fa,UPBV
+ENROLL,000277127,,Student,PGME-0044-202641-52307
+UPDATE,000587718,CC. 71.279.297,Edison De Jesus,Parra Sierra,,1,edisonparras@jaga.edu.co
+ENROLL,000587718,,Student_fa,UPBV
+ENROLL,000587718,,Student,PGME-0044-202641-52307
+UPDATE,000581330,CC. 1.022.035.724,Elsa Yaneth,Jaramillo Arias,,1,elsajllo26@gmail.com
+ENROLL,000581330,,Student_fa,UPBV
+ENROLL,000581330,,Student,PGME-0044-202641-52307
+UPDATE,000587751,CC. 1.104.416.425,Fabio Andres,Anaya Requena,,1,faar199024@gmail.com
+ENROLL,000587751,,Student_fa,UPBV
+ENROLL,000587751,,Student,PGME-0044-202641-52307
+UPDATE,000578219,CC. 1.010.183.772,Ferney,Baena Olascoaga,,1,ferneybaena@ierepublicadebrasil.edu.co
+ENROLL,000578219,,Student_fa,UPBV
+ENROLL,000578219,,Student,PGME-0044-202641-52307
+UPDATE,000586874,CC. 1.035.416.601,Juliana,Diaz Hernandez,,1,jdiazh27890@gmail.com
+ENROLL,000586874,,Student_fa,UPBV
+ENROLL,000586874,,Student,PGME-0044-202641-52307
+UPDATE,000586237,CC. 1.014.263.583,Karen Astrid,Abella Paez,,1,karenabella@ierodrigolaramedellin.edu.co
+ENROLL,000586237,,Student_fa,UPBV
+ENROLL,000586237,,Student,PGME-0044-202641-52307
+UPDATE,000587361,CC. 1.037.643.987,Laura Cristina,Arcila Cañas,,1,laura.arcilaca@amigo.edu.co
+ENROLL,000587361,,Student_fa,UPBV
+ENROLL,000587361,,Student,PGME-0044-202641-52307
+UPDATE,000481167,CC. 1.040.032.697,Laura Isabel,Valencia Valencia,,1,laurisvava@gmail.com
+ENROLL,000481167,,Student_fa,UPBV
+ENROLL,000481167,,Student,PGME-0044-202641-52307
+UPDATE,000587040,CC. 1.040.048.648,Leidy Cristina,Calderon Restrepo,,1,cristinacalderon12@gmail.com
+ENROLL,000587040,,Student_fa,UPBV
+ENROLL,000587040,,Student,PGME-0044-202641-52307
+UPDATE,000578751,CC. 1.036.945.016,Leidy Johana,Henao Lopez,,1,leidyhenaolopez32@gmail.com
+ENROLL,000578751,,Student_fa,UPBV
+ENROLL,000578751,,Student,PGME-0044-202641-52307
+UPDATE,000537684,CC. 1.152.696.725,Lina Maria,Hernandez Isaza,,1,linahernandezprofe@gmail.com
+ENROLL,000537684,,Student_fa,UPBV
+ENROLL,000537684,,Student,PGME-0044-202641-52307
+UPDATE,000586158,CC. 1.019.080.507,Luis Alberto,Miranda Cely,,1,luis9302_@hotmail.com
+ENROLL,000586158,,Student_fa,UPBV
+ENROLL,000586158,,Student,PGME-0044-202641-52307
+UPDATE,000209311,CC. 1.035.417.574,Luisa Fernanda,Calderon Palacio,,1,lufer1687@gmail.com
+ENROLL,000209311,,Student_fa,UPBV
+ENROLL,000209311,,Student,PGME-0044-202641-52307
+UPDATE,000320901,CC. 1.038.411.578,Maria Alejandra,Restrepo Gonzalez,,1,alejarestrepog@hotmail.com
+ENROLL,000320901,,Student_fa,UPBV
+ENROLL,000320901,,Student,PGME-0044-202641-52307
+UPDATE,000372513,CC. 39.449.695,Marisol,Muñoz Gomez,,1,marisolmunoz@ielapazlaceja.edu.co
+ENROLL,000372513,,Student_fa,UPBV
+ENROLL,000372513,,Student,PGME-0044-202641-52307
+UPDATE,000587923,CC. 70.569.013,Mauricio,Guirales Moreno,,1,mauricioguirales@gmail.com
+ENROLL,000587923,,Student_fa,UPBV
+ENROLL,000587923,,Student,PGME-0044-202641-52307
+UPDATE,000034153,CC. 43.739.606,Monica Maria,Trujillo Duque,,1,monica.trujillod@upb.edu.co
+ENROLL,000034153,,Student_fa,UPBV
+ENROLL,000034153,,Student,PGME-0044-202641-52307
+UPDATE,000588104,CC. 1.214.715.740,Yohan Sebastian,Cordoba Cano,,1,yohan.sebastian.cordoba@gmail.com
+ENROLL,000588104,,Student_fa,UPBV
+ENROLL,000588104,,Student,PGME-0044-202641-52307
+UPDATE,000058914,CC. 71.703.016,Nelson Dario,Restrepo Lopez,,1,nelsondario1968@gmail.com
+ENROLL,000058914,,Student_fa,UPBV
+ENROLL,000058914,,Student,PGME-0044-202641-52307
+UPDATE,000587654,CC. 1.040.031.684,Yonny Alejandro,Ramirez Ramirez,,1,alejoudea180@gmail.com
+ENROLL,000587654,,Student_fa,UPBV
+ENROLL,000587654,,Student,PGME-0044-202641-52307
+UPDATE,000388462,CC. 71.225.253,Alexander,Ortiz Gaviria,,1,alexanderortizg@hotmail.com
+ENROLL,000388462,,Student_fa,UPBV
+ENROLL,000388462,,Student,PGME-0045-202641-52319
+UPDATE,000577561,CC. 1.039.450.787,Angela Patricia,Steer Villa,,1,Angela.steervilla@gmail.com
+ENROLL,000577561,,Student_fa,UPBV
+ENROLL,000577561,,Student,PGME-0045-202641-52319
+UPDATE,000577559,CC. 33.253.592,Elvia Maria,Gonzalez Campillo,,1,elviagonzalezc1975@gmail.com
+ENROLL,000577559,,Student_fa,UPBV
+ENROLL,000577559,,Student,PGME-0045-202641-52319
+UPDATE,000577735,CC. 1.036.642.067,Giovany,Montoya Colorado,,1,giovany_100@hotmail.com
+ENROLL,000577735,,Student_fa,UPBV
+ENROLL,000577735,,Student,PGME-0045-202641-52319
+UPDATE,000577403,CC. 1.026.562.116,Ivan Camilo,Paez Zapata,,1,camilitopaezzapata@gmail.com
+ENROLL,000577403,,Student_fa,UPBV
+ENROLL,000577403,,Student,PGME-0045-202641-52319
+UPDATE,000240786,CC. 1.098.789.630,Laura Geraldine,Torres Villamizar,,1,lauratorres909@gmail.com
+ENROLL,000240786,,Student_fa,UPBV
+ENROLL,000240786,,Student,PGME-0045-202641-52319
+UPDATE,000577433,CC. 1.035.431.106,Laura Liliana,Restrepo Arias,,1,laurarestrepoarias@gmail.com
+ENROLL,000577433,,Student_fa,UPBV
+ENROLL,000577433,,Student,PGME-0045-202641-52319
+UPDATE,000577438,CC. 1.017.244.202,Manuela,Vives,,1,manuela.vives07@gmail.com
+ENROLL,000577438,,Student_fa,UPBV
+ENROLL,000577438,,Student,PGME-0045-202641-52319
+UPDATE,000184266,CC. 43.634.607,Natalia Andrea,Velasquez Cano,,1,natalia.velasquez@iemanueljbetancur.edu.co
+ENROLL,000184266,,Student_fa,UPBV
+ENROLL,000184266,,Student,PGME-0045-202641-52319
+UPDATE,000392910,CC. 1.152.193.295,Luisa,Ortiz Castillo,,1,luisaortizies@gmail.com
+ENROLL,000392910,,Student_fa,UPBV
+ENROLL,000392910,,Student,PGME-0045-202641-52319
+UPDATE,000385470,CC. 1.152.186.902,Natasha,Quintero Jimenez,,1,natly1408@gmail.com
+ENROLL,000385470,,Student_fa,UPBV
+ENROLL,000385470,,Student,PGME-0045-202641-52319
+UPDATE,000577409,CC. 71.331.050,Walter Adolfo,Zuluaga Arcila,,1,walterzu77@gmail.com
+ENROLL,000577409,,Student_fa,UPBV
+ENROLL,000577409,,Student,PGME-0045-202641-52319
+UPDATE,000577738,CC. 1.020.436.026,Yesid Mauricio,Perez Moreno,,1,YESID1487@GMAIL.COM
+ENROLL,000577738,,Student_fa,UPBV
+ENROLL,000577738,,Student,PGME-0045-202641-52319
+UPDATE,000577217,CC. 1.040.325.220,Bibiana Andrea,Gonzalez  Correa,,1,bibianag15@gmail.com
+ENROLL,000577217,,Student_fa,UPBV
+ENROLL,000577217,,Student,PGME-0045-202641-52319
+UPDATE,000577570,CC. 1.128.443.307,Cristian Camilo,Lopez Zapata,,1,cristianlopezza@hotmail.com
+ENROLL,000577570,,Student_fa,UPBV
+ENROLL,000577570,,Student,PGME-0045-202641-52322
+UPDATE,000336189,CC. 1.128.473.056,Daniel Esteban,Carmona Rendón,,1,decarmonar@gmail.com
+ENROLL,000336189,,Student_fa,UPBV
+ENROLL,000336189,,Student,PGME-0045-202641-52322
+UPDATE,000026791,CC. 3.391.791,David,Londoño Gonzalez,,1,profedavidsistemas2022@gmail.com
+ENROLL,000026791,,Student_fa,UPBV
+ENROLL,000026791,,Student,PGME-0045-202641-52322
+UPDATE,000577407,CC. 32.256.917,Erika Natalia,Alzate Cano,,1,enalzateca@gmail.com
+ENROLL,000577407,,Student_fa,UPBV
+ENROLL,000577407,,Student,PGME-0045-202641-52322
+UPDATE,000577435,CC. 1.036.642.640,Jhoan Stiven,Rueda Restrepo,,1,jhoan.rueda@iemanueljosegomezserna.edu.co
+ENROLL,000577435,,Student_fa,UPBV
+ENROLL,000577435,,Student,PGME-0045-202641-52322
+UPDATE,000186242,CC. 98.631.454,Juan Carlos,Blandon Vargas,,1,juancarlosbv@iemanueljbetancur.edu.co
+ENROLL,000186242,,Student_fa,UPBV
+ENROLL,000186242,,Student,PGME-0045-202641-52322
+UPDATE,000322149,CC. 76.324.504,Julian Andres,Grueso Fernandez,,1,julian.grueso@inemjose.edu.co
+ENROLL,000322149,,Student_fa,UPBV
+ENROLL,000322149,,Student,PGME-0045-202641-52322
+UPDATE,000577413,CC. 1.214.721.614,Kevin Aldrey,Bedoya Velez,,1,xkevinbedoyax@gmail.com
+ENROLL,000577413,,Student_fa,UPBV
+ENROLL,000577413,,Student,PGME-0045-202641-52322
+UPDATE,000388655,CC. 1.040.736.068,Luisa Fernanda,Florez Ramirez,,1,luisaflorez@ielusitania.edu.co
+ENROLL,000388655,,Student_fa,UPBV
+ENROLL,000388655,,Student,PGME-0045-202641-52322
+UPDATE,000578059,CC. 43.436.587,Rosario,Mejia Perez,,1,proferochy43@gmail.com
+ENROLL,000578059,,Student_fa,UPBV
+ENROLL,000578059,,Student,PGME-0045-202641-52322
+UPDATE,000577411,CC. 1.110.556.961,Yiliana,Arias Ochoa,,1,yiliana.arias@gmail.com
+ENROLL,000577411,,Student_fa,UPBV
+ENROLL,000577411,,Student,PGME-0045-202641-52322
+UPDATE,000577569,CC. 1.038.334.767,Yimmy,Lopez Montoya,,1,yimmylopez@ielusitania.edu.co
+ENROLL,000577569,,Student_fa,UPBV
+ENROLL,000577569,,Student,PGME-0045-202641-52322
+UPDATE,000577571,CC. 43.254.243,Yuly Pauline,Orozco Holguin,,1,yulypaulina17@hotmail.com
+ENROLL,000577571,,Student_fa,UPBV
+ENROLL,000577571,,Student,PGME-0045-202641-52322
+UPDATE,000305760,CC. 43.264.162,Marcela Yaneth,Montoya Jimenez,,1,juanaymarte@gmail.com
+ENROLL,000305760,,Student_fa,UPBV
+ENROLL,000305760,,Student,PGME-0045-202641-52359
+UPDATE,000349352,CC. 1.036.400.694,Daniela,Aguirre Ramirez,,1,daniela@iesanantoniorionegro.edu.co
+ENROLL,000349352,,Student_fa,UPBV
+ENROLL,000349352,,Student,PGME-0045-202641-52359
+UPDATE,000443413,CC. 54.257.074,Edilma,Renteria Rovira,,1,edilmar2@hotmail.com
+ENROLL,000443413,,Student_fa,UPBV
+ENROLL,000443413,,Student,PGME-0045-202641-52359
+UPDATE,000444073,CC. 5.348.989,Carlos  Alberto,Erazo,,1,carlosalberto28105@gmail.com
+ENROLL,000444073,,Student_fa,UPBV
+ENROLL,000444073,,Student,PGME-0045-202641-52359
+UPDATE,000496285,CC. 41.182.315,Marta Ligia,Chindoy Jansasoy,,1,chindoymartha376@gmail.com
+ENROLL,000496285,,Student_fa,UPBV
+ENROLL,000496285,,Student,PGME-0045-202641-52359
+UPDATE,000566683,CC. 1.077.451.433,Ariel Enrique,Maturana Garcia,,1,ariel.maturana@upb.edu.co
+ENROLL,000566683,,Student_fa,UPBV
+ENROLL,000566683,,Student,PGME-0045-202641-52359
+UPDATE,000567415,CC. 1.052.983.611,Breiner De Jesus,Mendoza Quezada,,1,breinermq36@gmail.com
+ENROLL,000567415,,Student_fa,UPBV
+ENROLL,000567415,,Student,PGME-0045-202641-52359
+UPDATE,000579468,CC. 1.040.045.578,Jennifer Alejandra,Ciro Londoño,,1,aljciro@gmail.com
+ENROLL,000579468,,Student_fa,UPBV
+ENROLL,000579468,,Student,PGME-0045-202641-52359
+UPDATE,000581210,CC. 71.372.533,Alvaro,Ruiz Gomez,,1,alvaro.ruizgo@upb.edu.co
+ENROLL,000581210,,Student_fa,UPBV
+ENROLL,000581210,,Student,PGME-0045-202641-52359
+UPDATE,000582010,CC. 29.820.837,Diana Maria,Arcila Pelaez,,1,arciladianamaria21@gmail.com
+ENROLL,000582010,,Student_fa,UPBV
+ENROLL,000582010,,Student,PGME-0045-202641-52359
+UPDATE,000582013,CC. 77.161.712,Carlos Eliecer,Mejia Zuleta,,1,carloseliecer2911@gmail.com
+ENROLL,000582013,,Student_fa,UPBV
+ENROLL,000582013,,Student,PGME-0045-202641-52359
+UPDATE,000582014,CC. 1.128.426.895,Henry Alberto,Restrepo Vargas,,1,licenciadopoli2016@gmail.com
+ENROLL,000582014,,Student_fa,UPBV
+ENROLL,000582014,,Student,PGME-0045-202641-52359
+UPDATE,000582078,CC. 32.258.986,Sandra Maria,Vera Alzate,,1,sandra.veraa@upb.edu.co
+ENROLL,000582078,,Student_fa,UPBV
+ENROLL,000582078,,Student,PGME-0045-202641-52359
+UPDATE,000582119,CC. 1.152.705.697,Erick Alexander,Castañeda Villalobos,,1,erickacasvi@gmail.com
+ENROLL,000582119,,Student_fa,UPBV
+ENROLL,000582119,,Student,PGME-0045-202641-52359
+UPDATE,000582321,CC. 1.037.264.042,Deisy Julieth,Tabera Vasquez,,1,taberavasquezdeisyjulieth@gmail.com
+ENROLL,000582321,,Student_fa,UPBV
+ENROLL,000582321,,Student,PGME-0045-202641-52359
+UPDATE,000582405,CC. 1.042.707.549,Claudia Yaneth,Tobon Miranda,,1,claudiatobon2303@gmail.com
+ENROLL,000582405,,Student_fa,UPBV
+ENROLL,000582405,,Student,PGME-0045-202641-52359
+UPDATE,000582445,CC. 39.677.488,Johana Astrid,Calderon Chaux,,1,jastrid24@hotmail.com
+ENROLL,000582445,,Student_fa,UPBV
+ENROLL,000582445,,Student,PGME-0045-202641-52359
+UPDATE,000582499,CC. 98.627.763,Julio Cesar,Davila Hincapie,,1,juliocesardavilahincapie@gmail.com
+ENROLL,000582499,,Student_fa,UPBV
+ENROLL,000582499,,Student,PGME-0045-202641-52359
+UPDATE,000582593,CC. 1.045.497.311,Kely Johana,Mena Mena,,1,kellymena898@gmail.com
+ENROLL,000582593,,Student_fa,UPBV
+ENROLL,000582593,,Student,PGME-0045-202641-52359
+UPDATE,000582675,CC. 98.633.022,Hans,Velasquez Maya,,1,hans.velasquez@upb.edu.co
+ENROLL,000582675,,Student_fa,UPBV
+ENROLL,000582675,,Student,PGME-0045-202641-52359
+UPDATE,000209677,CC. 80.041.122,Wilander,Culma Estevez,,1,wilander@ierhojasanchas.edu.co
+ENROLL,000209677,,Student_fa,UPBV
+ENROLL,000209677,,Student,PGME-0045-202641-52362
+UPDATE,000352913,CC. 70.905.156,Pablo Emilio,Naranjo Zuluaga,,1,pablo.nan@hotmail.com
+ENROLL,000352913,,Student_fa,UPBV
+ENROLL,000352913,,Student,PGME-0045-202641-52362
+UPDATE,000515174,CC. 60.265.757,Gladys Yamile,Ferrer Leal,,1,yamileferrerl@gmail.com
+ENROLL,000515174,,Student_fa,UPBV
+ENROLL,000515174,,Student,PGME-0045-202641-52362
+UPDATE,000517908,CC. 30.239.772,Sandra Patricia,Muñoz Zamora,,1,yireth2003@hotmail.com
+ENROLL,000517908,,Student_fa,UPBV
+ENROLL,000517908,,Student,PGME-0045-202641-52362
+UPDATE,000556938,CC. 43.742.098,Mary Luz,Gaviria Rendon,,1,marylgaviriar@itagui.edu.co
+ENROLL,000556938,,Student_fa,UPBV
+ENROLL,000556938,,Student,PGME-0045-202641-52362
+UPDATE,000572748,CC. 43.960.209,Zohe,Velasquez Gonzalez,,1,zorisha1207@gmail.com
+ENROLL,000572748,,Student_fa,UPBV
+ENROLL,000572748,,Student,PGME-0045-202641-52362
+UPDATE,000574751,CC. 1.036.946.763,Jairo,Rendon Gonzalez,,1,jairorendong@gmail.com
+ENROLL,000574751,,Student_fa,UPBV
+ENROLL,000574751,,Student,PGME-0045-202641-52362
+UPDATE,000579108,CC. 1.073.599.462,Sandra Milena,Pardo Sanchez,,1,sandrapardosan@gmail.com
+ENROLL,000579108,,Student_fa,UPBV
+ENROLL,000579108,,Student,PGME-0045-202641-52362
+UPDATE,000579703,CC. 1.007.287.341,Laura Vanessa,Ponce Tapias,,1,lauraponcetapia1@gmail.com
+ENROLL,000579703,,Student_fa,UPBV
+ENROLL,000579703,,Student,PGME-0045-202641-52362
+UPDATE,000579832,CC. 88.259.625,Walter,Pabon Pinillos,,1,wpabonpinillos@yahoo.com
+ENROLL,000579832,,Student_fa,UPBV
+ENROLL,000579832,,Student,PGME-0045-202641-52362
+UPDATE,000580116,CC. 3.424.363,Robinson Fernando,Gomez Garcia,,1,robinsonf.gomez@upb.edu.co
+ENROLL,000580116,,Student_fa,UPBV
+ENROLL,000580116,,Student,PGME-0045-202641-52362
+UPDATE,000580515,CC. 82.362.613,Yefferson,Murillo Mosquera,,1,yeffersonmurillomosquera@gmail.com
+ENROLL,000580515,,Student_fa,UPBV
+ENROLL,000580515,,Student,PGME-0045-202641-52362
+UPDATE,000580964,CC. 1.020.415.820,Yeimel Esteban,Echavarria Gil,,1,estebanechavarria01@gmail.com
+ENROLL,000580964,,Student_fa,UPBV
+ENROLL,000580964,,Student,PGME-0045-202641-52362
+UPDATE,000581209,CC. 98.700.924,Luis Miguel,Hernandez Celis,,1,lmhcelis42@gmail.com
+ENROLL,000581209,,Student_fa,UPBV
+ENROLL,000581209,,Student,PGME-0045-202641-52362
+UPDATE,000581423,CC. 17.903.793,Ruben Dario,Bastidas Cantillo,,1,rudabascan@gmail.com
+ENROLL,000581423,,Student_fa,UPBV
+ENROLL,000581423,,Student,PGME-0045-202641-52362
+UPDATE,000582174,CC. 1.107.101.979,Maryuri,Ramirez Ordoñez,,1,teacher.maryuri@gmail.com
+ENROLL,000582174,,Student_fa,UPBV
+ENROLL,000582174,,Student,PGME-0045-202641-52362
+UPDATE,000582672,CC. 1.076.383.973,Omar Yesid,Mosquera Mosquera,,1,omarmosquera2015@gmail.com
+ENROLL,000582672,,Student_fa,UPBV
+ENROLL,000582672,,Student,PGME-0045-202641-52362
+UPDATE,000583045,CC. 35.113.571,Liseth Del Socorro Del Socorro,Mendez Zapa,,1,lisethmendezzapa@gmail.com
+ENROLL,000583045,,Student_fa,UPBV
+ENROLL,000583045,,Student,PGME-0045-202641-52362

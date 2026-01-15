@@ -64,9 +64,9 @@ def main():
         #Se filtra el dataframe "EstudiantesInscribir"por el Periodo y NRC/LC del curso
         EstudiantesInscribir = data_sin_duplicados[
                 (data_sin_duplicados['PERIODO'].astype(str) == str(course_periodo)) &
-                (data_sin_duplicados['NRC'].astype(str) == str(course_nrc))
+                (data_sin_duplicados['LISTA_CRUZADA'].astype(str) == str(course_nrc))
         ] 
-              
+                
         # Crear los archivos para inscripcion
         helpers.crearArchivos(EstudiantesInscribir, course_name, course_nrc, course_periodo, BDestudiantes)
 
@@ -74,7 +74,7 @@ def main():
     helpers.merge_archivos()
 
     print("\n-------------------------------")
-    print("Limpieza de memoria...")
+    print("Limpieza de memoria.............")
     print("-------------------------------")
 
     #Limpiar los DataFrames para liberar memoria

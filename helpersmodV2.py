@@ -247,8 +247,11 @@ def crearArchivos(data, course_name, course_nrc, BDUsuBS, log_file_path='log_cre
     line_count = 0
 
     # Crear carpeta de salida si no existe
-    os.makedirs('./salida', exist_ok=True)
-    archivo_comandos = f'./salida/registro_{course_name}.txt'
+    #os.makedirs('./salida', exist_ok=True)
+    #archivo_comandos = f'./salida/registro_{course_name}.txt'
+
+    directory = CONFIG.get('salida_directory', './salida/') #directorio de salida desde el JSON de configuracion
+    archivo_comandos = directory + 'registro_' + course_name + '.txt'
 
     # Abrir archivos de salida y log
     with open(archivo_comandos, 'a', encoding='utf8') as fptr, \
