@@ -270,7 +270,7 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDEstuBS):
           OrgUnid = "CVTE"
   
     # Creamos los archivos distintos por curso
-    directory = CONFIG.get('salida_directory', './salida/')
+    directory = CONFIG.get('salida_directory', './salida/') #directorio de salida desde el JSON de configuracion
     file    = directory + 'registro_' + course_name + '.txt'
     fptr    = open(file, 'a', encoding='utf8')
     line_count = 0
