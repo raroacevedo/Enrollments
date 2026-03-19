@@ -13,7 +13,7 @@ from selenium.webdriver.chrome.options import Options
 
 #configura el driver de selenium
 def setup_driver():
-    """Configura y retorna el WebDriver con opciones seguras"""
+    """Configura y retorna el WebDriver con opciones seguras sin el prompt de red local"""
     service = Service(r"..\Chrome\chromedriver.exe")
 
     # Verifica si el chromedriver existe en la ruta especificada
@@ -23,10 +23,25 @@ def setup_driver():
     # Configuración de opciones del navegador
     options = Options()
     options.add_argument("--disable-extensions")
-    # options.add_argument("--headless")  # Descomentar si se desea en modo headless
+    options.add_argument("--incognito")              
+    options.add_argument("--disable-notifications")  
+    options.add_argument("--allow-insecure-localhost") 
     options.add_argument("--log-level=3")
+    
+    # --- NUEVOS PARÁMETROS PARA OMITIR EL MENSAJE DE RED LOCAL ---
+    # 1. Deshabilita la característica que hace saltar el aviso de seguridad
+    options.add_argument("--disable-features=LocalNetworkAccessChecks")
+    
+    # 2. Inyecta preferencias directas al perfil para autoconceder el permiso si llega a ser requerido
+    prefs = {
+        "profile.managed_default_content_settings.local_network_access": 1
+    }
+    options.add_experimental_option("prefs", prefs)
+    # -------------------------------------------------------------
+
     driver = webdriver.Chrome(service=service, options=options)
     driver.implicitly_wait(10)
+    
     return driver
 
 #login con credenciales y clave 2FA
@@ -153,7 +168,6 @@ def main():
 
     finally:
         driver.quit()
-        del driver, df_result, df_new            # Limpieza de variables   
         gc.collect()                             # Limpieza de memoria
         print("\n[✓] Proceso finalizado.")
 

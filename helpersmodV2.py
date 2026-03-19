@@ -15,12 +15,13 @@ def load_config(path="config.json"):
       {
         "banner_directory": "./",
         "bdusuarios_file": "./BDUsuarios/Listados Usuarios.xlsx",
+        "coordinadores_file": "./BDUsuarios/Coordinadores.xlsx",
         "salida_directory": "./salida/"
       }
     Devuelve un dict con la configuración (vacío si no existe o hay errores).
     """
 
-    print("📂 Cargando configuración...")
+    print("[INFO] Cargando configuración...")
     try:
         base = os.path.dirname(os.path.abspath(__file__))
     except NameError:
@@ -35,11 +36,36 @@ def load_config(path="config.json"):
         with open(cfg_path, encoding="utf8") as f:
             return json.load(f)
     except Exception as e:
-        print(f"⚠️ Error al leer la configuración {cfg_path}: {e}")
+        print(f"[WARN] Error al leer la configuración {cfg_path}: {e}")
         return {}
 
 # Cargar la configuración global una sola vez, los directorios y archivos de origen de datos y salida
 CONFIG = load_config()
+
+INVALID_IDS = {"000000nan", "nan", "", "0", "-", "000000000", "none"}
+
+def _resolve_path(path_value, default_path):
+    base = os.path.dirname(os.path.abspath(__file__))
+    final_path = path_value if path_value else default_path
+    if not os.path.isabs(final_path):
+        final_path = os.path.join(base, final_path)
+    return final_path
+
+def _to_clean_str(value):
+    if pd.isna(value):
+        return ""
+    return str(value).strip()
+
+def _normalizar_id_banner(value):
+    valor = _to_clean_str(value).lower()
+    if valor in {"", "nan", "none"}:
+        return ""
+
+    # Si llega como float por Excel (ej: 138144.0) se limpia el decimal.
+    if valor.endswith(".0"):
+        valor = valor[:-2]
+
+    return valor.zfill(9)
 
 #leer el archivo de NRC/LC: CSV
 def leer_nrc():
@@ -54,29 +80,29 @@ def leer_nrc():
 
     # Validación de existencia del archivo
     if not os.path.isfile(filepath):
-        print(f"❌ Error: El archivo requerido '{filename}' no se encuentra en el directorio actual.")
+        print(f"[ERROR] Error: El archivo requerido '{filename}' no se encuentra en el directorio actual.")
         return None
 
     # Intentar lectura del archivo
     try:
-        print(f"📥 Leyendo archivo: {filename}")
+        print(f"[INFO] Leyendo archivo: {filename}")
         df = pd.read_csv(
                 filepath,
                 encoding='utf-8',
                 sep=',',
                 header=0,
                 names=['Nombre', 'NRC', 'Periodo'],
-                dtype={'NRC': str}
+                dtype={'Nombre': str,'NRC': str}
         )
 
     except Exception as e:
-        print(f"❌ Error al leer el archivo '{filename}': {e}")
+        print(f"[ERROR] Error al leer el archivo '{filename}': {e}")
         return None
 
     # Validación de columnas esperadas
     columnas_esperadas = {'Nombre','NRC','Periodo'}
     if not columnas_esperadas.issubset(df.columns):
-        print(f"❌ Error: El archivo debe contener las columnas: {columnas_esperadas}. Columnas actuales: {df.columns.tolist()}")
+        print(f"[ERROR] Error: El archivo debe contener las columnas: {columnas_esperadas}. Columnas actuales: {df.columns.tolist()}")
         return None
   
     return df
@@ -112,13 +138,10 @@ def leer_BDUsuarios_BS(ruta_archivo=None):
     pd.DataFrame: DataFrame con los datos del archivo o None si ocurre un error.
     """
     # Determinar ruta del archivo por la configuración si no se proporcionó una por defecto
-    base = os.path.dirname(os.path.abspath(__file__))
     ruta_default = CONFIG.get('bdusuarios_file', "./BDUsuarios/Listados Usuarios.xlsx")
     if ruta_archivo is None:
         ruta_archivo = ruta_default
-    # Resolver rutas relativas respecto a la carpeta del script
-    if not os.path.isabs(ruta_archivo):
-        ruta_archivo = os.path.join(base, ruta_archivo)
+    ruta_archivo = _resolve_path(ruta_archivo, "./BDUsuarios/Listados Usuarios.xlsx")
 
     try:
         # Leer el Excel
@@ -127,21 +150,30 @@ def leer_BDUsuarios_BS(ruta_archivo=None):
             sheet_name=0,        # Leer la primera hoja
         )
 
-        #Se promueven las columnas necesarias
-        # Asegurar que los valores sean cadenas de texto y completar con ceros a la izquierda, se asume la longitud de 9
-        df=df[['UserName', 'FirstName', 'LastName', 'OrgRoleId']]
-        df['UserName'] = df['UserName'].astype(str).str.zfill(9)
+        # Se promueven las columnas necesarias (incluye datos para creación de coordinadores)
+        columnas_necesarias = ['UserName', 'FirstName', 'LastName', 'OrgRoleId', 'OrgDefinedId', 'ExternalEmail']
+        for col in columnas_necesarias:
+            if col not in df.columns:
+                df[col] = ''
+
+        df = df[columnas_necesarias]
+        df['UserName'] = df['UserName'].apply(_normalizar_id_banner)
+        df['FirstName'] = df['FirstName'].astype(str).str.strip()
+        df['LastName'] = df['LastName'].astype(str).str.strip()
+        df['OrgRoleId'] = df['OrgRoleId'].astype(str).str.strip()
+        df['OrgDefinedId'] = df['OrgDefinedId'].apply(_to_clean_str)
+        df['ExternalEmail'] = df['ExternalEmail'].apply(_to_clean_str)
         
-        print(f"[✓] Archivo '{ruta_archivo}' cargado exitosamente.")
+        print(f"[OK] Archivo '{ruta_archivo}' cargado exitosamente.")
         print(f"El archivo contiene {df.shape[0]} filas y {df.shape[1]} columnas.")
         
         return df
 
     except FileNotFoundError:
-        print(f"❌ Error: El archivo '{ruta_archivo}' no fue encontrado.")
+        print(f"[ERROR] Error: El archivo '{ruta_archivo}' no fue encontrado.")
         return None
     except Exception as e:
-        print(f"❌ Error al cargar el archivo: {e}")
+        print(f"[ERROR] Error al cargar el archivo: {e}")
         return None
 
 #leer el archivo de moderadores a inscribir: EXCEL fuente QLIK
@@ -158,20 +190,17 @@ def leer_moderadores(date='nodate'):
     """
     
     # Directorio con archivos .xlsx — puede definirse en config.json
-    base = os.path.dirname(os.path.abspath(__file__))
-    directory = CONFIG.get('banner_directory', './')
-    if not os.path.isabs(directory):
-        directory = os.path.join(base, directory)
+    directory = _resolve_path(CONFIG.get('banner_directory', './'), './')
 
     # Validación de existencia del directorio
     if not os.path.isdir(directory):
-        raise FileNotFoundError(f"❌ No se encontró el directorio de archivos .xlsx: {directory}")
+        raise FileNotFoundError(f"[ERROR] No se encontró el directorio de archivos .xlsx: {directory}")
 
-    excel_files = [f for f in os.listdir(directory) if f.endswith(".xlsx")]
+    excel_files = [f for f in os.listdir(directory) if f.endswith(".xlsx") and not f.startswith("~$")]
 
     # Validación de archivos excel en el directorio
     if not excel_files:
-        raise FileNotFoundError("❌ No se encontró ningún archivo .xlsx en el directorio actual.")
+        raise FileNotFoundError("[ERROR] No se encontró ningún archivo .xlsx en el directorio actual.")
 
     # Definición de solo las columnas necesarias para optimizar la carga del excel
     columnas_objetivo = {
@@ -183,23 +212,25 @@ def leer_moderadores(date='nodate'):
     # Iterar sobre cada archivo Excel
     for file in excel_files:
         filepath = os.path.join(directory, file)
-        print(f"📥 Leyendo archivo: {filepath}")
+        print(f"[INFO] Leyendo archivo: {filepath}")
 
         try:
             # Cargar todo el archivo
             df = pd.read_excel(filepath, 
                                sheet_name=0,  # primera hoja (docentes)
-                               dtype={'ID_DOCENTE': str},
+                               dtype={'ID_DOCENTE': str, 'LISTA_CRUZADA': str},
                                engine='openpyxl'
-                )      
+                )    
+
+            print(f"[OK] Archivo '{file}' cargado con {df.shape[0]} filas y {df.shape[1]} columnas.")  
         except Exception as e:
-            print(f"❌ Error al leer el archivo {file}: {e}")
+            print(f"[ERROR] Error al leer el archivo {file}: {e}")
             continue
 
         # Validar columnas requeridas existan en el excel
         if not columnas_objetivo.issubset(set(df.columns)):
             faltantes = columnas_objetivo - set(df.columns)
-            print(f"⚠️ Advertencia: El archivo {file} no tiene todas las columnas requeridas: {faltantes}")
+            print(f"[WARN] Advertencia: El archivo {file} no tiene todas las columnas requeridas: {faltantes}")
             continue
 
         # Filtrar solo las columnas necesarias
@@ -217,13 +248,13 @@ def leer_moderadores(date='nodate'):
             if date != 'nodate':
                 df = df[df['FECHA_ACTIVIDAD_DOC'] >= pd.to_datetime(date)]
         except Exception as e:
-            print(f"❌ Error al procesar fechas en {file}: {e}")
+            print(f"[ERROR] Error al procesar fechas en {file}: {e}")
             continue
 
         dataframes.append(df)
 
     if not dataframes:
-        raise ValueError("❌ Ningún archivo válido fue procesado correctamente.")
+        raise ValueError("[ERROR] Ningún archivo válido fue procesado correctamente.")
 
     # Concatenar todos los DataFrames en uno solo
     resultado = pd.concat(dataframes, ignore_index=True)
@@ -231,72 +262,236 @@ def leer_moderadores(date='nodate'):
     #retornar el DataFrame consolidado
     return resultado
 
-#se crea el archivo de registro para cada curso
-def crearArchivos(data, course_name, course_nrc, BDUsuBS, log_file_path='log_creacion_moderadores.txt'):
+def leer_centrocostos_estudiante():
     """
-    Genera comandos de inscripción y creación/actualización de moderadores en Brightspace.
+    Construye el DataFrame CENTROCOSTOSESTUDIANTE desde banner_directory/hoja Estudiantes.
+    Se filtra solo ESTADO_INSCRIPCIÓN='Inscrito' y se eliminan duplicados por:
+    PERIODO, LISTA_CRUZADA, ESTADO_INSCRIPCIÓN, COD_PROGRAMA_ESTUDIANTE.
+    """
+    directory = _resolve_path(CONFIG.get('banner_directory', './'), './')
+
+    if not os.path.isdir(directory):
+        raise FileNotFoundError(f"[ERROR] No se encontró el directorio de archivos .xlsx: {directory}")
+
+    excel_files = [f for f in os.listdir(directory) if f.endswith(".xlsx") and not f.startswith("~$")]
+    if not excel_files:
+        raise FileNotFoundError("[ERROR] No se encontró ningún archivo .xlsx en el directorio actual.")
+
+    columnas_objetivo = ['PERIODO', 'LISTA_CRUZADA', 'ESTADO_INSCRIPCIÓN', 'COD_PROGRAMA_ESTUDIANTE']
+    dataframes = []
+
+    for file in excel_files:
+        filepath = os.path.join(directory, file)
+        print(f"[INFO] Leyendo hoja Estudiantes (CentroCostos): {filepath}")
+
+        try:
+            # Se lee por nombre de hoja para cumplir la regla de negocio.
+            df = pd.read_excel(filepath, sheet_name='Estudiantes', engine='openpyxl')
+        except Exception as e:
+            print(f"[ERROR] Error al leer hoja Estudiantes de {file}: {e}")
+            continue
+
+        if not set(columnas_objetivo).issubset(set(df.columns)):
+            faltantes = set(columnas_objetivo) - set(df.columns)
+            print(f"[WARN] Advertencia: El archivo {file} no tiene columnas requeridas para centro de costos: {faltantes}")
+            continue
+
+        df = df[columnas_objetivo].copy()
+        df['PERIODO'] = df['PERIODO'].apply(_to_clean_str)
+        df['LISTA_CRUZADA'] = df['LISTA_CRUZADA'].apply(_to_clean_str)
+        df['ESTADO_INSCRIPCIÓN'] = df['ESTADO_INSCRIPCIÓN'].apply(_to_clean_str)
+        df['COD_PROGRAMA_ESTUDIANTE'] = df['COD_PROGRAMA_ESTUDIANTE'].apply(_to_clean_str)
+
+        # Solo se conservan estudiantes inscritos.
+        df = df[df['ESTADO_INSCRIPCIÓN'].str.lower() == 'inscrito']
+        df = df[
+            (df['PERIODO'] != '') &
+            (df['LISTA_CRUZADA'] != '') &
+            (df['COD_PROGRAMA_ESTUDIANTE'] != '')
+        ]
+
+        dataframes.append(df)
+
+    if not dataframes:
+        raise ValueError("[ERROR] No fue posible construir CENTROCOSTOSESTUDIANTE desde los archivos de banner.")
+
+    centro_costos_estudiante = pd.concat(dataframes, ignore_index=True)
+    centro_costos_estudiante = centro_costos_estudiante.drop_duplicates(
+        subset=['PERIODO', 'LISTA_CRUZADA', 'ESTADO_INSCRIPCIÓN', 'COD_PROGRAMA_ESTUDIANTE']
+    ).reset_index(drop=True)
+
+    print(f"[OK] CENTROCOSTOSESTUDIANTE cargado con {centro_costos_estudiante.shape[0]} filas únicas.")
+    return centro_costos_estudiante
+
+def leer_coordinadores(ruta_archivo=None):
+    """
+    Lee el archivo de coordinadores parametrizado en JSON.
+    Columnas requeridas: 'Centro de Costos' e 'ID COORDINADOR'.
+    """
+    ruta_default = CONFIG.get('coordinadores_file')
+    if not ruta_default:
+        # Fallback: misma carpeta de bdusuarios_file
+        ruta_bdusuarios = _resolve_path(CONFIG.get('bdusuarios_file', "./BDUsuarios/Listados Usuarios.xlsx"),
+                                        "./BDUsuarios/Listados Usuarios.xlsx")
+        ruta_default = os.path.join(os.path.dirname(ruta_bdusuarios), 'Coordinadores.xlsx')
+
+    if ruta_archivo is None:
+        ruta_archivo = ruta_default
+    ruta_archivo = _resolve_path(ruta_archivo, ruta_default)
+
+    try:
+        df = pd.read_excel(ruta_archivo, sheet_name=0, engine='openpyxl')
+        columnas_requeridas = ['Centro de Costos', 'ID COORDINADOR']
+        columnas_opcionales = ['Coordinador(a)', 'Correo Electrónico']
+
+        if not set(columnas_requeridas).issubset(set(df.columns)):
+            faltantes = set(columnas_requeridas) - set(df.columns)
+            raise ValueError(f"Faltan columnas requeridas en archivo coordinadores: {faltantes}")
+
+        for col in columnas_opcionales:
+            if col not in df.columns:
+                df[col] = ''
+
+        df = df[columnas_requeridas + columnas_opcionales].copy()
+        df['Centro de Costos'] = df['Centro de Costos'].apply(_to_clean_str)
+        df['ID COORDINADOR'] = df['ID COORDINADOR'].apply(_normalizar_id_banner)
+        df['Coordinador(a)'] = df['Coordinador(a)'].apply(_to_clean_str)
+        df['Correo Electrónico'] = df['Correo Electrónico'].apply(_to_clean_str)
+
+        df = df[
+            (df['Centro de Costos'] != '') &
+            (~df['ID COORDINADOR'].str.lower().isin(INVALID_IDS))
+        ]
+        df = df.drop_duplicates(subset=['Centro de Costos', 'ID COORDINADOR']).reset_index(drop=True)
+
+        print(f"[OK] Archivo de coordinadores '{ruta_archivo}' cargado con {df.shape[0]} registros.")
+        return df
+
+    except FileNotFoundError:
+        print(f"[ERROR] Error: El archivo '{ruta_archivo}' no fue encontrado.")
+        return None
+    except Exception as e:
+        print(f"[ERROR] Error al cargar coordinadores: {e}")
+        return None
+
+def resolver_coordinador_curso(course_nrc, course_periodo, centro_costos_estudiante, bd_coordinadores, log):
+    """
+    Obtiene el ID del coordinador para un curso a partir de:
+      1) NRC + PERIODO -> COD_PROGRAMA_ESTUDIANTE (CENTROCOSTOSESTUDIANTE)
+      2) COD_PROGRAMA_ESTUDIANTE -> ID COORDINADOR (archivo coordinadores)
+    """
+    if centro_costos_estudiante is None or bd_coordinadores is None:
+        return None, None
+
+    nrc = _to_clean_str(course_nrc)
+    periodo = _to_clean_str(course_periodo)
+
+    match_cc = centro_costos_estudiante[
+        (centro_costos_estudiante['LISTA_CRUZADA'].astype(str) == nrc) &
+        (centro_costos_estudiante['PERIODO'].astype(str) == periodo)
+    ]
+
+    if match_cc.empty:
+        log.write(f"[WARN] Sin COD_PROGRAMA_ESTUDIANTE para NRC={nrc}, PERIODO={periodo}\n")
+        return None, None
+
+    centros = match_cc['COD_PROGRAMA_ESTUDIANTE'].dropna().astype(str).str.strip().unique().tolist()
+    centro_costo = centros[0]
+    if len(centros) > 1:
+        log.write(f"[WARN] NRC={nrc} PERIODO={periodo} tiene múltiples centros {centros}. Se usa: {centro_costo}\n")
+
+    match_coord = bd_coordinadores[bd_coordinadores['Centro de Costos'] == centro_costo]
+    if match_coord.empty:
+        log.write(f"[WARN] Sin coordinador para Centro de Costos={centro_costo}\n")
+        return None, centro_costo
+
+    row_coord = match_coord.iloc[0]
+    id_coordinador = _normalizar_id_banner(row_coord.get('ID COORDINADOR', ''))
+    if id_coordinador.lower() in INVALID_IDS:
+        log.write(f"[WARN] ID COORDINADOR inválido para Centro de Costos={centro_costo}\n")
+        return None, centro_costo
+
+    return row_coord, centro_costo
+
+def obtener_datos_coordinador(id_banner, bd_usuarios):
+    """
+    Obtiene información del coordinador desde BDUsuarios (hoja 0).
+    """
+    user = bd_usuarios.loc[bd_usuarios['UserName'] == id_banner]
+    if user.empty:
+        return None
+
+    row = user.iloc[0]
+    return {
+        'docuusu': _to_clean_str(row.get('OrgDefinedId', '')) or id_banner,
+        'first_name': _to_clean_str(row.get('FirstName', '')),
+        'last_name': _to_clean_str(row.get('LastName', '')),
+        'email': _to_clean_str(row.get('ExternalEmail', ''))
+    }
+
+#se crea el archivo de registro para cada curso
+def crearArchivos(data, course_name, course_nrc, course_periodo, BDUsuBS, centro_costos_estudiante,
+                  bd_coordinadores, log_file_path='log_creacion_moderadores.txt'):
+    """
+    Genera comandos de inscripción y creación/actualización para:
+      1) Docente con rol Moderador (flujo original).
+      2) Coordinador con rol Coordinador (nuevo flujo).
 
     Parámetros:
         data (pd.DataFrame): Datos de los docentes por curso.
         course_name (str): Nombre del curso.
         course_nrc (str): NRC del curso.
+        course_periodo (str): Periodo del curso.
         BDUsuBS (pd.DataFrame): Base de usuarios de Brightspace.
+        centro_costos_estudiante (pd.DataFrame): CENTROCOSTOSESTUDIANTE.
+        bd_coordinadores (pd.DataFrame): Archivo de coordinadores.
         log_file_path (str): Ruta al archivo de log.
     """
-    Rol = "Moderador"
+    rol_moderador = "Moderador"
+    rol_coordinador = "Coordinador"
     line_count = 0
 
-    # Crear carpeta de salida si no existe
-    #os.makedirs('./salida', exist_ok=True)
-    #archivo_comandos = f'./salida/registro_{course_name}.txt'
+    directory = _resolve_path(CONFIG.get('salida_directory', './salida/'), './salida/')
+    os.makedirs(directory, exist_ok=True)
+    archivo_comandos = os.path.join(directory, f"registro_{course_name}.txt")
+    usuarios_bs = set(BDUsuBS['UserName'].astype(str).tolist())
 
-    directory = CONFIG.get('salida_directory', './salida/') #directorio de salida desde el JSON de configuracion
-    archivo_comandos = directory + 'registro_' + course_name + '.txt'
-
-    # Abrir archivos de salida y log
     with open(archivo_comandos, 'a', encoding='utf8') as fptr, \
          open(log_file_path, 'a', encoding='utf8') as log, \
          open('moderadores.csv', 'a', encoding='utf8', newline='') as moderadores:
 
-        # Escribir encabezados en el archivo de comandos
         writer = csv.writer(moderadores)
         log.write(f"\n=== PROCESAMIENTO CURSO: {course_name} - NRC: {course_nrc} ===\n")
         log.write(f"Fecha: {datetime.now()}\n")
 
+        # 1) Inscripción de docentes moderadores (flujo existente).
         for _, row in data.iterrows():
-            idBanner = str(row.get('ID_DOCENTE', '')).strip()
-            
-            # Validación de ID_Banner
-            if idBanner in ["000000nan","nan", "", "0", "-", "000000000",None]:
-                log.write(f"❌ ID inválido: '{idBanner}' para curso {course_name}\n")
+            idBanner = _normalizar_id_banner(row.get('ID_DOCENTE', ''))
+            if idBanner.lower() in INVALID_IDS:
+                log.write(f"[ERROR] ID inválido: '{idBanner}' para curso {course_name}\n")
                 continue
-            
-            # extraer el rol del moderador y verificar si es nuevo o existente
-            Unuevo = idBanner not in BDUsuBS['UserName'].values
+
+            Unuevo = idBanner not in usuarios_bs
             RolModerador = BDUsuBS.loc[BDUsuBS['UserName'] == idBanner, 'OrgRoleId'].values
 
-            # Se formatea el tipo de documento y número de documento
             try:
                 ndocu = "{:,}".format(int(row['DOCUMENTO'])).replace(',', '.')
-            except:
+            except Exception:
                 ndocu = str(row['DOCUMENTO'])
 
             try:
                 docuusu = f"{row['TIPO_DOCUMENTO']}. {ndocu}"
-            except:
+            except Exception:
                 docuusu = ndocu
 
-            #Se limpian los nombres y apellidos
             first_name = str(row.get('NOMBRE_DOCENTE', '')).strip()
             last_name = str(row.get('APELLIDO_DOCENTE', '')).strip()
             email = str(row.get('CORREO_DOCENTE', '')).strip()
 
-            # Validación del usuario: Nuevo o existente
             if Unuevo:
-                fptr.write(f'CREATE,{idBanner},{docuusu},{first_name},{last_name},,{Rol},1,{email}\n')
+                fptr.write(f'CREATE,{idBanner},{docuusu},{first_name},{last_name},,{rol_moderador},1,{email}\n')
             else:
                 fptr.write(f'UPDATE,{idBanner},{docuusu},{first_name},{last_name},,1,{email}\n')
-                # Si el usuario ya existe, se cambia el rol a moderador
                 if RolModerador.size > 0:
                     rol = str(RolModerador[0])
                     mapeo_roles = {
@@ -306,15 +501,44 @@ def crearArchivos(data, course_name, course_nrc, BDUsuBS, log_file_path='log_cre
                     if rol in mapeo_roles:
                         fptr.write(f'UNENROLL,{idBanner},,{mapeo_roles[rol]}\n')
 
-                fptr.write(f'ENROLL,{idBanner},,{Rol},UPBV\n')
-            
-            # Inscripción al curso
-            fptr.write(f'ENROLL,{idBanner},,{Rol},{course_name}\n')
+                fptr.write(f'ENROLL,{idBanner},,{rol_moderador},UPBV\n')
+
+            fptr.write(f'ENROLL,{idBanner},,{rol_moderador},{course_name}\n')
             line_count += 1
 
-        # Registros de inscripción
+        # 2) Inscripción de coordinador por curso (nuevo flujo).
+        row_coord, centro_costo = resolver_coordinador_curso(
+            course_nrc, course_periodo, centro_costos_estudiante, bd_coordinadores, log
+        )
+        if row_coord is not None:
+            id_coord = _normalizar_id_banner(row_coord.get('ID COORDINADOR', ''))
+            if id_coord.lower() not in INVALID_IDS:
+                coord_nuevo = id_coord not in usuarios_bs
+                datos_coord = obtener_datos_coordinador(id_coord, BDUsuBS)
+
+                if datos_coord is None:
+                    # Fallback mínimo cuando el coordinador no está en BDUsuarios.
+                    datos_coord = {
+                        'docuusu': id_coord,
+                        'first_name': _to_clean_str(row_coord.get('Coordinador(a)', '')),
+                        'last_name': '',
+                        'email': _to_clean_str(row_coord.get('Correo Electrónico', ''))
+                    }
+
+                if coord_nuevo:
+                    fptr.write(
+                        f"CREATE,{id_coord},{datos_coord['docuusu']},{datos_coord['first_name']},"
+                        f"{datos_coord['last_name']},,{rol_coordinador},1,{datos_coord['email']}\n"
+                    )
+
+                fptr.write(f'ENROLL,{id_coord},,{rol_coordinador},{course_name}\n')
+                log.write(
+                    f"[OK] Coordinador inscrito NRC={course_nrc}, PERIODO={course_periodo}, "
+                    f"CentroCosto={centro_costo}, ID={id_coord}\n"
+                )
+
         writer.writerow([course_name, course_nrc, line_count])
 
-        print(f"[✓] Se han inscrito: {line_count} moderadores en el curso: {course_name} NRC: {course_nrc}")
+        print(f"[OK] Se han inscrito: {line_count} moderadores en el curso: {course_name} NRC: {course_nrc}")
+        log.write(f"[OK] Total moderadores inscritos: {line_count}\n")
 
-        log.write(f"[✓] Total moderadores inscritos: {line_count}\n")
