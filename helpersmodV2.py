@@ -44,6 +44,7 @@ CONFIG = load_config()
 
 INVALID_IDS = {"000000nan", "nan", "", "0", "-", "000000000", "none"}
 
+# Funciones auxiliares comunes para la lectura de archivos, limpieza de datos, resolución de coordinadores y creación de archivos de inscripción.
 def _resolve_path(path_value, default_path):
     base = os.path.dirname(os.path.abspath(__file__))
     final_path = path_value if path_value else default_path
@@ -51,11 +52,13 @@ def _resolve_path(path_value, default_path):
         final_path = os.path.join(base, final_path)
     return final_path
 
+# Limpia un valor convirtiéndolo a string, eliminando espacios y manejando valores nulos.
 def _to_clean_str(value):
     if pd.isna(value):
         return ""
     return str(value).strip()
 
+# Normaliza un ID de banner a formato string de 9 dígitos, sin decimales ni caracteres no numéricos.
 def _normalizar_id_banner(value):
     valor = _to_clean_str(value).lower()
     if valor in {"", "nan", "none"}:
@@ -126,7 +129,7 @@ def merge_archivos():
 
     return
 
-#Leer la BD de usuarios de BS: XLSX
+#Leer la BD de usuarios de BS: XLSX - Fuente DOMO
 def leer_BDUsuarios_BS(ruta_archivo=None):
     """
     Función para cargar un archivo Excel en un DataFrame.
@@ -176,7 +179,7 @@ def leer_BDUsuarios_BS(ruta_archivo=None):
         print(f"[ERROR] Error al cargar el archivo: {e}")
         return None
 
-#leer el archivo de moderadores a inscribir: EXCEL fuente QLIK
+#leer el archivo de moderadores a inscribir: EXCEL fuente BANNER
 def leer_moderadores(date='nodate'):
     """
     Lee múltiples archivos .xlsx con información de estudiantes desde el directorio origen o actual.
@@ -262,6 +265,8 @@ def leer_moderadores(date='nodate'):
     #retornar el DataFrame consolidado
     return resultado
 
+#Cargar el archivo de centro de costos estudiante desde Excel, con columnas 'PERIODO', 'LISTA_CRUZADA', 'ESTADO_INSCRIPCIÓN' y 'COD_PROGRAMA_ESTUDIANTE'.
+#  Se filtra solo ESTADO_INSCRIPCIÓN='Inscrito' y se eliminan duplicados por: PERIODO, LISTA_CRUZADA, ESTADO_INSCRIPCIÓN, COD_PROGRAMA_ESTUDIANTE.
 def leer_centrocostos_estudiante():
     """
     Construye el DataFrame CENTROCOSTOSESTUDIANTE desde banner_directory/hoja Estudiantes.
@@ -323,6 +328,7 @@ def leer_centrocostos_estudiante():
     print(f"[OK] CENTROCOSTOSESTUDIANTE cargado con {centro_costos_estudiante.shape[0]} filas únicas.")
     return centro_costos_estudiante
 
+# Leer el archivo de coordinadores desde Excel, con columnas 'Centro de Costos' e 'ID COORDINADOR'.
 def leer_coordinadores(ruta_archivo=None):
     """
     Lee el archivo de coordinadores parametrizado en JSON.
@@ -374,6 +380,9 @@ def leer_coordinadores(ruta_archivo=None):
         print(f"[ERROR] Error al cargar coordinadores: {e}")
         return None
 
+#Buscar el coordinador del curso a partir del NRC/LC y Periodo, usando el DataFrame CENTROCOSTOSESTUDIANTE 
+# para obtener el COD_PROGRAMA_ESTUDIANTE y luego buscar el ID del coordinador en el archivo de coordinadores. 
+# Se devuelve un dict con la información del coordinador o None si no se encuentra.
 def resolver_coordinador_curso(course_nrc, course_periodo, centro_costos_estudiante, bd_coordinadores, log):
     """
     Obtiene el ID del coordinador para un curso a partir de:
@@ -413,6 +422,8 @@ def resolver_coordinador_curso(course_nrc, course_periodo, centro_costos_estudia
 
     return row_coord, centro_costo
 
+#Se obtiene la información del coordinador desde BDUsuarios (hoja 0) para el ID de banner dado. 
+# Si no se encuentra, se devuelve None.
 def obtener_datos_coordinador(id_banner, bd_usuarios):
     """
     Obtiene información del coordinador desde BDUsuarios (hoja 0).
