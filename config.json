@@ -1,6 +1,7 @@
 {
   "banner_directory": "C:/Users/000251456/UPBVIRTUAL/Plataformas/D2L/ProcesoMatriculas/ListadosEstudiantesDocentesBanner/",
   "bdusuarios_file": "C:/Users/000251456/UPBVIRTUAL/Plataformas/D2L/ProcesoMatriculas/Enrollments/files/UnidadesOrganizacion/Listados Usuarios.xlsx",
+  "coordinadores_file": "C:/Users/000251456/UPBVIRTUAL/Plataformas/D2L/ProcesoMatriculas/Enrollments/files/UnidadesOrganizacion/Coordinadores.xlsx",
   "salida_directory": "C:/Users/000251456/UPBVIRTUAL/Plataformas/D2L/ProcesoMatriculas/Enrollments/salida/2026/",
   "Tipo_proceso": "Matricular"
 }

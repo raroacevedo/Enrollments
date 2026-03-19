@@ -37,14 +37,18 @@ def main():
     print ("\n")
  
     # Leer datos de los NRC/LC que se incribiran - shortname.csv
-    nrc = helpers.leer_nrc()
-    #convertir a string el NRC/LC para evitar problemas de formato
-    nrc['NRC'] = nrc['NRC'].astype(str)
+    CURSOS = helpers.leer_nrc( )
      
     print("\n-------------------------------")
     print("Cursos a inscribir")
     print("-------------------------------")
-    print(nrc)
+    print(CURSOS)
+
+    print("\n----------------------------------------------")
+    print("Cargando CentroCostosEstudiante y Coordinadores")
+    print("----------------------------------------------")
+    CENTROCOSTOSESTUDIANTE = helpers.leer_centrocostos_estudiante()
+    BDCoordinadores = helpers.leer_coordinadores()
 
     # Remover duplicados x Pediodo, NRC/LC y ID_Docente
     data_sin_duplicados = BDModeradoresNRC.drop_duplicates(subset=['PERIODO', 'NRC', 'ID_DOCENTE'])
@@ -54,18 +58,27 @@ def main():
     print("----------------------------------")
 
     # Crear los archivos: CSV para inscripcion, uno por NRC y se genera resumen de inscripcion (moderadores.csv)
-    for index, row in nrc.iterrows():
+    for index,row in CURSOS.iterrows():
         course_name = row['Nombre']     #Codigo del curso
         course_nrc = row['NRC']         #NRC/LC del curso
         course_periodo = row['Periodo'] #Periodo del curso
 
         #Se filtra el dataframe "ModeradoresInscribir" por el Periodo y NRC/LC del curso
         ModeradoresInscribir = data_sin_duplicados[ 
-                (data_sin_duplicados['PERIODO'] == course_periodo) & 
+                #(data_sin_duplicados['PERIODO'].astype(str) == str(course_periodo)) & 
+                (data_sin_duplicados['PERIODO'] == course_periodo) &
                 (data_sin_duplicados['LISTA_CRUZADA'] == course_nrc)
-        ] 
+        ]
 
-        helpers.crearArchivos(ModeradoresInscribir, course_name, course_nrc, BDUsuarios)
+        helpers.crearArchivos(
+            ModeradoresInscribir,
+            course_name,
+            course_nrc,
+            course_periodo,
+            BDUsuarios,
+            CENTROCOSTOSESTUDIANTE,
+            BDCoordinadores
+        )
 
     #se crea un solo archvivo con todos los cursos
     helpers.merge_archivos()
