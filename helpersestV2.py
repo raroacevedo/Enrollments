@@ -303,55 +303,59 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDEstuBS):
 
         #correo principal del estudiante
         email       = row['CORREO_ESTUDIANTE']
-        
-        #ESTADO_INSCRIPCIÓN
-        estado = row['ESTADO_INSCRIPCIÓN']
 
-        #ESTUDIANTE PAGO
-        pago = row['PAGO']
-  
-        #validar socio integrador : Si es APLATAM o BS (UPBVIRTUAL)
-        socio_integrador = row['SOCIO_INTEGRADOR']
-        if socio_integrador == "nan" : socio_integrador = "BS"  # Si no tiene socio integrador, se asume BS
-    
-        #se valida el caso de "APLATAM" en formacion avanzada
-        if tipformacion in ["41", "42"]:
-            if socio_integrador == "AP":
-                Rol = "Student_ap"
-                OrgUnid = "CVLA"
-            else:
-                Rol = "Student_fa"
-                OrgUnid = "CVFA"
-               
-        #Proceso de inscripcion o cancelacion
-        if(tipproceso == 'Matricular'): #Definido en el JSON de configuracion
-            if(estado == 'Inscrito'):   #Se procede a la inscripcion - BANNER|SZREINS
-                if (socio_integrador == "BS") or (socio_integrador == "AP" and pago == "Y") :  # Solo se inscribe si es APLATAM y ha pagado o si es BS
-                    
-                    if Enuevo: ##si el estudiante no existe en la base de datos de estudiantes BS SE crea el usuario
-                        fptr.write('CREATE' + ',' + idBanner + ',' + docuusu + ',' + first_name + ',' + last_name+ ',,' + Rol + ',' + '1' + ',' + email + '\n')
-                        # Generamos la inscripción  en la Unidad (nivel de formacion) para la pagina de inicio
-                        fptr.write('ENROLL' + ',' + idBanner + ',' + '' + ',' + Rol + ',' + OrgUnid + '\n')
-                    else: ##si el estudiante ya existe en la base de datos de estudiantes BS SE actualiza el usuario
-                        # Generamos la actualización de los datos del usuario y SE ACTIVA EL USUARIO
-                        fptr.write('UPDATE' + ',' + idBanner + ',' + docuusu + ',' + first_name + ',' + last_name+ ',,' + '1' + ',' + email + '\n')
-                        # Generamos la inscripción  en la Unidad UPBV - CAMBIO ROL ARQUETIPO
-                        fptr.write('ENROLL' + ',' + idBanner + ',' + '' + ',' + Rol + ',' + "UPBV" + '\n')
-
-                    # Generamos las lineas al archivo para inscripción en el curso
-                    fptr.write('ENROLL' + ',' + idBanner + ',' + '' + ',' + 'Student' +',' + course_name + '\n')
-
-                    line_count = line_count + 1
-        #Proceso de desmatriculacion o Limpieza
+        #se valida que si el dato email esta vacio no se registra el estudiante
+        if pd.isna(email) or email.strip() == "":
+            print(f"⚠️ Advertencia: El estudiante con ID_Banner {idBanner} - {first_name} {last_name} no tiene correo electrónico registrado. No se inscribirá en el curso.")
         else:
-            #print("\n[→] Limpiando estudiante ID_Banner: " + idBanner + " del curso: " + course_name + " NRC: " + course_nrc)
-            if ((tipproceso == 'Desmatricular') and (estado == 'Cancelado')): ##si hay cancelacion se procede a la desmatriculacion
-                fptr.write('UNENROLL' + ',' + idBanner + ',' +',' + course_name + '\n')
-                line_count = line_count + 1
-            elif ((tipproceso == 'Limpieza') and (estado == 'Eliminado')): ##si hay eliminacion se procede a la desmatriculacion
-                  # Generamos los registros para desmatricular al estudiante - LIMPIEZA DE LISTA (DL)            
-                  fptr.write('UNENROLL' + ',' + idBanner + ',' +',' + course_name + '\n')
-                  line_count = line_count + 1
+            #ESTADO_INSCRIPCIÓN
+            estado = row['ESTADO_INSCRIPCIÓN']
+
+            #ESTUDIANTE PAGO
+            pago = row['PAGO']
+    
+            #validar socio integrador : Si es APLATAM o BS (UPBVIRTUAL)
+            socio_integrador = row['SOCIO_INTEGRADOR']
+            if socio_integrador == "nan" : socio_integrador = "BS"  # Si no tiene socio integrador, se asume BS
+        
+            #se valida el caso de "APLATAM" en formacion avanzada
+            if tipformacion in ["41", "42"]:
+                if socio_integrador == "AP":
+                    Rol = "Student_ap"
+                    OrgUnid = "CVLA"
+                else:
+                    Rol = "Student_fa"
+                    OrgUnid = "CVFA"
+                
+            #Proceso de inscripcion o cancelacion
+            if(tipproceso == 'Matricular'): #Definido en el JSON de configuracion
+                if(estado == 'Inscrito'):   #Se procede a la inscripcion - BANNER|SZREINS
+                    if (socio_integrador == "BS") or (socio_integrador == "AP" and pago == "Y") :  # Solo se inscribe si es APLATAM y ha pagado o si es BS
+                        
+                        if Enuevo: ##si el estudiante no existe en la base de datos de estudiantes BS SE crea el usuario
+                            fptr.write('CREATE' + ',' + idBanner + ',' + docuusu + ',' + first_name + ',' + last_name+ ',,' + Rol + ',' + '1' + ',' + email + '\n')
+                            # Generamos la inscripción  en la Unidad (nivel de formacion) para la pagina de inicio
+                            fptr.write('ENROLL' + ',' + idBanner + ',' + '' + ',' + Rol + ',' + OrgUnid + '\n')
+                        else: ##si el estudiante ya existe en la base de datos de estudiantes BS SE actualiza el usuario
+                            # Generamos la actualización de los datos del usuario y SE ACTIVA EL USUARIO
+                            fptr.write('UPDATE' + ',' + idBanner + ',' + docuusu + ',' + first_name + ',' + last_name+ ',,' + '1' + ',' + email + '\n')
+                            # Generamos la inscripción  en la Unidad UPBV - CAMBIO ROL ARQUETIPO
+                            fptr.write('ENROLL' + ',' + idBanner + ',' + '' + ',' + Rol + ',' + "UPBV" + '\n')
+
+                        # Generamos las lineas al archivo para inscripción en el curso
+                        fptr.write('ENROLL' + ',' + idBanner + ',' + '' + ',' + 'Student' +',' + course_name + '\n')
+
+                        line_count = line_count + 1
+            #Proceso de desmatriculacion o Limpieza
+            else:
+                #print("\n[→] Limpiando estudiante ID_Banner: " + idBanner + " del curso: " + course_name + " NRC: " + course_nrc)
+                if ((tipproceso == 'Desmatricular') and (estado == 'Cancelado')): ##si hay cancelacion se procede a la desmatriculacion
+                    fptr.write('UNENROLL' + ',' + idBanner + ',' +',' + course_name + '\n')
+                    line_count = line_count + 1
+                elif ((tipproceso == 'Limpieza') and (estado == 'Eliminado')): ##si hay eliminacion se procede a la desmatriculacion
+                    # Generamos los registros para desmatricular al estudiante - LIMPIEZA DE LISTA (DL)            
+                    fptr.write('UNENROLL' + ',' + idBanner + ',' +',' + course_name + '\n')
+                    line_count = line_count + 1
     
     # Generamos el archivo resumen de inscritos por curso
     numberStudents = [course_name, course_nrc, line_count]
