@@ -97,9 +97,9 @@ No aplica automaticamente a scripts que no usen `load_config()` o `CONFIG.get(..
 - Uso:
   - Controla el comportamiento del proceso de estudiantes.
 - Valores esperados:
-  - `Matricular`
-  - `Desmatricular`
-  - `Limpieza`
+  - `Matricular` - tstado en Banner Inscrito
+  - `Desmatricular` tstado en Banner Cancelado
+  - `Limpieza`  - tstado en Banner Eliminado
 - Nota:
   - En el flujo docente actual, esta llave no altera la logica principal de inscripcion de moderadores/coordinadores.
 
