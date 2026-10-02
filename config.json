@@ -3,5 +3,13 @@
   "bdusuarios_file": "C:/Users/000251456/UPBVIRTUAL/Plataformas/D2L/ProcesoMatriculas/Enrollments/files/UnidadesOrganizacion/Listados Usuarios.xlsx",
   "coordinadores_file": "C:/Users/000251456/UPBVIRTUAL/Plataformas/D2L/ProcesoMatriculas/Enrollments/files/UnidadesOrganizacion/Coordinadores.xlsx",
   "salida_directory": "C:/Users/000251456/UPBVIRTUAL/Plataformas/D2L/ProcesoMatriculas/Enrollments/salida/2026/",
-  "Tipo_proceso": "Matricular"
+  "Tipo_proceso": "Matricular",
+  "programacion_cursos_url": "https://upbeduco-my.sharepoint.com/:x:/g/personal/teamupbvirtual_upb_edu_co/IQB56oFFkvF_SpSH6eBZe2goAcJVYitbGxH2ihdrwUqE3XA?e=TqWw9H",
+  "programacion_cursos_preferir_remoto": true,
+  "programacion_cursos_file": "C:/Users/000251456/UPBVIRTUAL/Plataformas/D2L/ProcesoMatriculas/Enrollments/files/UnidadesOrganizacion/ProgramacionDeAperturaCursosVirtuales.xlsx",
+  "programacion_cursos_hoja": "Duplicados 2026",
+  "programacion_cursos_fecha_inicial": "2026-09-26",
+  "programacion_cursos_fecha_final": "2026-09-29",
+  "shortnames_file": "shortnames.csv",
+  "log_file": "logs/inscribirEstV3.log"
 }

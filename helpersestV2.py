@@ -193,7 +193,7 @@ def leer_estudiantesBanner(date='nodate'):
         try:
             # Cargar todo el archivo
             df = pd.read_excel(filepath, 
-                               sheet_name=1,  # Segunda hoja (estudiantes)
+                               sheet_name="Estudiantes",  # Hoja (estudiantes) Excel que consolida la carpeta Estudiantes del Sharepoint SZREINS
                                dtype={'ID_ESTUDIANTE': str},
                                engine='openpyxl'
                 )      
@@ -309,15 +309,16 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDEstuBS):
             print(f"⚠️ Advertencia: El estudiante con ID_Banner {idBanner} - {first_name} {last_name} no tiene correo electrónico registrado. No se inscribirá en el curso.")
         else:
             #ESTADO_INSCRIPCIÓN
-            estado = row['ESTADO_INSCRIPCIÓN']
+            inscripcion = row['ESTADO_INSCRIPCIÓN']
+            #COD_INSCRIPCIÓN 
+            cod_inscripcion = row['COD_INSCRIPCIÓN']
 
             #ESTUDIANTE PAGO
             pago = row['PAGO']
     
-            #validar socio integrador : Si es APLATAM o BS (UPBVIRTUAL)
-            socio_integrador = row['SOCIO_INTEGRADOR']
-            if socio_integrador == "nan" : socio_integrador = "BS"  # Si no tiene socio integrador, se asume BS
-        
+            #if socio_integrador == "nan" : socio_integrador = "BS"  # Si no tiene socio integrador, se asume BS
+            socio_integrador = row['SOCIO_INTEGRADOR'].strip() if pd.notna(row['SOCIO_INTEGRADOR']) else "BS"  # Asumir "BS" si es nulo o vacío
+          
             #se valida el caso de "APLATAM" en formacion avanzada
             if tipformacion in ["41", "42"]:
                 if socio_integrador == "AP":
@@ -326,10 +327,10 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDEstuBS):
                 else:
                     Rol = "Student_fa"
                     OrgUnid = "CVFA"
-                
+
             #Proceso de inscripcion o cancelacion
             if(tipproceso == 'Matricular'): #Definido en el JSON de configuracion
-                if(estado == 'Inscrito'):   #Se procede a la inscripcion - BANNER|SZREINS
+                if(inscripcion == 'Inscrito'):   #Se procede a la inscripcion - BANNER|SZREINS
                     if (socio_integrador == "BS") or (socio_integrador == "AP" and pago == "Y") :  # Solo se inscribe si es APLATAM y ha pagado o si es BS
                         
                         if Enuevo: ##si el estudiante no existe en la base de datos de estudiantes BS SE crea el usuario
@@ -349,10 +350,10 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDEstuBS):
             #Proceso de desmatriculacion o Limpieza
             else:
                 #print("\n[→] Limpiando estudiante ID_Banner: " + idBanner + " del curso: " + course_name + " NRC: " + course_nrc)
-                if ((tipproceso == 'Desmatricular') and (estado == 'Cancelado')): ##si hay cancelacion se procede a la desmatriculacion
+                if ((tipproceso == 'Desmatricular') and (inscripcion == 'Cancelado')): ##si hay cancelacion se procede a la desmatriculacion
                     fptr.write('UNENROLL' + ',' + idBanner + ',' +',' + course_name + '\n')
                     line_count = line_count + 1
-                elif ((tipproceso == 'Limpieza') and (estado == 'Eliminado')): ##si hay eliminacion se procede a la desmatriculacion
+                elif ((tipproceso == 'Limpiar') and (cod_inscripcion == 'DL')): ##si hay eliminacion se procede a la desmatriculacion
                     # Generamos los registros para desmatricular al estudiante - LIMPIEZA DE LISTA (DL)            
                     fptr.write('UNENROLL' + ',' + idBanner + ',' +',' + course_name + '\n')
                     line_count = line_count + 1

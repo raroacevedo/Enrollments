@@ -45,10 +45,22 @@ def main():
     print(CURSOS)
 
     print("\n----------------------------------------------")
-    print("Cargando CentroCostosEstudiante y Coordinadores")
+    print("Cargando CentroCostosEstudiante, coordinadores y mentores")
     print("----------------------------------------------")
     CENTROCOSTOSESTUDIANTE = helpers.leer_centrocostos_estudiante()
-    BDCoordinadores = helpers.leer_coordinadores()
+    BDResponsables = helpers.leer_coordinadores()
+
+    fuentes_requeridas = {
+        "moderadores Banner": BDModeradoresNRC,
+        "usuarios Brightspace": BDUsuarios,
+        "cursos": CURSOS,
+        "centros de costos": CENTROCOSTOSESTUDIANTE,
+        "coordinadores y mentores": BDResponsables,
+    }
+    fuentes_invalidas = [nombre for nombre, fuente in fuentes_requeridas.items() if fuente is None]
+    if fuentes_invalidas:
+        print(f"[ERROR] No fue posible cargar: {', '.join(fuentes_invalidas)}. Saliendo...")
+        return
 
     # Remover duplicados x Pediodo, NRC/LC y ID_Docente
     data_sin_duplicados = BDModeradoresNRC.drop_duplicates(subset=['PERIODO', 'NRC', 'ID_DOCENTE'])
@@ -77,7 +89,7 @@ def main():
             course_periodo,
             BDUsuarios,
             CENTROCOSTOSESTUDIANTE,
-            BDCoordinadores
+            BDResponsables
         )
 
     #se crea un solo archvivo con todos los cursos

@@ -43,6 +43,9 @@ def load_config(path="config.json"):
 CONFIG = load_config()
 
 INVALID_IDS = {"000000nan", "nan", "", "0", "-", "000000000", "none"}
+COORDINADOR_ID_COLUMN = "Coordinador_ID"
+MENTOR_ID_COLUMNS = ("Mentor1_Id", "Mentor2_Id", "Mentor3_Id")
+RESPONSABLE_ID_COLUMNS = (COORDINADOR_ID_COLUMN,) + MENTOR_ID_COLUMNS
 
 # Funciones auxiliares comunes para la lectura de archivos, limpieza de datos, resolución de coordinadores y creación de archivos de inscripción.
 def _resolve_path(path_value, default_path):
@@ -75,7 +78,7 @@ def leer_nrc():
     """
     Lee el archivo 'ListaCursos.csv' ubicado en el directorio actual.
     Retorna un DataFrame con la información de NRC y nombre de curso.
-    
+
     El archivo debe contener al menos las columnas 'NRC' y 'Nombre_Curso'.
     """
     filename = 'shortnames.csv'
@@ -107,7 +110,7 @@ def leer_nrc():
     if not columnas_esperadas.issubset(df.columns):
         print(f"[ERROR] Error: El archivo debe contener las columnas: {columnas_esperadas}. Columnas actuales: {df.columns.tolist()}")
         return None
-  
+
     return df
 
 #Generar el archivo de registro unico (resumen)
@@ -125,7 +128,7 @@ def merge_archivos():
                 data = fp.read()
 
             with open('registro_unicoMOD.txt', 'a', encoding='utf8') as fp:
-                fp.write(data)            
+                fp.write(data)
 
     return
 
@@ -133,10 +136,10 @@ def merge_archivos():
 def leer_BDUsuarios_BS(ruta_archivo=None):
     """
     Función para cargar un archivo Excel en un DataFrame.
-    
+
     Parámetros:
     ruta_archivo (str): Ruta del archivo Excel a cargar.
-    
+
     Retorna:
     pd.DataFrame: DataFrame con los datos del archivo o None si ocurre un error.
     """
@@ -166,10 +169,10 @@ def leer_BDUsuarios_BS(ruta_archivo=None):
         df['OrgRoleId'] = df['OrgRoleId'].astype(str).str.strip()
         df['OrgDefinedId'] = df['OrgDefinedId'].apply(_to_clean_str)
         df['ExternalEmail'] = df['ExternalEmail'].apply(_to_clean_str)
-        
+
         print(f"[OK] Archivo '{ruta_archivo}' cargado exitosamente.")
         print(f"El archivo contiene {df.shape[0]} filas y {df.shape[1]} columnas.")
-        
+
         return df
 
     except FileNotFoundError:
@@ -184,14 +187,14 @@ def leer_moderadores(date='nodate'):
     """
     Lee múltiples archivos .xlsx con información de estudiantes desde el directorio origen o actual.
     Optimizado para grandes volúmenes. Aplica limpieza y validación.
-    
+
     Parámetros:
         date (str): Fecha mínima (YYYY-MM-DD) para filtrar la columna 'FECHA_ACTIVIDAD_EST'.
-    
+
     Retorna:
         pd.DataFrame consolidado.
     """
-    
+
     # Directorio con archivos .xlsx — puede definirse en config.json
     directory = _resolve_path(CONFIG.get('banner_directory', './'), './')
 
@@ -219,13 +222,13 @@ def leer_moderadores(date='nodate'):
 
         try:
             # Cargar todo el archivo
-            df = pd.read_excel(filepath, 
+            df = pd.read_excel(filepath,
                                sheet_name=0,  # primera hoja (docentes)
                                dtype={'ID_DOCENTE': str, 'LISTA_CRUZADA': str},
                                engine='openpyxl'
-                )    
+                )
 
-            print(f"[OK] Archivo '{file}' cargado con {df.shape[0]} filas y {df.shape[1]} columnas.")  
+            print(f"[OK] Archivo '{file}' cargado con {df.shape[0]} filas y {df.shape[1]} columnas.")
         except Exception as e:
             print(f"[ERROR] Error al leer el archivo {file}: {e}")
             continue
@@ -261,17 +264,16 @@ def leer_moderadores(date='nodate'):
 
     # Concatenar todos los DataFrames en uno solo
     resultado = pd.concat(dataframes, ignore_index=True)
-    
+
     #retornar el DataFrame consolidado
     return resultado
 
 #Cargar el archivo de centro de costos estudiante desde Excel, con columnas 'PERIODO', 'LISTA_CRUZADA', 'ESTADO_INSCRIPCIÓN' y 'COD_PROGRAMA_ESTUDIANTE'.
-#  Se filtra solo ESTADO_INSCRIPCIÓN='Inscrito' y se eliminan duplicados por: PERIODO, LISTA_CRUZADA, ESTADO_INSCRIPCIÓN, COD_PROGRAMA_ESTUDIANTE.
+#Se filtra solo ESTADO_INSCRIPCIÓN='Inscrito' y se eliminan duplicados por: PERIODO, LISTA_CRUZADA, ESTADO_INSCRIPCIÓN, COD_PROGRAMA_ESTUDIANTE.
 def leer_centrocostos_estudiante():
     """
     Construye el DataFrame CENTROCOSTOSESTUDIANTE desde banner_directory/hoja Estudiantes.
-    Se filtra solo ESTADO_INSCRIPCIÓN='Inscrito' y se eliminan duplicados por:
-    PERIODO, LISTA_CRUZADA, ESTADO_INSCRIPCIÓN, COD_PROGRAMA_ESTUDIANTE.
+    Se filtra solo ESTADO_INSCRIPCIÓN='Inscrito' y se eliminan duplicados por:PERIODO, LISTA_CRUZADA, ESTADO_INSCRIPCIÓN, COD_PROGRAMA_ESTUDIANTE.
     """
     directory = _resolve_path(CONFIG.get('banner_directory', './'), './')
 
@@ -282,6 +284,7 @@ def leer_centrocostos_estudiante():
     if not excel_files:
         raise FileNotFoundError("[ERROR] No se encontró ningún archivo .xlsx en el directorio actual.")
 
+    # Definición de columnas objetivo para la hoja Estudiantes
     columnas_objetivo = ['PERIODO', 'LISTA_CRUZADA', 'ESTADO_INSCRIPCIÓN', 'COD_PROGRAMA_ESTUDIANTE']
     dataframes = []
 
@@ -328,15 +331,24 @@ def leer_centrocostos_estudiante():
     print(f"[OK] CENTROCOSTOSESTUDIANTE cargado con {centro_costos_estudiante.shape[0]} filas únicas.")
     return centro_costos_estudiante
 
-# Leer el archivo de coordinadores desde Excel, con columnas 'Centro de Costos' e 'ID COORDINADOR'.
+# Leer el archivo de responsables(Coodinadores + Mentores) de programa desde Excel.
 def leer_coordinadores(ruta_archivo=None):
     """
-    Lee el archivo de coordinadores parametrizado en JSON.
-    Columnas requeridas: 'Centro de Costos' e 'ID COORDINADOR'.
+    Lee el archivo de coordinadores y mentores parametrizado en JSON.
+
+    Columnas requeridas:
+      - Centro de Costos
+      - Coordinador_ID
+      - Mentor1_Id
+      - Mentor2_Id
+      - Mentor3_Id
+
+    Se conservan filas con al menos un responsable valido. Las columnas de
+    nombre y correo son opcionales y solo se usan como respaldo para CREATE.
     """
     ruta_default = CONFIG.get('coordinadores_file')
     if not ruta_default:
-        # Fallback: misma carpeta de bdusuarios_file
+        # fallback: misma carpeta de bdusuarios_file
         ruta_bdusuarios = _resolve_path(CONFIG.get('bdusuarios_file', "./BDUsuarios/Listados Usuarios.xlsx"),
                                         "./BDUsuarios/Listados Usuarios.xlsx")
         ruta_default = os.path.join(os.path.dirname(ruta_bdusuarios), 'Coordinadores.xlsx')
@@ -346,31 +358,54 @@ def leer_coordinadores(ruta_archivo=None):
     ruta_archivo = _resolve_path(ruta_archivo, ruta_default)
 
     try:
+        # Leer el archivo Excel 
         df = pd.read_excel(ruta_archivo, sheet_name=0, engine='openpyxl')
-        columnas_requeridas = ['Centro de Costos', 'ID COORDINADOR']
-        columnas_opcionales = ['Coordinador(a)', 'Correo Electrónico']
+        #columnas_requeridas = ['Centro de Costos', COORDINADOR_ID_COLUMN, *MENTOR_ID_COLUMNS]
+        columnas_requeridas = ['Centro de Costos', 'Estado', 'MODALIDAD', COORDINADOR_ID_COLUMN, *MENTOR_ID_COLUMNS]
+        columnas_opcionales = [
+            'Coordinador_Nombre', 'Coordinador_Correo',
+            'Mentor1_Nombres', 'Mentor1_Correo',
+            'Mentor2_Nombres', 'Mentor2_Correo',
+            'Mentor3_Nombres', 'Mentor3_Correo',
+        ]
 
+        #validación de columnas requeridas
         if not set(columnas_requeridas).issubset(set(df.columns)):
             faltantes = set(columnas_requeridas) - set(df.columns)
             raise ValueError(f"Faltan columnas requeridas en archivo coordinadores: {faltantes}")
 
+        # Agregar columnas opcionales si no existen
         for col in columnas_opcionales:
             if col not in df.columns:
                 df[col] = ''
 
         df = df[columnas_requeridas + columnas_opcionales].copy()
         df['Centro de Costos'] = df['Centro de Costos'].apply(_to_clean_str)
-        df['ID COORDINADOR'] = df['ID COORDINADOR'].apply(_normalizar_id_banner)
-        df['Coordinador(a)'] = df['Coordinador(a)'].apply(_to_clean_str)
-        df['Correo Electrónico'] = df['Correo Electrónico'].apply(_to_clean_str)
 
-        df = df[
-            (df['Centro de Costos'] != '') &
-            (~df['ID COORDINADOR'].str.lower().isin(INVALID_IDS))
-        ]
-        df = df.drop_duplicates(subset=['Centro de Costos', 'ID COORDINADOR']).reset_index(drop=True)
+        # FILTRAR df(DataFrame) con las columnas Estado = Activo = y MODALIDAD = Virtual
+        df = df[(df['Estado'].str.lower() == 'activo') & (df['MODALIDAD'].str.lower() == 'virtual')]
 
-        print(f"[OK] Archivo de coordinadores '{ruta_archivo}' cargado con {df.shape[0]} registros.")
+        for col in RESPONSABLE_ID_COLUMNS:
+            df[col] = df[col].apply(_normalizar_id_banner)
+        for col in columnas_opcionales:
+            df[col] = df[col].apply(_to_clean_str)
+
+        tiene_responsable = pd.Series(False, index=df.index)
+        for col in RESPONSABLE_ID_COLUMNS:
+            tiene_responsable |= ~df[col].str.lower().isin(INVALID_IDS)
+
+        df = df[(df['Centro de Costos'] != '') & tiene_responsable]
+        df = df.drop_duplicates(
+            subset=['Centro de Costos', *RESPONSABLE_ID_COLUMNS]
+        ).reset_index(drop=True)
+
+        total_mentores = sum(
+            (~df[col].str.lower().isin(INVALID_IDS)).sum() for col in MENTOR_ID_COLUMNS
+        )
+        print(
+            f"[OK] Archivo de responsables '{ruta_archivo}' cargado con "
+            f"{df.shape[0]} registros y {total_mentores} asignaciones de mentor."
+        )
         return df
 
     except FileNotFoundError:
@@ -380,14 +415,13 @@ def leer_coordinadores(ruta_archivo=None):
         print(f"[ERROR] Error al cargar coordinadores: {e}")
         return None
 
-#Buscar el coordinador del curso a partir del NRC/LC y Periodo, usando el DataFrame CENTROCOSTOSESTUDIANTE 
-# para obtener el COD_PROGRAMA_ESTUDIANTE y luego buscar el ID del coordinador en el archivo de coordinadores. 
-# Se devuelve un dict con la información del coordinador o None si no se encuentra.
-def resolver_coordinador_curso(course_nrc, course_periodo, centro_costos_estudiante, bd_coordinadores, log):
+# Buscar los responsables(Coordinadores + Mentores) del curso a partir del NRC/LC y Periodo.
+def resolver_responsables_curso(course_nrc, course_periodo, centro_costos_estudiante,
+                                bd_coordinadores, log):
     """
-    Obtiene el ID del coordinador para un curso a partir de:
+    Obtiene coordinador y mentores para un curso a partir de:
       1) NRC + PERIODO -> COD_PROGRAMA_ESTUDIANTE (CENTROCOSTOSESTUDIANTE)
-      2) COD_PROGRAMA_ESTUDIANTE -> ID COORDINADOR (archivo coordinadores)
+      2) COD_PROGRAMA_ESTUDIANTE -> responsables (archivo coordinadores)
     """
     if centro_costos_estudiante is None or bd_coordinadores is None:
         return None, None
@@ -411,20 +445,29 @@ def resolver_coordinador_curso(course_nrc, course_periodo, centro_costos_estudia
 
     match_coord = bd_coordinadores[bd_coordinadores['Centro de Costos'] == centro_costo]
     if match_coord.empty:
-        log.write(f"[WARN] Sin coordinador para Centro de Costos={centro_costo}\n")
+        log.write(f"[WARN] Sin responsables para Centro de Costos={centro_costo}\n")
         return None, centro_costo
+
+    if len(match_coord) > 1:
+        log.write(
+            f"[WARN] Centro de Costos={centro_costo} tiene {len(match_coord)} "
+            "configuraciones de responsables. Se usa la primera fila del archivo.\n"
+        )
 
     row_coord = match_coord.iloc[0]
-    id_coordinador = _normalizar_id_banner(row_coord.get('ID COORDINADOR', ''))
-    if id_coordinador.lower() in INVALID_IDS:
-        log.write(f"[WARN] ID COORDINADOR inválido para Centro de Costos={centro_costo}\n")
-        return None, centro_costo
-
     return row_coord, centro_costo
 
-#Se obtiene la información del coordinador desde BDUsuarios (hoja 0) para el ID de banner dado. 
+#Resolver coordinador de curso (alias para integraciones existentes del helper V2).
+def resolver_coordinador_curso(course_nrc, course_periodo, centro_costos_estudiante,
+                               bd_coordinadores, log):
+    """Alias compatible para integraciones existentes del helper V2."""
+    return resolver_responsables_curso(
+        course_nrc, course_periodo, centro_costos_estudiante, bd_coordinadores, log
+    )
+
+#Se obtiene la información del coordinador desde BDUsuarios (hoja 0) para el ID de banner dado.
 # Si no se encuentra, se devuelve None.
-def obtener_datos_coordinador(id_banner, bd_usuarios):
+def obtener_datos_usuario(id_banner, bd_usuarios):
     """
     Obtiene información del coordinador desde BDUsuarios (hoja 0).
     """
@@ -440,13 +483,66 @@ def obtener_datos_coordinador(id_banner, bd_usuarios):
         'email': _to_clean_str(row.get('ExternalEmail', ''))
     }
 
+# Obtenemos los datos del coordinador desde BDUsuarios (hoja 0) para el ID de banner dado.
+def obtener_datos_coordinador(id_banner, bd_usuarios):
+    """Alias compatible con el nombre utilizado antes del refactor."""
+    return obtener_datos_usuario(id_banner, bd_usuarios)
+
+#extaer datos de los mentores
+def extraer_mentores(row_responsables):
+    """Devuelve mentores validos y unicos, conservando el orden de las columnas."""
+    mentores = []
+    ids_vistos = set()
+    for posicion, column in enumerate(MENTOR_ID_COLUMNS, start=1):
+        mentor_id = _normalizar_id_banner(row_responsables.get(column, ''))
+        if mentor_id.lower() in INVALID_IDS or mentor_id in ids_vistos:
+            continue
+        ids_vistos.add(mentor_id)
+        mentores.append({
+            'id': mentor_id,
+            'nombre': _to_clean_str(row_responsables.get(f'Mentor{posicion}_Nombres', '')),
+            'correo': _to_clean_str(row_responsables.get(f'Mentor{posicion}_Correo', '')),
+            'origen': column,
+        })
+    return mentores
+
+#Se obtiene la información del responsable (coordinador o mentor) desde BDUsuarios (hoja 0) para el ID de banner dado.
+def _datos_responsable(id_banner, bd_usuarios, nombre_respaldo='', correo_respaldo=''):
+    datos = obtener_datos_usuario(id_banner, bd_usuarios)
+    if datos is not None:
+        return datos
+    return {
+        'docuusu': id_banner,
+        'first_name': _to_clean_str(nombre_respaldo),
+        'last_name': '',
+        'email': _to_clean_str(correo_respaldo),
+    }
+
+#Inscribir un responsable (coordinador o mentor) en el curso, emitiendo CREATE si es nuevo y ENROLL para inscribirlo.
+def _inscribir_responsable(fptr, id_banner, rol, course_name, usuarios_bs, bd_usuarios,
+                           nombre_respaldo='', correo_respaldo=''):
+    """Emite CREATE cuando aplica y ENROLL para un responsable del programa."""
+    if id_banner not in usuarios_bs:
+        datos = _datos_responsable(
+            id_banner, bd_usuarios, nombre_respaldo, correo_respaldo
+        )
+        fptr.write(
+            f"CREATE,{id_banner},{datos['docuusu']},{datos['first_name']},"
+            f"{datos['last_name']},,{rol},1,{datos['email']}\n"
+        )
+        usuarios_bs.add(id_banner)
+    fptr.write(f'ENROLL,{id_banner},,{rol},{course_name}\n')
+
 #se crea el archivo de registro para cada curso
 def crearArchivos(data, course_name, course_nrc, course_periodo, BDUsuBS, centro_costos_estudiante,
                   bd_coordinadores, log_file_path='log_creacion_moderadores.txt'):
     """
     Genera comandos de inscripción y creación/actualización para:
-      1) Docente con rol Moderador (flujo original).
-      2) Coordinador con rol Coordinador (nuevo flujo).
+      1) Docente con rol Moderador .
+      2) Coordinador con rol Coordinador, salvo que ya sea Moderador del curso.
+      3) Mentores configurados con rol Mentor.
+
+    La precedencia de rol por curso es Moderador > Coordinador > Mentor. Esto evita emitir dos ENROLL incompatibles para el mismo usuario y curso.
 
     Parámetros:
         data (pd.DataFrame): Datos de los docentes por curso.
@@ -460,7 +556,10 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDUsuBS, centro
     """
     rol_moderador = "Moderador"
     rol_coordinador = "Coordinador"
-    line_count = 0
+    rol_mentor = "Mentor"
+    moderadores_count = 0
+    coordinadores_count = 0
+    mentores_count = 0
 
     directory = _resolve_path(CONFIG.get('salida_directory', './salida/'), './salida/')
     os.makedirs(directory, exist_ok=True)
@@ -476,11 +575,18 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDUsuBS, centro
         log.write(f"Fecha: {datetime.now()}\n")
 
         # 1) Inscripción de docentes moderadores (flujo existente).
+        moderadores_ids = set()
         for _, row in data.iterrows():
             idBanner = _normalizar_id_banner(row.get('ID_DOCENTE', ''))
             if idBanner.lower() in INVALID_IDS:
                 log.write(f"[ERROR] ID inválido: '{idBanner}' para curso {course_name}\n")
                 continue
+            if idBanner in moderadores_ids:
+                log.write(
+                    f"[INFO] Moderador duplicado omitido: ID={idBanner}, curso={course_name}\n"
+                )
+                continue
+            moderadores_ids.add(idBanner)
 
             Unuevo = idBanner not in usuarios_bs
             RolModerador = BDUsuBS.loc[BDUsuBS['UserName'] == idBanner, 'OrgRoleId'].values
@@ -515,41 +621,78 @@ def crearArchivos(data, course_name, course_nrc, course_periodo, BDUsuBS, centro
                 fptr.write(f'ENROLL,{idBanner},,{rol_moderador},UPBV\n')
 
             fptr.write(f'ENROLL,{idBanner},,{rol_moderador},{course_name}\n')
-            line_count += 1
+            moderadores_count += 1
 
-        # 2) Inscripción de coordinador por curso (nuevo flujo).
-        row_coord, centro_costo = resolver_coordinador_curso(
+        # 2) Resolución e inscripción de responsables(coordinadores + mentores) del programa.
+        row_coord, centro_costo = resolver_responsables_curso(
             course_nrc, course_periodo, centro_costos_estudiante, bd_coordinadores, log
         )
         if row_coord is not None:
-            id_coord = _normalizar_id_banner(row_coord.get('ID COORDINADOR', ''))
+            ids_con_rol = set(moderadores_ids)
+            id_coord = _normalizar_id_banner(row_coord.get(COORDINADOR_ID_COLUMN, ''))
             if id_coord.lower() not in INVALID_IDS:
-                coord_nuevo = id_coord not in usuarios_bs
-                datos_coord = obtener_datos_coordinador(id_coord, BDUsuBS)
-
-                if datos_coord is None:
-                    # Fallback mínimo cuando el coordinador no está en BDUsuarios.
-                    datos_coord = {
-                        'docuusu': id_coord,
-                        'first_name': _to_clean_str(row_coord.get('Coordinador(a)', '')),
-                        'last_name': '',
-                        'email': _to_clean_str(row_coord.get('Correo Electrónico', ''))
-                    }
-
-                if coord_nuevo:
-                    fptr.write(
-                        f"CREATE,{id_coord},{datos_coord['docuusu']},{datos_coord['first_name']},"
-                        f"{datos_coord['last_name']},,{rol_coordinador},1,{datos_coord['email']}\n"
+                if id_coord in moderadores_ids:
+                    log.write(
+                        f"[INFO] Coordinador omitido como Coordinador porque ya fue inscrito "
+                        f"como Moderador: ID={id_coord}, curso={course_name}\n"
                     )
-
-                fptr.write(f'ENROLL,{id_coord},,{rol_coordinador},{course_name}\n')
+                else:
+                    _inscribir_responsable(
+                        fptr,
+                        id_coord,
+                        rol_coordinador,
+                        course_name,
+                        usuarios_bs,
+                        BDUsuBS,
+                        row_coord.get('Coordinador_Nombre', ''),
+                        row_coord.get('Coordinador_Correo', ''),
+                    )
+                    ids_con_rol.add(id_coord)
+                    coordinadores_count += 1
+                    log.write(
+                        f"[OK] Coordinador inscrito NRC={course_nrc}, PERIODO={course_periodo}, "
+                        f"CentroCosto={centro_costo}, ID={id_coord}\n"
+                    )
+            else:
                 log.write(
-                    f"[OK] Coordinador inscrito NRC={course_nrc}, PERIODO={course_periodo}, "
-                    f"CentroCosto={centro_costo}, ID={id_coord}\n"
+                    f"[WARN] Coordinador_ID vacio o invalido para CentroCosto={centro_costo}\n"
+                )
+            # 3) Inscripción de mentores, evitando duplicados y respetando precedencia de rol.
+            for mentor in extraer_mentores(row_coord):
+                id_mentor = mentor['id']
+                if id_mentor in ids_con_rol:
+                    log.write(
+                        f"[INFO] Mentor omitido porque el usuario ya tiene un rol de mayor "
+                        f"precedencia en el curso: ID={id_mentor}, curso={course_name}, "
+                        f"origen={mentor['origen']}\n"
+                    )
+                    continue
+                _inscribir_responsable(
+                    fptr,
+                    id_mentor,
+                    rol_mentor,
+                    course_name,
+                    usuarios_bs,
+                    BDUsuBS,
+                    mentor['nombre'],
+                    mentor['correo'],
+                )
+                ids_con_rol.add(id_mentor)
+                mentores_count += 1
+                log.write(
+                    f"[OK] Mentor inscrito NRC={course_nrc}, PERIODO={course_periodo}, "
+                    f"CentroCosto={centro_costo}, ID={id_mentor}, origen={mentor['origen']}\n"
                 )
 
-        writer.writerow([course_name, course_nrc, line_count])
+        # Se conserva el formato histórico del resumen: cuenta de moderadores.
+        writer.writerow([course_name, course_nrc, moderadores_count])
 
-        print(f"[OK] Se han inscrito: {line_count} moderadores en el curso: {course_name} NRC: {course_nrc}")
-        log.write(f"[OK] Total moderadores inscritos: {line_count}\n")
-
+        print(
+            f"[OK] Curso {course_name} NRC:{course_nrc} - "
+            f"Moderadores:{moderadores_count}, Coordinadores:{coordinadores_count}, "
+            f"Mentores:{mentores_count}"
+        )
+        log.write(
+            f"[OK] Totales - Moderadores:{moderadores_count}, "
+            f"Coordinadores:{coordinadores_count}, Mentores:{mentores_count}\n"
+        )

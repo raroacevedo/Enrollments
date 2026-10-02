@@ -1,0 +1,31 @@
+2026-07-21 19:36:17 | INFO | Inicia proceso V3 de inscripcion de estudiantes
+2026-07-21 19:36:18 | INFO | Descargando programacion de cursos desde OneDrive/SharePoint
+2026-07-21 19:36:22 | WARNING | El Excel contiene 1 valor(es) de estilo invalido(s); se usa una copia temporal saneada sin modificar el archivo origen.
+2026-07-21 19:36:25 | INFO | Programacion cargada: 2327 filas en la hoja Duplicados 2026
+2026-07-21 19:36:25 | INFO | Filtro de programacion: rango inclusivo 2026-07-13 a 2026-07-13, Estado=✔️; 151 fila(s) seleccionada(s), 1426 fuera de rango, 750 sin Estado activo y 0 sin fecha valida.
+2026-07-21 19:36:25 | INFO | shortnames.csv generado: 146 registro(s) para el rango 2026-07-13 a 2026-07-13 en C:\Users\000251456\UPBVIRTUAL\Desarrollo\Bots\Enrollments\shortnames.csv
+2026-07-21 19:36:25 | INFO | Finaliza correctamente el proceso V3
+2026-08-14 17:17:09 | INFO | Inicia proceso V3 de inscripcion de estudiantes
+2026-08-14 17:17:09 | INFO | Descargando programacion de cursos desde OneDrive/SharePoint
+2026-08-14 17:17:11 | WARNING | El Excel contiene 1 valor(es) de estilo invalido(s); se usa una copia temporal saneada sin modificar el archivo origen.
+2026-08-14 17:17:12 | INFO | Programacion cargada: 2576 filas en la hoja Duplicados 2026
+2026-08-14 17:17:12 | INFO | Filtro de programacion: rango inclusivo 2026-08-14 a 2026-08-18, Estado=✔️; 28 fila(s) seleccionada(s), 1851 fuera de rango, 697 sin Estado activo y 0 sin fecha valida.
+2026-08-14 17:17:12 | INFO | shortnames.csv generado: 28 registro(s) para el rango 2026-08-14 a 2026-08-18 en C:\Users\000251456\UPBVIRTUAL\Desarrollo\Bots\Enrollments\shortnames.csv
+2026-08-14 17:17:12 | INFO | Finaliza correctamente el proceso V3
+2026-09-25 15:29:37 | INFO | Inicia proceso V3 de inscripcion de estudiantes
+2026-09-25 15:29:37 | INFO | Descargando programacion de cursos desde OneDrive/SharePoint
+2026-09-25 15:29:38 | WARNING | Fallo la descarga de OneDrive (La URL de programacion no devolvio un archivo XLSX (Content-Type: text/html; charset=utf-8)). Se usara la copia local sincronizada: C:\Users\000251456\UPBVIRTUAL\Plataformas\D2L\ProcesoMatriculas\Enrollments\files\UnidadesOrganizacion\ProgramacionDeAperturaCursosVirtuales.xlsx
+2026-09-25 15:29:38 | WARNING | El Excel contiene 1 valor(es) de estilo invalido(s); se usa una copia temporal saneada sin modificar el archivo origen.
+2026-09-25 15:29:39 | INFO | Programacion cargada: 2656 filas en la hoja Duplicados 2026
+2026-09-25 15:29:39 | INFO | Filtro de programacion: rango inclusivo 2026-09-26 a 2026-09-29, Estado=✔️; 17 fila(s) seleccionada(s), 2210 fuera de rango, 429 sin Estado activo y 0 sin fecha valida.
+2026-09-25 15:29:39 | INFO | shortnames.csv generado: 17 registro(s) para el rango 2026-09-26 a 2026-09-29 en C:\Users\000251456\UPBVIRTUAL\Desarrollo\Bots\Enrollments\shortnames.csv
+2026-09-25 15:29:39 | WARNING | C:\Users\000251456\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openpyxl\styles\stylesheet.py:237: UserWarning: Workbook contains no default style, apply openpyxl's default
+  warn("Workbook contains no default style, apply openpyxl's default")
+
+2026-09-25 15:29:42 | INFO | Base de Brightspace cargada: 48536 UserName unicos
+2026-09-25 15:29:42 | INFO | Leyendo Banner en modo streaming: C:\Users\000251456\UPBVIRTUAL\Plataformas\D2L\ProcesoMatriculas\ListadosEstudiantesDocentesBanner\ListadoDocentesEstudiantes.xlsx
+2026-09-25 15:29:57 | INFO | Banner procesado: 190862 filas leidas, 296 relevantes, 221 estudiantes inscritos/desinscritos.
+2026-09-25 15:29:57 | INFO | Omisiones y deduplicaciones: {'fecha': 0, 'duplicado_fuente': 0, 'duplicado_curso': 0, 'sin_correo': 0, 'estado': 75, 'pago': 0, 'periodo': 0}
+2026-09-25 15:29:57 | INFO | Consolidado generado: C:\Users\000251456\UPBVIRTUAL\Desarrollo\Bots\Enrollments\registro_unicoEst.txt
+2026-09-25 15:29:57 | INFO | Resumen generado: C:\Users\000251456\UPBVIRTUAL\Desarrollo\Bots\Enrollments\students.csv
+2026-09-25 15:29:57 | INFO | Finaliza correctamente el proceso V3

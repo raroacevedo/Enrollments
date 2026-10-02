@@ -51,11 +51,15 @@ def main():
     # Remover duplicados x Pediodo, NRC/LC y ID_Estudiante
     data_sin_duplicados = BDEstudiantesNRC.drop_duplicates(subset=['PERIODO', 'NRC', 'ID_ESTUDIANTE'])
 
+    print("**************")
+
     # Crear los archivos: CSV para inscripcion, uno por NRC y se genera resumen de inscripcion (student.csv)
     for index, row in nrc.iterrows():
         course_name = row['Nombre']     #Codigo del curso
         course_nrc = row['NRC']         #NRC/LC del curso
         course_periodo = row['Periodo'] #Periodo del curso
+
+        #mostrar curse, NRC  y periodo
 
         # cuando la longitud del course_periodo es mayor a 6, se toma solo los primeros 6 caracteres -- Regla de negocio APLATAM (se elimina V1,V2, etc)
         if len(str(course_periodo)) > 6:    

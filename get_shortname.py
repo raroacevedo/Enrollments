@@ -50,14 +50,13 @@ def login(driver, username, password, second_factor):
     driver.get("https://virtual.upb.edu.co/d2l/login?noRedirect=1")
 
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "userName"))).send_keys(username)
-    #WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "password"))).send_keys(password + Keys.RETURN)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "password"))).send_keys("2/2*2Hijosmemsam" + Keys.RETURN)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "password"))).send_keys(password + Keys.RETURN)
     sleep(1)
 
     # Autenticación de dos factores
-    driver.get("https://virtual.upb.edu.co/d2l/lp/auth/twofactorauthentication/TwoFactorCodeEntry.d2l")
+    #driver.get("https://virtual.upb.edu.co/d2l/lp/auth/twofactorauthentication/TwoFactorCodeEntry.d2l")
     #WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "z_d"))).send_keys(second_factor + Keys.RETURN) //codigo anterior
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "z_i"))).send_keys(second_factor + Keys.RETURN)
+    #WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "z_i"))).send_keys(second_factor + Keys.RETURN)
 
     # Esperar hasta que se redireccione al home de la plataforma para asegurar que el login se complete
     sleep(3)
@@ -101,9 +100,12 @@ def load_existing_shortnames(file_path):
 
 def main():
     # --- Recolección de credenciales ---
-    user = input('Username: ')
-    password = getpass('Password: ')
-    second_factor = input("Clave 2FA: ")
+    #user = input('Username: ')
+    user="adminbot"
+    #password = getpass('Password: ')
+    password="*Upb/ÑV1rtu4l*"
+    #second_factor = input("Clave 2FA: ")
+    second_factor=""  # 
 
     # --- Configuración del navegador ---
     driver = setup_driver()

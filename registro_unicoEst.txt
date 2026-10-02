@@ -1,0 +1,33 @@
+UPDATE,000247639,CC. 1.036.933.312,Santiago,Montaño Llano,,1,santiago.montanol@upb.edu.co
+ENROLL,000247639,,Student_fa,UPBV
+ENROLL,000247639,,Student,8827-2050-202642-51874
+UPDATE,000012972,CC. 43.165.685,Paola Andrea,Sierra Tamayo,,1,pasita25@gmail.com
+ENROLL,000012972,,Student_fa,UPBV
+ENROLL,000012972,,Student,8827-2050-202642-51874
+UPDATE,000587618,CC. 1.020.495.690,Mateo Andres,Tamayo Quiros,,1,mateotamayoquiros@gmail.com
+ENROLL,000587618,,Student_fa,UPBV
+ENROLL,000587618,,Student,8827-2050-202642-51874
+UPDATE,000587614,CC. 1.039.470.837,Valentina,Jimenez Alvarez,,1,vjimeneza8@gmail.com
+ENROLL,000587614,,Student_fa,UPBV
+ENROLL,000587614,,Student,8827-2050-202642-51874
+UPDATE,000592629,CC. 1.128.454.091,Estefania,Rivera Posada,,1,eriveraposada@gmail.com
+ENROLL,000592629,,Student_fa,UPBV
+ENROLL,000592629,,Student,8827-2050-202642-51874
+UPDATE,000427556,CC. 1.000.410.366,Sofia,Arango Patiño,,1,sofiaarangopat@hotmail.com
+ENROLL,000427556,,Student_fa,UPBV
+ENROLL,000427556,,Student,8827-2050-202642-51874
+UPDATE,000316881,CC. 80.040.773,Diego Antonio,Castro Castro,,1,diego.castro.castro@gmail.com
+ENROLL,000316881,,Student_fa,UPBV
+ENROLL,000316881,,Student,8827-2050-202642-51874
+UPDATE,000258876,CC. 1.098.778.357,Fabio Mario,Rincon Torres,,1,rincont.fabio@gmail.com
+ENROLL,000258876,,Student_fa,UPBV
+ENROLL,000258876,,Student,8827-2050-202642-51874
+UPDATE,000590055,CC. 9.726.672,Jaime Augusto,Rubiano Gonzalez,,1,jaimeag_gonzalez@hotmail.com
+ENROLL,000590055,,Student_fa,UPBV
+ENROLL,000590055,,Student,8827-2050-202642-51874
+UPDATE,000373727,CC. 1.000.754.946,Daniel Jesus,Castillo Botero,,1,danielcastillo460@gmail.com
+ENROLL,000373727,,Student_fa,UPBV
+ENROLL,000373727,,Student,8827-2050-202642-51874
+UPDATE,000470031,CC. 1.093.797.436,Michael Andres,Gamboa Garza,,1,mgnothe1@gmail.com
+ENROLL,000470031,,Student_fa,UPBV
+ENROLL,000470031,,Student,8827-2050-202642-51874
